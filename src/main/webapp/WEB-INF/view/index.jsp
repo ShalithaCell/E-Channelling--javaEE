@@ -10,7 +10,7 @@
     <%@include file="site-master/header.jsp"%>
 
     <div style="height: 100%">
-        <h1>dsadsdasd</h1>
+        <h1>${title}</h1>
     </div>
 
     <%@include file="site-master/footer.jsp"%>

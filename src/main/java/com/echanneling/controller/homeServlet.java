@@ -1,5 +1,9 @@
 package com.echanneling.controller;
 
+import com.echanneling.delegate.AppDelegate;
+import com.echanneling.model.Constants;
+import com.echanneling.service.support.CatchException;
+
 import java.io.IOException;
 
 import javax.servlet.ServletException;
@@ -13,9 +17,14 @@ public class homeServlet extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
 		request.setAttribute("name", "shalitha");
-		request.setAttribute("title", "hey");
-		request.getRequestDispatcher("/WEB-INF/view/index.jsp").forward(request, response);
+		request.setAttribute("title", AppDelegate.properties.getProperty("projectName"));
+
+		ArithmeticException e = new ArithmeticException("test");
+
+		CatchException.Handle(e);
+		request.getRequestDispatcher(Constants.HOMEPAGE).forward(request, response);
 	}
 	
 	@Override
