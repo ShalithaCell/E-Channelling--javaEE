@@ -1,14 +1,20 @@
 package com.echanneling.delegate;
 
 import com.echanneling.model.Constants;
+import com.echanneling.model.ExceptionDetails;
 import com.echanneling.service.support.CustomMailSender;
+import com.echanneling.service.support.MailInitializer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.mail.MessagingException;
 import javax.mail.internet.AddressException;
+import javax.servlet.ServletContext;
 import java.io.IOException;
 import java.io.InputStream;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Properties;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -27,6 +33,8 @@ public class AppDelegate {
     final static Logger logger = LogManager.getLogger(AppDelegate.class);
     public static final Properties properties = new Properties();
 
+    public static ServletContext sContext;
+
     static {
         try {
 
@@ -35,25 +43,42 @@ public class AppDelegate {
             properties.load(inputStream);
 
         } catch (IOException e) {
-            CustomExceptionHandle(e.getMessage());
+            CustomExceptionHandle("IOException",e);
         }
     }
 
+    public static void Init(ServletContext context){
+
+        //run all delegates
+        sContext = context;
+        System.out.println(AppParams.InitParam  +" the Ap delegate");
+
+    }
+
     //write log files
-    public static void CustomExceptionHandle(String message){
+    public static void CustomExceptionHandle(String type, Exception e){
         if(logger.isDebugEnabled()){
             logger.debug("This is debug");
         }
-
         //logs an error message with parameter
-        logger.error("This is error : " + message);
+        logger.error("This is error : " + e.getMessage());
+
+        final String message = e.getMessage();
+        final String stackTrace = e.getStackTrace().toString();
+        final String ExceptionType = type;
 
         ExecutorService service = Executors.newFixedThreadPool(4);
         service.submit(new Runnable() {
             public void run() {
 
                 try{
-                    CustomMailSender.generateAndSendEmail("subject", "body");
+                    DateFormat dateFormat = new SimpleDateFormat(Constants.SIMPLE_DATE_FORMAT);
+                    Date date = new Date();
+
+                    ExceptionDetails exceptionDetails = new ExceptionDetails(dateFormat.format(date), ExceptionType , message, stackTrace);
+
+                    MailInitializer.InitAndSendErrorMessage(exceptionDetails);
+
                 }catch (AddressException e){
                     logger.error("This is error : " + e);
                 }

@@ -5,7 +5,9 @@ import com.echanneling.model.Constants;
 import com.echanneling.service.support.CatchException;
 
 import java.io.IOException;
+import java.io.InputStream;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,9 +23,15 @@ public class homeServlet extends HttpServlet {
 		request.setAttribute("name", "shalitha");
 		request.setAttribute("title", AppDelegate.properties.getProperty("projectName"));
 
+		//first time run
+		ServletContext servletContext = getServletContext();
+		AppDelegate.Init(servletContext);
+
 		ArithmeticException e = new ArithmeticException("test");
 
 		CatchException.Handle(e);
+
+
 		request.getRequestDispatcher(Constants.HOMEPAGE).forward(request, response);
 	}
 	

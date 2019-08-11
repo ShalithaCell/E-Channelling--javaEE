@@ -52,7 +52,7 @@ public class CustomMailSender {
 
         // Enter your correct gmail UserID and Password
         // if you have 2FA enabled then provide App Specific Password
-        transport.connect("smtp.gmail.com", "sliitproject.bookit@gmail.com", "mydongal");
+        transport.connect("smtp.gmail.com", AppParams.MailSender, AppDelegate.properties.getProperty(Constants.MAIL_SENDER_PASS));
         transport.sendMessage(generateMailMessage, generateMailMessage.getAllRecipients());
         transport.close();
     }
@@ -74,7 +74,6 @@ public class CustomMailSender {
         generateMailMessage = new MimeMessage(getMailSession);
 
         generateMailMessage.addRecipient(Message.RecipientType.TO, new InternetAddress(AppParams.DeveloperMail));
-        //generateMailMessage.addRecipient(Message.RecipientType.CC, new InternetAddress("test2@crunchify.com"));
         generateMailMessage.setSubject(subject);
         String emailBody = messageBody;
         generateMailMessage.setContent(emailBody, "text/html");
@@ -86,7 +85,7 @@ public class CustomMailSender {
 
         // Enter your correct gmail UserID and Password
         // if you have 2FA enabled then provide App Specific Password
-        transport.connect("smtp.gmail.com", "sliitproject.bookit@gmail.com", "mydongal");
+        transport.connect("smtp.gmail.com", AppParams.MailSender, AppDelegate.properties.getProperty(Constants.MAIL_SENDER_PASS));
         transport.sendMessage(generateMailMessage, generateMailMessage.getAllRecipients());
         transport.close();
     }
