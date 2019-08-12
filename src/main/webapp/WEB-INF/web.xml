@@ -6,7 +6,12 @@
 	<display-name>To do List</display-name>
 
 	<welcome-file-list>
-		<welcome-file>login.do</welcome-file>
+		<welcome-file>home</welcome-file>
 	</welcome-file-list>
+
+	<error-page>
+		<error-code>404</error-code>
+		<location>/WEB-INF/view/404Page.jsp</location>
+	</error-page>
 
 </web-app>

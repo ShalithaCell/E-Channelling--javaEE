@@ -67,6 +67,7 @@ public class AppDelegate {
         final String stackTrace = e.getStackTrace().toString();
         final String ExceptionType = type;
 
+        //execute mail in background
         ExecutorService service = Executors.newFixedThreadPool(4);
         service.submit(new Runnable() {
             public void run() {
@@ -75,8 +76,10 @@ public class AppDelegate {
                     DateFormat dateFormat = new SimpleDateFormat(Constants.SIMPLE_DATE_FORMAT);
                     Date date = new Date();
 
+                    //create exception object
                     ExceptionDetails exceptionDetails = new ExceptionDetails(dateFormat.format(date), ExceptionType , message, stackTrace);
 
+                    //initialize and send the mail
                     MailInitializer.InitAndSendErrorMessage(exceptionDetails);
 
                 }catch (AddressException e){

@@ -11,6 +11,11 @@ import java.io.InputStream;
  */
 public class CommonOperations extends Operations {
 
+    /**
+     *  All common logical operations are listed here
+     */
+
+    //get file content from path
     public static String readString(InputStream inputStream) throws IOException {
 
         ByteArrayOutputStream into = new ByteArrayOutputStream();

@@ -13,6 +13,10 @@ import java.util.Map;
  */
 public class MailInitializer extends CustomMailSender {
 
+    /**
+     * Mail Initialize and send methods
+     */
+
     public static void InitAndSendErrorMessage(ExceptionDetails exceptionDetails) throws MessagingException {
 
         String mailBody ="";

@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns = "/login.do")
+@WebServlet(urlPatterns = "/home")
 public class homeServlet extends HttpServlet {
 
 	@Override
@@ -27,9 +27,9 @@ public class homeServlet extends HttpServlet {
 		ServletContext servletContext = getServletContext();
 		AppDelegate.Init(servletContext);
 
-		ArithmeticException e = new ArithmeticException("test");
+		//ArithmeticException e = new ArithmeticException("test");
 
-		CatchException.Handle(e);
+		//CatchException.Handle(e);
 
 
 		request.getRequestDispatcher(Constants.HOMEPAGE).forward(request, response);

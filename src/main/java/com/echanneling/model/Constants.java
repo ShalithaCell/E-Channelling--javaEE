@@ -6,7 +6,7 @@ package com.echanneling.model;
 
 public class Constants {
 
-    /** ===============================Default Constants======================================== */
+    /** =============================== Default Constants ======================================== */
 
     /** Constant for config.properties **/
     public static final String PROPERTY_FILE = "config.properties";
@@ -20,7 +20,13 @@ public class Constants {
     /** Constant for String.Empty **/
     public static final String STRING_EMPTY = "";
 
-    /** ===============================Default Keys======================================== */
+    /** Constant for driver name key of MySQL database */
+    public static final String DRIVER_NAME = "driverName";
+
+    /** Constant for connection string */
+    public static final String CONNECTION_STRING = "connectionString";
+
+    /** =============================== Default Keys ======================================== */
 
     /** Constant for developer mail address **/
     public static final String DEVELOPER_EMAIL = "developerMailAddress";
@@ -28,10 +34,41 @@ public class Constants {
     /** Constant for simple date time format **/
     public static final String SIMPLE_DATE_FORMAT = "yyyy/MM/dd HH:mm:ss";
 
+    /** =============================== Page identifying keys ======================================== */
+    public static final String HOME_PAGE_KEY = "home";
+    public static final String LOGIN_PAGE_KEY = "login";
 
-    /** ===============================Default Routing======================================== */
+
+    /** =============================== Default Routing ======================================== */
     public static final String HOMEPAGE = "/WEB-INF/view/index.jsp";
+    public static final String LOGINPAGE = "/WEB-INF/view/account/login.jsp";
 
     public static final String EXEPTION_MAIL = "WEB-INF/EmailTempletes/ErrorInformTemplete.html";
+
+
+    /** =============================== Default SQL column indexes ======================================== */
+    /** Constant for Column index one */
+    public static final int COLUMN_INDEX_ONE = 1;
+
+    /** Constant for Column index two */
+    public static final int COLUMN_INDEX_TWO = 2;
+
+    /** Constant for Column index three */
+    public static final int COLUMN_INDEX_THREE = 3;
+
+    /** Constant for Column index four */
+    public static final int COLUMN_INDEX_FOUR = 4;
+
+    /** Constant for Column index five */
+    public static final int COLUMN_INDEX_FIVE = 5;
+
+    /** Constant for Column index six */
+    public static final int COLUMN_INDEX_SIX = 6;
+
+    /** Constant for Column index seven */
+    public static final int COLUMN_INDEX_SEVEN = 7;
+
+    /** Constant for Column index eight */
+    public static final int COLUMN_INDEX_EIGHT = 8;
 
 }
