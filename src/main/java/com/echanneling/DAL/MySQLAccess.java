@@ -1,5 +1,6 @@
 package com.echanneling.DAL;
 
+import com.echanneling.delegate.AppParams;
 import com.echanneling.model.Constants;
 
 import java.sql.Connection;
@@ -17,10 +18,10 @@ public class MySQLAccess {
 
         if (connection == null || connection.isClosed()) {
             // This will load the MySQL driver, each DB has its own driver
-            Class.forName(Constants.DRIVER_NAME);
+            Class.forName(AppParams.SQLDriver);
 
             // Setup the connection with the DB
-            connection = DriverManager.getConnection(Constants.CONNECTION_STRING);
+            connection = DriverManager.getConnection(AppParams.ConnectionString);
         }
 
         return connection;

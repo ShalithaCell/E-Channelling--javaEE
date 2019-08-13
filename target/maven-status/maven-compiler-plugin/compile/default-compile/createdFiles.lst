@@ -1,5 +1,8 @@
+com/echanneling/DAL/DBDataAccess.class
 com/echanneling/controller/homeServlet.class
 com/echanneling/service/support/CatchException.class
+com/echanneling/service/support/testSQL.class
+com/echanneling/service/support/DConvert.class
 com/echanneling/controller/LoginServlet.class
 com/echanneling/service/support/MailInitializer.class
 com/echanneling/delegate/AppParams.class
@@ -7,8 +10,10 @@ com/echanneling/delegate/AppDelegate$1.class
 com/echanneling/model/Operations.class
 com/echanneling/service/biz/IOOperations.class
 com/echanneling/service/biz/SessionOperations.class
+com/echanneling/DAL/MySQLAccess.class
 com/echanneling/delegate/AppDelegate.class
 com/echanneling/model/Constants.class
 com/echanneling/service/biz/CommonOperations.class
 com/echanneling/model/ExceptionDetails.class
 com/echanneling/service/support/CustomMailSender.class
+com/echanneling/DAL/CDataAccess.class

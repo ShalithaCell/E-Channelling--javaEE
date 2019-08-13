@@ -11,6 +11,8 @@ public class CDataAccess extends DBDataAccess{
     public static boolean ExecuateNonQuery(String query) throws SQLException, ClassNotFoundException {
 
         try{
+            ReInitializeDBParams();
+
             connection = MySQLAccess.getConnection();
 
             // Statements allow to issue SQL queries to the database
@@ -25,14 +27,6 @@ public class CDataAccess extends DBDataAccess{
             throw e;
         }
         finally {
-            //Close prepared statement and database connectivity at the end of transaction
-            if (preparedStatement != null) {
-                preparedStatement.close();
-            }
-            if (connection != null) {
-                connection.close();
-            }
-
             rowsImpact = 0;
         }
 
@@ -42,10 +36,12 @@ public class CDataAccess extends DBDataAccess{
     public static boolean ExecuateNonQuery(String query, String[] args) throws SQLException, ClassNotFoundException {
 
         try{
+            ReInitializeDBParams();
+
             connection = MySQLAccess.getConnection();
 
             // Statements allow to issue SQL queries to the database
-            statement = connection.createStatement();
+            preparedStatement = connection.prepareStatement(query);
 
             for(int i = 0; i < args.length; i++){
                 // Parameters start with 1
@@ -53,7 +49,7 @@ public class CDataAccess extends DBDataAccess{
             }
 
             // Result set get the result of the SQL query
-            rowsImpact = statement.executeUpdate(query);
+            rowsImpact = preparedStatement.executeUpdate(query);
 
             return rowsImpact > 0;
         }
@@ -61,14 +57,6 @@ public class CDataAccess extends DBDataAccess{
             throw e;
         }
         finally {
-            //Close prepared statement and database connectivity at the end of transaction
-            if (preparedStatement != null) {
-                preparedStatement.close();
-            }
-            if (connection != null) {
-                connection.close();
-            }
-
             rowsImpact = 0;
         }
     }
@@ -78,6 +66,9 @@ public class CDataAccess extends DBDataAccess{
     public static ResultSet ExecuateQuery(String query) throws SQLException, ClassNotFoundException {
 
         try{
+
+            ReInitializeDBParams();
+
             connection = MySQLAccess.getConnection();
 
             // Statements allow to issue SQL queries to the database
@@ -92,17 +83,6 @@ public class CDataAccess extends DBDataAccess{
             throw e;
         }
         finally {
-            //Close prepared statement and database connectivity at the end of transaction
-            if (preparedStatement != null) {
-                preparedStatement.close();
-            }
-            if (connection != null) {
-                connection.close();
-            }
-            if (resultSet != null) {
-                resultSet.close();
-            }
-
             rowsImpact = 0;
         }
 
@@ -112,10 +92,12 @@ public class CDataAccess extends DBDataAccess{
     public static ResultSet ExecuateQuery(String query, String[] args) throws SQLException, ClassNotFoundException {
 
         try{
+            ReInitializeDBParams();
+
             connection = MySQLAccess.getConnection();
 
             // Statements allow to issue SQL queries to the database
-            statement = connection.createStatement();
+            preparedStatement = connection.prepareStatement(query);
 
             for(int i = 0; i < args.length; i++){
                 // Parameters start with 1
@@ -123,7 +105,7 @@ public class CDataAccess extends DBDataAccess{
             }
 
             // Result set get the result of the SQL query
-            resultSet = statement.executeQuery(query);
+            resultSet = preparedStatement.executeQuery(query);
 
             return resultSet;
         }
@@ -131,17 +113,6 @@ public class CDataAccess extends DBDataAccess{
             throw e;
         }
         finally {
-            //Close prepared statement and database connectivity at the end of transaction
-            if (preparedStatement != null) {
-                preparedStatement.close();
-            }
-            if (connection != null) {
-                connection.close();
-            }
-            if (resultSet != null) {
-                resultSet.close();
-            }
-
             rowsImpact = 0;
         }
     }
