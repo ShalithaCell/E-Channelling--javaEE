@@ -1,7 +1,6 @@
 package com.echanneling.DAL;
 
 import com.echanneling.delegate.AppParams;
-import com.echanneling.model.Constants;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

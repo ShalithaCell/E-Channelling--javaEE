@@ -2,7 +2,6 @@ package com.echanneling.delegate;
 
 import com.echanneling.model.Constants;
 import com.echanneling.model.ExceptionDetails;
-import com.echanneling.service.support.CustomMailSender;
 import com.echanneling.service.support.MailInitializer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

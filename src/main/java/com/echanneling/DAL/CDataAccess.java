@@ -3,8 +3,7 @@ package com.echanneling.DAL;
 import com.echanneling.service.support.DConvert;
 
 import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
-import java.sql.*;
+import java.sql.SQLException;
 
 /**
  * @author shalithasenanayaka on 2019-08-12 using IntelliJ IDEA

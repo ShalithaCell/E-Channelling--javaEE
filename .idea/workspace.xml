@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cebaf41e-f4a3-453d-ba76-6ebf40e5dc91" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/DAL/CDataAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/DAL/CDataAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/DAL/DBDataAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/DAL/DBDataAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/controller/homeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/controller/homeServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/delegate/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/delegate/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/model/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/model/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/service/support/CatchException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/service/support/CatchException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/DAL/MySQLAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/DAL/MySQLAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/delegate/AppDelegate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/delegate/AppDelegate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/service/biz/EncryptionModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/service/biz/EncryptionModule.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/service/support/DConvert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/service/support/DConvert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/service/support/testSQL.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/DAL/CDataAccess.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/DAL/CDataAccess.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/service/support/testSQL.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/service/support/testSQL.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -112,7 +105,7 @@
       <workItem from="1565642558568" duration="4029000" />
       <workItem from="1565677848990" duration="6010000" />
       <workItem from="1565702676603" duration="2037000" />
-      <workItem from="1565709199830" duration="1758000" />
+      <workItem from="1565709199830" duration="2025000" />
     </task>
     <task id="LOCAL-00001" summary="clean project and add mailing functions">
       <created>1565503011733</created>
@@ -142,7 +135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565663467871</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Implement Encryption modules">
+      <created>1565711146896</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1565711146896</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,6 +165,7 @@
     <MESSAGE value="clean project and add mailing functions" />
     <MESSAGE value="Implement DB functionality" />
     <MESSAGE value="Implement Convections" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement Convections" />
+    <MESSAGE value="Implement Encryption modules" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement Encryption modules" />
   </component>
 </project>
