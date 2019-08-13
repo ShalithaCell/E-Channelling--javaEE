@@ -26,6 +26,10 @@ public class Constants {
     /** Constant for connection string */
     public static final String CONNECTION_STRING = "connectionString";
 
+    /** Constant for secret and salt */
+    public static final String SECRET_KEY = "secretKey";
+    public static final String SALT = "salt";
+
     /** =============================== Default Keys ======================================== */
 
     /** Constant for developer mail address **/

@@ -1,9 +1,6 @@
 package com.echanneling.DAL;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 
 /**
  * @author shalithasenanayaka on 2019-08-12 using IntelliJ IDEA
@@ -23,11 +20,25 @@ public class DBDataAccess {
         resultSet = null;
     }
 
-    protected static void ReInitializeDBParams(){
-        connection = null;
-        statement = null;
-        preparedStatement = null;
-        resultSet = null;
+    protected static void ReInitializeDBParams() throws SQLException {
+
+        if(connection != null || !connection.isClosed()){
+            connection.close();
+        }
+        if(statement != null){
+            statement = null;
+        }
+
+        if(preparedStatement != null){
+            preparedStatement = null;
+        }
+
+        if (resultSet != null){
+            resultSet = null;
+        }
+
+        rowsImpact = 0;
+
     }
 
 }

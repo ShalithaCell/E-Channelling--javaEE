@@ -5,17 +5,15 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/DAL/CDataAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/DAL/CDataAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/DAL/MySQLAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/DAL/MySQLAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/DAL/DBDataAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/DAL/DBDataAccess.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/controller/homeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/controller/homeServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/delegate/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/delegate/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/controller/homeServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/controller/homeServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/delegate/AppParams.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/delegate/AppParams.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/delegate/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/delegate/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/model/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/model/Constants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/index_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/index_jsp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/index_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/index_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/model/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/model/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/service/support/CatchException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/service/support/CatchException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/service/support/DConvert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/service/support/DConvert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/service/support/testSQL.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/DAL/CDataAccess.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/DAL/CDataAccess.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/service/support/testSQL.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/service/support/testSQL.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -111,7 +109,10 @@
       <workItem from="1565451113727" duration="23941000" />
       <workItem from="1565541115942" duration="5858000" />
       <workItem from="1565604097641" duration="8970000" />
-      <workItem from="1565642558568" duration="3290000" />
+      <workItem from="1565642558568" duration="4029000" />
+      <workItem from="1565677848990" duration="6010000" />
+      <workItem from="1565702676603" duration="2037000" />
+      <workItem from="1565709199830" duration="1758000" />
     </task>
     <task id="LOCAL-00001" summary="clean project and add mailing functions">
       <created>1565503011733</created>
@@ -134,7 +135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565614047573</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Implement Convections">
+      <created>1565663467871</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1565663467871</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,22 +164,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="clean project and add mailing functions" />
     <MESSAGE value="Implement DB functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement DB functionality" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/echanneling/service/support/testSQL.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/echanneling/service/support/testSQL.java</url>
-          <line>18</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Implement Convections" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement Convections" />
   </component>
 </project>

@@ -2,10 +2,18 @@ package com.echanneling.service.support;
 
 import com.echanneling.delegate.AppDelegate;
 
+import javax.crypto.BadPaddingException;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
 import javax.mail.MessagingException;
 import javax.mail.internet.AddressException;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.security.InvalidAlgorithmParameterException;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
+import java.security.spec.InvalidKeySpecException;
 
 /**
  * @author shalithasenanayaka on 2019-08-10 using IntelliJ IDEA
@@ -97,5 +105,42 @@ public class CatchException {
     public static void Handle(Exception e){
         AppDelegate.CustomExceptionHandle(e.getClass().getCanonicalName(),e);
     }
+
+    /** ---Fatal exceptions--- */
+
+    //Encryption errors
+    public static void Handle( InvalidKeySpecException  e){
+        AppDelegate.CustomExceptionHandle(e.getClass().getCanonicalName(),e);
+    }
+
+    public static void Handle( NoSuchAlgorithmException e){
+        AppDelegate.CustomExceptionHandle(e.getClass().getCanonicalName(),e);
+    }
+
+    public static void Handle( BadPaddingException e){
+        AppDelegate.CustomExceptionHandle(e.getClass().getCanonicalName(),e);
+    }
+
+    public static void Handle( InvalidKeyException e){
+        AppDelegate.CustomExceptionHandle(e.getClass().getCanonicalName(),e);
+    }
+
+    public static void Handle( InvalidAlgorithmParameterException e){
+        AppDelegate.CustomExceptionHandle(e.getClass().getCanonicalName(),e);
+    }
+
+    public static void Handle( NoSuchPaddingException e){
+        AppDelegate.CustomExceptionHandle(e.getClass().getCanonicalName(),e);
+    }
+
+    public static void Handle( IllegalBlockSizeException e){
+        AppDelegate.CustomExceptionHandle(e.getClass().getCanonicalName(),e);
+    }
+
+    public static void Handle( UnsupportedEncodingException e){
+        AppDelegate.CustomExceptionHandle(e.getClass().getCanonicalName(),e);
+    }
+
+
 
 }

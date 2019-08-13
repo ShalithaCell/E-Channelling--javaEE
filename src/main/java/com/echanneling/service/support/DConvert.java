@@ -3,6 +3,8 @@ package com.echanneling.service.support;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import javax.sql.rowset.CachedRowSet;
+import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -27,7 +29,7 @@ public class DConvert {
     private static JSONArray jsonArray;
 
     //populate result set to JTable
-    public static DefaultTableModel convertToJTable(ResultSet rs) throws SQLException {
+    public static JTable convertToJTable(ResultSet rs) throws SQLException {
 
         ResultSetMetaData metaData = rs.getMetaData();
 
@@ -48,7 +50,9 @@ public class DConvert {
             data.add(vector);
         }
 
-        return new DefaultTableModel(data, columnNames);
+        JTable table = new JTable(new DefaultTableModel(data, columnNames));
+
+        return table;
 
     }
 

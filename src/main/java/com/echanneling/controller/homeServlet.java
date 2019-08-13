@@ -2,11 +2,8 @@ package com.echanneling.controller;
 
 import com.echanneling.delegate.AppDelegate;
 import com.echanneling.model.Constants;
-import com.echanneling.service.support.CatchException;
-import com.echanneling.service.support.testSQL;
 
 import java.io.IOException;
-import java.io.InputStream;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -32,7 +29,6 @@ public class homeServlet extends HttpServlet {
 
 		//CatchException.Handle(e);
 
-		testSQL.test();
 
 		request.getRequestDispatcher(Constants.HOMEPAGE).forward(request, response);
 	}

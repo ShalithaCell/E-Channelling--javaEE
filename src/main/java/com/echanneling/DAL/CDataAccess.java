@@ -1,5 +1,9 @@
 package com.echanneling.DAL;
 
+import com.echanneling.service.support.DConvert;
+
+import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import java.sql.*;
 
 /**
@@ -27,7 +31,7 @@ public class CDataAccess extends DBDataAccess{
             throw e;
         }
         finally {
-            rowsImpact = 0;
+            ReInitializeDBParams();
         }
 
     }
@@ -57,17 +61,15 @@ public class CDataAccess extends DBDataAccess{
             throw e;
         }
         finally {
-            rowsImpact = 0;
+            ReInitializeDBParams();
         }
     }
 
 
     //Execute plain SQL query to ResultSet
-    public static ResultSet ExecuateQuery(String query) throws SQLException, ClassNotFoundException {
+    public static JTable ExecuateQuery(String query) throws SQLException, ClassNotFoundException {
 
         try{
-
-            ReInitializeDBParams();
 
             connection = MySQLAccess.getConnection();
 
@@ -77,22 +79,23 @@ public class CDataAccess extends DBDataAccess{
             // Result set get the result of the SQL query
             resultSet = statement.executeQuery(query);
 
-            return resultSet;
+            JTable jTable = DConvert.convertToJTable(resultSet);
+
+            return jTable;
         }
         catch (SQLException | ClassNotFoundException e){
             throw e;
         }
         finally {
-            rowsImpact = 0;
+            ReInitializeDBParams();
         }
 
     }
 
     //Execute SQL query with parameters to ResultSet (Secure method - This way can prevent sql injection)
-    public static ResultSet ExecuateQuery(String query, String[] args) throws SQLException, ClassNotFoundException {
+    public static JTable ExecuateQuery(String query, String[] args) throws SQLException, ClassNotFoundException {
 
         try{
-            ReInitializeDBParams();
 
             connection = MySQLAccess.getConnection();
 
@@ -107,13 +110,15 @@ public class CDataAccess extends DBDataAccess{
             // Result set get the result of the SQL query
             resultSet = preparedStatement.executeQuery(query);
 
-            return resultSet;
+            JTable jTable = DConvert.convertToJTable(resultSet);
+
+            return jTable;
         }
         catch (SQLException | ClassNotFoundException e){
             throw e;
         }
         finally {
-            rowsImpact = 0;
+            ReInitializeDBParams();
         }
     }
 
