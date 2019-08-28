@@ -9,95 +9,91 @@
 <!DOCTYPE html>
 <html>
     <head>
+
         <script src="../../../resources/libs/jquery/jquery-3.4.1.min.js"></script>
 
-        <link href="../../../resources/libs/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
-        <script src="../../../resources/libs/MDB/js/popper.min.js"></script>
-        <link href="../../../resources/libs/MDB/css/mdb.min.css" rel="stylesheet">
-
-        <script src="../../../resources/libs/bootstrap-4.3.1/js/bootstrap.min.js"></script>
-        <link href="../../../resources/libs/bootstrap-4.3.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-
+        <script src="../../../resources/libs/jquery-toaster-master/jquery.toaster.js"></script>
         <link href="../../../resources/styles/style-login.css" rel="stylesheet">
         <script src="../../../resources/scripts/script-login.js"></script>
 
-        <script src="../../../resources/scripts/script-default.js"></script>
 
+        <link href="../../../resources/styles/style-default.css" rel="stylesheet">
         <script type="text/javascript">
-            $( document ).ready(function() {
+            $(document).ready(function () {
                 var session = '<%= session.getAttribute("page") %>';
                 sessionManagement(name);
+
+                $('#btnSigbnUp').click(function () {
+
+                    var Emptycontrollers = CheckFormTextElementsIsEmpty('formSignUp')
+
+                    if(Emptycontrollers.length > 0){
+
+                    }
+
+
+                    //$('#testform').submit();
+                });
+
             });
         </script>
-
     </head>
     <body>
 
-        <%@include file="../site-master/header.jsp"%>
+        <%@include file="../site-master/header.jsp" %>
 
         <div style="height: 100%">
-        <div class="cotn_principal">
-            <div class="cont_centrar">
-
-                <div class="cont_login">
-                    <div class="cont_info_log_sign_up">
-                        <div class="col_md_login">
-                            <div class="cont_ba_opcitiy">
-
+            <div class="cotn_principal">
+                <div class="cont_centrar">
+                    <div class="cont_login">
+                        <div class="cont_info_log_sign_up">
+                            <div class="col_md_login">
+                                <div class="cont_ba_opcitiy">
+                                    <h2>LOGIN</h2>
+                                    <p></p>
+                                    <button class="btn_login" onclick="cambiar_login()">LOGIN</button>
+                                </div>
+                            </div>
+                            <div class="col_md_sign_up">
+                                <div class="cont_ba_opcitiy">
+                                    <h2>SIGN UP</h2>
+                                    <p></p>
+                                    <button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN UP</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cont_back_info">
+                            <div class="cont_img_back_grey">
+                                <img src="https://www.gtagangwars.de/suite/images/styleLogo-6bd77433ddf78bd8477ea7306e804f677bc925d0.png"
+                                     alt=""/>
+                            </div>
+                        </div>
+                        <div class="cont_forms">
+                            <div class="cont_img_back_">
+                                <img src="https://www.gtagangwars.de/suite/images/styleLogo-6bd77433ddf78bd8477ea7306e804f677bc925d0.png"
+                                     alt=""/>
+                            </div>
+                            <form id="testform" class="cont_form_login" action="login" method="post">
+                                <a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons"></i></a>
                                 <h2>LOGIN</h2>
-                                <p></p>
-                                <button class="btn_login" onclick="cambiar_login()">LOGIN</button>
-                            </div>
-                        </div>
-                        <div class="col_md_sign_up">
-                            <div class="cont_ba_opcitiy">
-                                <h2>SIGN UP</h2>
-
-
-                                <p></p>
-
-                                <button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN UP</button>
-                            </div>
+                                <input type="email" placeholder="Email"/>
+                                <input type="password" placeholder="Password"/>
+                                <button type="button" class="btn_login" id="btnlogin">LOGIN</button>
+                            </form>
+                            <form id="formSignUp" action="login" method="post">
+                                <div class="cont_form_sign_up">
+                                    <a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons"></i></a>
+                                    <h2>SIGN UP</h2>
+                                    <input type="text" placeholder="Email" id="txtEmail" class="has-error"/>
+                                    <input id="txtPassword" type="password" placeholder="Password"/>
+                                    <input type="password" id="confirmPassword" placeholder="Confirm Password"/>
+                                    <button type="button" class="btn_sign_up" id="btnSigbnUp">SIGN UP</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
-
-
-                    <div class="cont_back_info">
-                        <div class="cont_img_back_grey">
-                            <img src="https://www.gtagangwars.de/suite/images/styleLogo-6bd77433ddf78bd8477ea7306e804f677bc925d0.png" alt="" />
-                        </div>
-
-                    </div>
-                    <div class="cont_forms" >
-                        <div class="cont_img_back_">
-                            <img src="https://www.gtagangwars.de/suite/images/styleLogo-6bd77433ddf78bd8477ea7306e804f677bc925d0.png" alt="" />
-                        </div>
-                        <div class="cont_form_login">
-                            <a href="#" onclick="ocultar_login_sign_up()" ><i class="material-icons"></i></a>
-                            <h2>LOGIN</h2>
-                            <input type="text" placeholder="Email" />
-                            <input type="password" placeholder="Password" />
-                            <button class="btn_login" onclick="cambiar_login()">LOGIN</button>
-                        </div>
-
-                        <div class="cont_form_sign_up">
-                            <a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons"></i></a>
-                            <h2>SIGN UP</h2>
-                            <input type="text" placeholder="Email" />
-                            <input type="password" placeholder="Password" />
-                            <input type="password" placeholder="Confirm Password" />
-                            <button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN UP</button>
-
-                        </div>
-
-                    </div>
-
                 </div>
             </div>
         </div>
-        </div>
-
-
     </body>
 </html>

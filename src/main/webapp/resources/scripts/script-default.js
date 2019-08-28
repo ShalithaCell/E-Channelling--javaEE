@@ -14,3 +14,28 @@ function sessionManagement(name) {
     }
 }
 
+function checkMailIsValied(email){
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    if(!email.match(re)) {
+        return false;
+    }
+    return true;
+}
+
+function CheckFormTextElementsIsEmpty(FormName) {
+    var controlArray = [];
+
+    $('#'+FormName).find('input[type="text"],input[type="password"],input[type="email"]').each(function () {
+
+
+        if($(this).val().length == 0){
+            controlArray.push($(this).attr('id'));
+        }
+
+    });
+
+    return controlArray;
+}
+
+
+

@@ -13,10 +13,11 @@ import java.io.IOException;
 /**
  * @author shalithasenanayaka on 2019-08-11 using IntelliJ IDEA
  */
-@WebServlet(urlPatterns = "/login")
+@WebServlet(urlPatterns = {"/login", "/register", "/sighup"})
 public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        response.setContentType("text/plain");
+        response.getWriter().write("greetings");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

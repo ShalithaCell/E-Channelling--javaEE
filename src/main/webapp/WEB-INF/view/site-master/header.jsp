@@ -22,6 +22,8 @@
 
         <link href="../../../resources/styles/navbar-master.css" rel="stylesheet">
 
+        <script src="../../../resources/scripts/script-default.js"></script>
+
 
     </head>
     <body>
