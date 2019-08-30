@@ -6,35 +6,18 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cebaf41e-f4a3-453d-ba76-6ebf40e5dc91" name="Default Changelist" comment="Optimise Imports">
+    <list default="true" id="cebaf41e-f4a3-453d-ba76-6ebf40e5dc91" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/controller/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/controller/LoginServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/account/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/account/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/site-master/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/site-master/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/scripts/script-default.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/scripts/script-default.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/DAL/CDataAccess.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/DAL/CDataAccess.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/DAL/DBDataAccess.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/DAL/DBDataAccess.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/DAL/MySQLAccess.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/DAL/MySQLAccess.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/controller/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/controller/LoginServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/controller/homeServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/controller/homeServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/delegate/AppDelegate$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/delegate/AppDelegate$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/delegate/AppDelegate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/delegate/AppDelegate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/delegate/AppParams.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/delegate/AppParams.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/delegate/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/delegate/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/model/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/model/Constants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/service/support/CatchException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/service/support/CatchException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/service/support/DConvert.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/service/support/DConvert.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/service/support/testSQL.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/com.echanneling/E-Channeling/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/com.echanneling/E-Channeling/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/com.echanneling/E-Channeling/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/com.echanneling/E-Channeling/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-08-13" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-08-13" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/libs/jquery-toaster-master/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/jquery.toaster-master/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/libs/jquery-toaster-master/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/jquery.toaster-master/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/libs/jquery-toaster-master/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/jquery.toaster-master/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/libs/jquery-toaster-master/bower.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/jquery.toaster-master/bower.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/libs/jquery-toaster-master/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/jquery.toaster-master/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/libs/jquery-toaster-master/jquery.toaster.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/jquery.toaster-master/jquery.toaster.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/libs/jquery-toaster-master/toaster.jquery.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/jquery.toaster-master/toaster.jquery.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/account/login_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/account/login_jsp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/account/login_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/account/login_jsp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/index_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/index_jsp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/index_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/index_jsp.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,9 +30,9 @@
       <list>
         <option value="package-info" />
         <option value="Jsp File" />
-        <option value="JavaScript File" />
         <option value="Class" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -62,18 +45,19 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF/EmailTempletes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/resources/libs" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources/libs" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/EmailTempletes" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp/resources/libs" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/EmailTempletes" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/EmailTempletes" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -184,7 +168,8 @@
       <workItem from="1566582499899" duration="88000" />
       <workItem from="1566620893918" duration="2036000" />
       <workItem from="1566753689219" duration="6672000" />
-      <workItem from="1566965416699" duration="3634000" />
+      <workItem from="1566965416699" duration="3929000" />
+      <workItem from="1567130226136" duration="1904000" />
     </task>
     <task id="LOCAL-00001" summary="clean project and add mailing functions">
       <created>1565503011733</created>
@@ -228,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565711318555</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Import JQuery toaster">
+      <created>1566973862755</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1566973862755</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,7 +245,8 @@
     <MESSAGE value="Implement Convections" />
     <MESSAGE value="Implement Encryption modules" />
     <MESSAGE value="Optimise Imports" />
-    <option name="LAST_COMMIT_MESSAGE" value="Optimise Imports" />
+    <MESSAGE value="Import JQuery toaster" />
+    <option name="LAST_COMMIT_MESSAGE" value="Import JQuery toaster" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

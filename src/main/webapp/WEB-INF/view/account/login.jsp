@@ -12,7 +12,8 @@
 
         <script src="../../../resources/libs/jquery/jquery-3.4.1.min.js"></script>
 
-        <script src="../../../resources/libs/jquery-toaster-master/jquery.toaster.js"></script>
+
+
         <link href="../../../resources/styles/style-login.css" rel="stylesheet">
         <script src="../../../resources/scripts/script-login.js"></script>
 
@@ -24,13 +25,16 @@
                 sessionManagement(name);
 
                 $('#btnSigbnUp').click(function () {
+                    var counter = 0;
+                    var controllers = CheckFormTextElementsIsEmpty('formSignUp')
 
-                    var Emptycontrollers = CheckFormTextElementsIsEmpty('formSignUp')
-
-                    if(Emptycontrollers.length > 0){
-
+                    if(controllers.length > 0){
+                        jQuery.each( controllers, function( i, val ) {
+                            counter++;
+                            $('#'+val).addClass('has-error');
+                        });
                     }
-
+                    StartToasterMessage(MESSAGE_DANGER, 'hi', 'title');
 
                     //$('#testform').submit();
                 });
@@ -84,7 +88,7 @@
                                 <div class="cont_form_sign_up">
                                     <a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons"></i></a>
                                     <h2>SIGN UP</h2>
-                                    <input type="text" placeholder="Email" id="txtEmail" class="has-error"/>
+                                    <input type="text" placeholder="Email" id="txtEmail"/>
                                     <input id="txtPassword" type="password" placeholder="Password"/>
                                     <input type="password" id="confirmPassword" placeholder="Confirm Password"/>
                                     <button type="button" class="btn_sign_up" id="btnSigbnUp">SIGN UP</button>
@@ -95,5 +99,10 @@
                 </div>
             </div>
         </div>
+
+        <script src="../../../resources/libs/jquery.toaster-master/jquery.toaster.js"></script>
+        <script src="../../../resources/scripts/toastMessageHandler.js"></script>
+        <script src="../../../resources/scripts/constants.js"></script>
+
     </body>
 </html>
