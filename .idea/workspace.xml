@@ -8,14 +8,10 @@
   <component name="ChangeListManager">
     <list default="true" id="cebaf41e-f4a3-453d-ba76-6ebf40e5dc91" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/controller/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/controller/LoginServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/account/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/account/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/libs/jquery-toaster-master/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/jquery.toaster-master/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/libs/jquery-toaster-master/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/jquery.toaster-master/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/libs/jquery-toaster-master/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/jquery.toaster-master/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/libs/jquery-toaster-master/bower.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/jquery.toaster-master/bower.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/libs/jquery-toaster-master/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/jquery.toaster-master/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/libs/jquery-toaster-master/jquery.toaster.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/jquery.toaster-master/jquery.toaster.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/libs/jquery-toaster-master/toaster.jquery.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/jquery.toaster-master/toaster.jquery.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/scripts/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/scripts/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/controller/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/controller/LoginServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/account/login_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/account/login_jsp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/account/login_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/account/login_jsp.java" afterDir="false" />
     </list>
@@ -169,7 +165,9 @@
       <workItem from="1566620893918" duration="2036000" />
       <workItem from="1566753689219" duration="6672000" />
       <workItem from="1566965416699" duration="3929000" />
-      <workItem from="1567130226136" duration="1904000" />
+      <workItem from="1567130226136" duration="2003000" />
+      <workItem from="1567186474140" duration="563000" />
+      <workItem from="1567351837039" duration="1943000" />
     </task>
     <task id="LOCAL-00001" summary="clean project and add mailing functions">
       <created>1565503011733</created>
@@ -220,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566973862755</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Reformat and Optimize Jquery methods">
+      <created>1567132496653</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1567132496653</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,20 +251,21 @@
     <MESSAGE value="Implement Encryption modules" />
     <MESSAGE value="Optimise Imports" />
     <MESSAGE value="Import JQuery toaster" />
-    <option name="LAST_COMMIT_MESSAGE" value="Import JQuery toaster" />
+    <MESSAGE value="Reformat and Optimize Jquery methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reformat and Optimize Jquery methods" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/echanneling/controller/LoginServlet.java</url>
-          <line>18</line>
-          <option name="timeStamp" value="2" />
+          <line>28</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/echanneling/controller/LoginServlet.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="3" />
+          <line>21</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

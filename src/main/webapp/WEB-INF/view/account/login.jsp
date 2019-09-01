@@ -24,6 +24,17 @@
                 var session = '<%= session.getAttribute("page") %>';
                 sessionManagement(name);
 
+
+                $('#formSignUp').find('input[type="text"],input[type="password"],input[type="email"]').on("change paste keyup", function() {
+
+
+                    if($(this).val().length != 0){
+                        $(this).removeClass('has-error');
+                    }
+
+                });
+
+
                 $('#btnSigbnUp').click(function () {
                     var counter = 0;
                     var controllers = CheckFormTextElementsIsEmpty('formSignUp')
@@ -33,10 +44,18 @@
                             counter++;
                             $('#'+val).addClass('has-error');
                         });
-                    }
-                    StartToasterMessage(MESSAGE_DANGER, 'hi', 'title');
 
-                    //$('#testform').submit();
+                        StartToasterMessage(MESSAGE_DANGER, REQUIRED_FIELD, 'required');
+
+                    }else if($('#txtPassword').val() != $('#confirmPassword').val()){
+                        StartToasterMessage(MESSAGE_DANGER, PASSWORD_DOESNOT_MATCH, 'Notice');
+                        $('#txtPassword').addClass('has-error');
+                        $('#confirmPassword').addClass('has-error');
+                    }
+                    else{
+                        $('#testform').submit();
+                    }
+
                 });
 
             });
@@ -88,8 +107,8 @@
                                 <div class="cont_form_sign_up">
                                     <a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons"></i></a>
                                     <h2>SIGN UP</h2>
-                                    <input type="text" placeholder="Email" id="txtEmail"/>
-                                    <input id="txtPassword" type="password" placeholder="Password"/>
+                                    <input type="text" name="txtEmails" placeholder="Email" id="txtEmail"/>
+                                    <input id="txtPassword" name="txtPasswords" type="password" placeholder="Password"/>
                                     <input type="password" id="confirmPassword" placeholder="Confirm Password"/>
                                     <button type="button" class="btn_sign_up" id="btnSigbnUp">SIGN UP</button>
                                 </div>

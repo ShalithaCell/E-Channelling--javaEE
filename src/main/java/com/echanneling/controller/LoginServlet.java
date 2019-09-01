@@ -16,8 +16,12 @@ import java.io.IOException;
 @WebServlet(urlPatterns = {"/login", "/register", "/sighup"})
 public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setContentType("text/plain");
-        response.getWriter().write("greetings");
+        //response.setContentType("text/plain");
+        //response.getWriter().write("greetings");
+
+        String email = request.getParameter("txtEmails");
+        String password = request.getParameter("txtPassword");
+
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
