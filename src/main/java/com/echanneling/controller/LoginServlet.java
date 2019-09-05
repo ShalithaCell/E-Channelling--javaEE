@@ -1,8 +1,11 @@
 package com.echanneling.controller;
 
+import com.echanneling.delegate.AppDelegate;
 import com.echanneling.model.Constants;
 import com.echanneling.service.biz.SessionOperations;
+import com.echanneling.service.biz.UserManagementService;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -16,11 +19,24 @@ import java.io.IOException;
 @WebServlet(urlPatterns = {"/login", "/register", "/sighup"})
 public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //response.setContentType("text/plain");
-        //response.getWriter().write("greetings");
 
-        String email = request.getParameter("txtEmails");
-        String password = request.getParameter("txtPassword");
+
+        //first time run
+        ServletContext servletContext = getServletContext();
+        AppDelegate.Init(servletContext);
+
+        String command = request.getParameter("command");
+
+        switch (command){
+            case "login":
+                UserManagementService.checkUserEmailIsExists("shalithax@gmail.com");
+                break;
+        }
+
+        String greetings = "Hello ";
+
+        response.setContentType("text/plain");
+        response.getWriter().write(greetings);
 
     }
 

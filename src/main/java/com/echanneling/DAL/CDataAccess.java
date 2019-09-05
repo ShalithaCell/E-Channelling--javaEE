@@ -1,9 +1,19 @@
 package com.echanneling.DAL;
 
+import com.echanneling.service.biz.CommonOperations;
 import com.echanneling.service.support.DConvert;
+import com.mysql.cj.jdbc.CallableStatement;
+import org.javatuples.Quartet;
+import org.javatuples.Triplet;
 
 import javax.swing.*;
 import java.sql.SQLException;
+import java.sql.SQLType;
+import java.sql.Types;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author shalithasenanayaka on 2019-08-12 using IntelliJ IDEA
@@ -119,6 +129,48 @@ public class CDataAccess extends DBDataAccess{
         finally {
             ReInitializeDBParams();
         }
+    }
+
+    public static HashMap<String, String> ExecuateProcedure (String procedureName, Triplet<String, Object, Boolean>[] paramSet) throws SQLException, ClassNotFoundException{
+        /**
+         * procedureName = Stored procedure name
+         *
+         * Quartet - { param name, param value, is output}
+         */
+
+        connection = MySQLAccess.getConnection();
+
+        String procedure = CommonOperations.InitSQLProcedure(procedureName, paramSet);
+
+        CallableStatement stmt= (CallableStatement) connection.prepareCall(procedure);
+
+        int counter = 1;
+        HashMap<String ,Integer> outputIndexes = new HashMap<String ,Integer>();
+
+        for (Triplet<String, Object, Boolean> item: paramSet) {
+            if(item.getValue2()){
+                //Set OUT parameter
+                stmt.registerOutParameter(counter, Types.VARCHAR);
+                outputIndexes.put(item.getValue0(), counter);
+                counter++;
+                continue;
+            }
+
+            if((item.getValue1() instanceof String)){
+                stmt.setString(counter, (String) item.getValue1());
+            }
+            counter++;
+        }
+
+        //Execute stored procedure
+        stmt.execute();
+
+        HashMap<String, String> outputParamSet = new HashMap<>();
+        for (Map.Entry<String, Integer> entry : outputIndexes.entrySet()) {
+            outputParamSet.put(entry.getKey(), stmt.getString(entry.getValue()));
+        }
+
+        return outputParamSet;
     }
 
 

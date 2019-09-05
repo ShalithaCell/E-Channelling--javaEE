@@ -53,12 +53,15 @@
                         $('#confirmPassword').addClass('has-error');
                     }
                     else{
-                        $('#testform').submit();
+                        //$('#testform').submit();
+                        RegisterUser($('#txtEmail').val(), $('#txtPassword').val());
                     }
 
                 });
 
             });
+
+
         </script>
     </head>
     <body>
@@ -107,7 +110,7 @@
                                 <div class="cont_form_sign_up">
                                     <a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons"></i></a>
                                     <h2>SIGN UP</h2>
-                                    <input type="text" name="txtEmails" placeholder="Email" id="txtEmail"/>
+                                    <input type="text" name="txtEmails" value="" placeholder="Email" id="txtEmail"/>
                                     <input id="txtPassword" name="txtPasswords" type="password" placeholder="Password"/>
                                     <input type="password" id="confirmPassword" placeholder="Confirm Password"/>
                                     <button type="button" class="btn_sign_up" id="btnSigbnUp">SIGN UP</button>

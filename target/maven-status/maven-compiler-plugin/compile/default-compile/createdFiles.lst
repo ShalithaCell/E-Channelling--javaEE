@@ -1,3 +1,4 @@
+com/echanneling/service/biz/UserManagementService.class
 com/echanneling/DAL/DBDataAccess.class
 com/echanneling/controller/homeServlet.class
 com/echanneling/service/support/CatchException.class

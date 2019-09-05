@@ -38,3 +38,18 @@ function ocultar_login_sign_up() {
     },500);
 
 }
+
+function RegisterUser(email, password) {
+    $.ajax({
+        url: 'login',
+        type: 'post',
+        data: { "txtEmails": email, "password" : password , "command" : "login"},
+        success: function(response) {
+
+            console.log(response);
+
+
+        }
+    });
+
+}
