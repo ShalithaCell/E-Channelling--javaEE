@@ -1,6 +1,7 @@
 package com.echanneling.service.biz;
 
 import com.echanneling.DAL.CDataAccess;
+import com.echanneling.model.ProcedureParams;
 import org.javatuples.Quartet;
 import org.javatuples.Triplet;
 
@@ -14,24 +15,18 @@ import java.util.HashMap;
  */
 public class UserManagementService {
 
-    public static boolean checkUserEmailIsExists(String email){
+    public static boolean checkUserEmailIsExists(String email) throws SQLException, ClassNotFoundException {
 
-        Triplet<String, Object, Boolean>[] paramSet = new Triplet[2];
-        Triplet<String, Object, Boolean> paramSet1 = new Triplet<String, Object, Boolean>("UserEmail", "shalithax@gmail.com", false);
-        Triplet<String, Object, Boolean> paramSet2 = new Triplet<String, Object, Boolean>("result", "5", true);
-        paramSet[0] = paramSet1;
-        paramSet[1] = paramSet2;
+        ProcedureParams procedureParams = new ProcedureParams();
+        procedureParams.setParamSet("UserEmail", "shalithax@gmail.com", false);
+        procedureParams.setParamSet("result", "2", true);
 
+        HashMap<String, String> params = CDataAccess.ExecuateProcedure("SP_CHECK_USER_EMAIL_EXISTS", procedureParams.getParamSet());
 
-        try {
-            HashMap<String, String> params = CDataAccess.ExecuateProcedure("SP_CHECK_USER_EMAIL_EXISTS", paramSet);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-
-        return true;
+        if(params.get("result").equals("0"))
+            return false;
+        else
+            return true;
     }
 
 }

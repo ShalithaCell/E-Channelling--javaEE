@@ -64,6 +64,13 @@
 		  <version>1.0.0</version>
 	  </dependency>
 
+	  <!-- https://mvnrepository.com/artifact/org.javatuples/javatuples -->
+	  <dependency>
+		  <groupId>org.javatuples</groupId>
+		  <artifactId>javatuples</artifactId>
+		  <version>1.2</version>
+	  </dependency>
+
 
 
   </dependencies>
@@ -99,6 +106,16 @@
 				</plugin>
 			</plugins>
 		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>8</source>
+					<target>8</target>
+				</configuration>
+			</plugin>
+		</plugins>
 	</build>
 
   

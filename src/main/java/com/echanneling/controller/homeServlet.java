@@ -21,10 +21,6 @@ public class homeServlet extends HttpServlet {
 		request.setAttribute("name", "shalitha");
 		request.setAttribute("title", AppDelegate.properties.getProperty("projectName"));
 
-		//first time run
-		ServletContext servletContext = getServletContext();
-		AppDelegate.Init(servletContext);
-
 		//ArithmeticException e = new ArithmeticException("test");
 
 		//CatchException.Handle(e);

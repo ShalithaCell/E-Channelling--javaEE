@@ -28,7 +28,11 @@ public class Constants {
 
     /** Constant for secret and salt */
     public static final String SECRET_KEY = "secretKey";
+
     public static final String SALT = "salt";
+
+    public static final String XML_ROOT_NODE = "queries";
+    public static final String XML_TAG_QUERY = "query";
 
     /** =============================== Default Keys ======================================== */
 
@@ -48,6 +52,7 @@ public class Constants {
     public static final String LOGINPAGE = "/WEB-INF/view/account/login.jsp";
 
     public static final String EXEPTION_MAIL = "WEB-INF/EmailTempletes/ErrorInformTemplete.html";
+    public static final String CONFIG_XML = "WEB-INF/SystemInfo.xml";
 
 
     /** =============================== Default SQL column indexes ======================================== */

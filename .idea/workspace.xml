@@ -8,37 +8,22 @@
   <component name="ChangeListManager">
     <list default="true" id="cebaf41e-f4a3-453d-ba76-6ebf40e5dc91" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/DAL/CDataAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/DAL/CDataAccess.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/controller/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/controller/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/delegate/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/delegate/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/service/biz/CommonOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/service/biz/CommonOperations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/account/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/account/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/scripts/script-login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/scripts/script-login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/DAL/CDataAccess.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/DAL/CDataAccess.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/DAL/DBDataAccess.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/DAL/DBDataAccess.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/DAL/MySQLAccess.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/DAL/MySQLAccess.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/controller/homeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/controller/homeServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/delegate/AppDelegate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/delegate/AppDelegate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/model/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/model/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/model/ProcedureParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/model/ProcedureParams.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/service/biz/UserManagementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/service/biz/UserManagementService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/controller/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/controller/LoginServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/controller/homeServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/controller/homeServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/delegate/AppDelegate$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/delegate/AppDelegate$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/delegate/AppDelegate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/delegate/AppDelegate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/delegate/AppParams.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/delegate/AppParams.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/delegate/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/delegate/config.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/model/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/model/Constants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/model/ExceptionDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/model/ExceptionDetails.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/model/Operations.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/model/Operations.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/service/biz/CommonOperations.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/service/biz/CommonOperations.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/service/biz/EncryptionModule.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/service/biz/EncryptionModule.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/service/biz/IOOperations.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/service/biz/IOOperations.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/service/biz/SessionOperations.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/service/biz/SessionOperations.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/service/support/CatchException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/service/support/CatchException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/service/support/CustomMailSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/service/support/CustomMailSender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/service/support/DConvert.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/service/support/DConvert.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/service/support/MailInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/service/support/MailInitializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/service/biz/UserManagementService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/service/biz/UserManagementService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/com.echanneling/E-Channeling/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/com.echanneling/E-Channeling/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/com.echanneling/E-Channeling/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/com.echanneling/E-Channeling/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/account/login_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/account/login_jsp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/account/login_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/account/login_jsp.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -200,7 +185,10 @@
       <workItem from="1567564660887" duration="3418000" />
       <workItem from="1567617940810" duration="1533000" />
       <workItem from="1567647356623" duration="3323000" />
-      <workItem from="1567677885328" duration="3948000" />
+      <workItem from="1567677885328" duration="4029000" />
+      <workItem from="1567735806994" duration="949000" />
+      <workItem from="1567856277739" duration="3944000" />
+      <workItem from="1567905590996" duration="2523000" />
     </task>
     <task id="LOCAL-00001" summary="clean project and add mailing functions">
       <created>1565503011733</created>
@@ -265,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567355196844</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Implement DB Stored Procedure exec function">
+      <created>1567712997104</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1567712997105</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,6 +288,38 @@
     <MESSAGE value="Import JQuery toaster" />
     <MESSAGE value="Reformat and Optimize Jquery methods" />
     <MESSAGE value="Implement SignUp frontEnd" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement SignUp frontEnd" />
+    <MESSAGE value="Implement DB Stored Procedure exec function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement DB Stored Procedure exec function" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/echanneling/DAL/CDataAccess.java</url>
+          <line>167</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/echanneling/DAL/CDataAccess.java</url>
+          <line>140</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/echanneling/delegate/AppDelegate.java</url>
+          <line>105</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/echanneling/delegate/AppDelegate.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/echanneling/controller/DelegateServlet.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

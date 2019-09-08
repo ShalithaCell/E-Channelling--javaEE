@@ -1,0 +1,10 @@
+0:0:0:0:0:0:0:1 - - [06/Sep/2019:07:53:02 +0530] "GET / HTTP/1.1" 200 7081 http-bio-8080-exec-1 632
+0:0:0:0:0:0:0:1 - - [06/Sep/2019:07:53:02 +0530] "GET /resources/scripts/script-default.js HTTP/1.1" 304 - http-bio-8080-exec-3 13
+0:0:0:0:0:0:0:1 - - [06/Sep/2019:07:53:03 +0530] "GET /favicon.ico HTTP/1.1" 404 2344 http-bio-8080-exec-4 247
+0:0:0:0:0:0:0:1 - - [06/Sep/2019:07:53:05 +0530] "GET /login HTTP/1.1" 200 9500 http-bio-8080-exec-5 85
+0:0:0:0:0:0:0:1 - - [06/Sep/2019:07:53:05 +0530] "GET /resources/scripts/script-login.js HTTP/1.1" 304 - http-bio-8080-exec-2 39
+0:0:0:0:0:0:0:1 - - [06/Sep/2019:07:53:05 +0530] "GET /resources/styles/style-default.css HTTP/1.1" 304 - http-bio-8080-exec-6 56
+0:0:0:0:0:0:0:1 - - [06/Sep/2019:07:53:05 +0530] "GET /resources/scripts/toastMessageHandler.js HTTP/1.1" 304 - http-bio-8080-exec-7 32
+0:0:0:0:0:0:0:1 - - [06/Sep/2019:07:53:06 +0530] "GET /resources/scripts/constants.js HTTP/1.1" 304 - http-bio-8080-exec-8 111
+0:0:0:0:0:0:0:1 - - [06/Sep/2019:07:53:13 +0530] "POST /login HTTP/1.1" 500 1624 http-bio-8080-exec-8 19
+0:0:0:0:0:0:0:1 - - [06/Sep/2019:07:53:52 +0530] "POST /login HTTP/1.1" 500 1624 http-bio-8080-exec-7 4

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- @author shalithasenanayaka on 2019-08-10 using IntelliJ IDEA -->
+
+<queries>
+    <query id="checkEmailDuplicate">SP_CHECK_USER_EMAIL_EXISTS</query>
+</queries>

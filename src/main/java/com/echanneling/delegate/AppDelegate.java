@@ -5,10 +5,17 @@ import com.echanneling.model.ExceptionDetails;
 import com.echanneling.service.support.MailInitializer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.w3c.dom.Document;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
 
 import javax.mail.MessagingException;
 import javax.mail.internet.AddressException;
 import javax.servlet.ServletContext;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.text.DateFormat;
@@ -50,7 +57,9 @@ public class AppDelegate {
 
         //run all delegates
         sContext = context;
-        System.out.println(AppParams.InitParam  +" the Ap delegate");
+        System.out.println(AppParams.InitParam  +" the App delegate");
+        InstantiateXMLFile();
+
 
     }
 
@@ -90,6 +99,25 @@ public class AppDelegate {
 
             }
         });
+    }
+
+    public static void InstantiateXMLFile() {
+        try{
+            File xmlFile = new File(Constants.CONFIG_XML);
+            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder builder = factory.newDocumentBuilder();
+            Document doc = builder.parse(xmlFile);
+
+            NodeList studentNodes = doc.getElementsByTagName(Constants.XML_ROOT_NODE);
+            for(int i=0; i<studentNodes.getLength(); i++){
+                System.out.println("ok");
+            }
+        }catch (ParserConfigurationException | IOException| SAXException e){
+            logger.error("This is error : " + e);
+        }
+
+
+
 
 
 
