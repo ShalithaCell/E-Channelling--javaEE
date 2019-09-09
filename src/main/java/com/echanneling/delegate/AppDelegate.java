@@ -2,10 +2,13 @@ package com.echanneling.delegate;
 
 import com.echanneling.model.Constants;
 import com.echanneling.model.ExceptionDetails;
+import com.echanneling.service.support.CatchException;
 import com.echanneling.service.support.MailInitializer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
@@ -21,6 +24,7 @@ import java.io.InputStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Properties;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -38,6 +42,8 @@ public class AppDelegate {
     //private static final Logger LOGGER = Logger.getLogger( AppDelegate.class.getName() );
     final static Logger logger = LogManager.getLogger(AppDelegate.class);
     public static final Properties properties = new Properties();
+
+    private static HashMap<String,String> QueryParams=new HashMap<String, String>();
 
     public static ServletContext sContext;
 
@@ -100,27 +106,36 @@ public class AppDelegate {
             }
         });
     }
-
+    //read all  system config xml file
     public static void InstantiateXMLFile() {
         try{
-            File xmlFile = new File(Constants.CONFIG_XML);
+            String webRoot = sContext.getRealPath("");
+
+            File xmlFile = new File(webRoot + "/" + Constants.CONFIG_XML);
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
             Document doc = builder.parse(xmlFile);
+            doc.getDocumentElement().normalize();
 
-            NodeList studentNodes = doc.getElementsByTagName(Constants.XML_ROOT_NODE);
-            for(int i=0; i<studentNodes.getLength(); i++){
-                System.out.println("ok");
+            NodeList Queries = doc.getElementsByTagName(Constants.XML_ROOT_NODE_QURIES);
+            NodeList QueryList = Queries.item(0).getChildNodes();
+
+            for(int i = 0; i < QueryList.getLength(); i++) {
+                Node current = QueryList.item(i);
+                //Only want stuff from ELEMENT nodes
+                if(current.getNodeType() == Node.ELEMENT_NODE) {
+                    QueryParams.put(((Element) current).getAttribute("id"), current.getTextContent());
+                }
             }
+
         }catch (ParserConfigurationException | IOException| SAXException e){
-            logger.error("This is error : " + e);
+            CatchException.Handle(e);
         }
+    }
 
-
-
-
-
-
+    //get sql query by id
+    public static String GetSQLQuery(String key){
+        return QueryParams.get(key);
     }
 
 

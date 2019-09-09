@@ -1,0 +1,13 @@
+0:0:0:0:0:0:0:1 - - [08/Sep/2019:08:26:04 +0530] "GET /login HTTP/1.1" 200 9500 http-bio-8080-exec-1 182
+0:0:0:0:0:0:0:1 - - [08/Sep/2019:08:26:04 +0530] "GET /resources/styles/style-login.css HTTP/1.1" 304 - http-bio-8080-exec-2 88
+0:0:0:0:0:0:0:1 - - [08/Sep/2019:08:26:04 +0530] "GET /resources/scripts/script-login.js HTTP/1.1" 304 - http-bio-8080-exec-5 32
+0:0:0:0:0:0:0:1 - - [08/Sep/2019:08:26:04 +0530] "GET /resources/libs/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1" 304 - http-bio-8080-exec-4 34
+0:0:0:0:0:0:0:1 - - [08/Sep/2019:08:26:04 +0530] "GET /resources/libs/jquery/jquery-3.4.1.min.js HTTP/1.1" 304 - http-bio-8080-exec-3 130
+0:0:0:0:0:0:0:1 - - [08/Sep/2019:08:26:05 +0530] "GET /resources/libs/MDB/js/popper.min.js HTTP/1.1" 304 - http-bio-8080-exec-10 182
+0:0:0:0:0:0:0:1 - - [08/Sep/2019:08:26:05 +0530] "GET /resources/styles/navbar-master.css HTTP/1.1" 304 - http-bio-8080-exec-3 34
+0:0:0:0:0:0:0:1 - - [08/Sep/2019:08:26:05 +0530] "GET /resources/libs/bootstrap-4.3.1/js/bootstrap.min.js HTTP/1.1" 304 - http-bio-8080-exec-6 185
+0:0:0:0:0:0:0:1 - - [08/Sep/2019:08:26:05 +0530] "GET /resources/libs/MDB/css/mdb.min.css HTTP/1.1" 304 - http-bio-8080-exec-7 240
+0:0:0:0:0:0:0:1 - - [08/Sep/2019:08:26:05 +0530] "GET /resources/libs/bootstrap-4.3.1/css/bootstrap.min.css HTTP/1.1" 304 - http-bio-8080-exec-8 89
+0:0:0:0:0:0:0:1 - - [08/Sep/2019:08:26:05 +0530] "GET /resources/scripts/constants.js HTTP/1.1" 304 - http-bio-8080-exec-7 46
+0:0:0:0:0:0:0:1 - - [08/Sep/2019:08:26:05 +0530] "GET /resources/libs/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 304 - http-bio-8080-exec-5 3
+0:0:0:0:0:0:0:1 - - [08/Sep/2019:08:26:49 +0530] "GET /login HTTP/1.1" 200 9500 http-bio-8080-exec-1 135

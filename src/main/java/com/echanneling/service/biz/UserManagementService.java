@@ -1,6 +1,8 @@
 package com.echanneling.service.biz;
 
 import com.echanneling.DAL.CDataAccess;
+import com.echanneling.delegate.AppDelegate;
+import com.echanneling.model.Constants;
 import com.echanneling.model.ProcedureParams;
 import org.javatuples.Quartet;
 import org.javatuples.Triplet;
@@ -21,7 +23,7 @@ public class UserManagementService {
         procedureParams.setParamSet("UserEmail", "shalithax@gmail.com", false);
         procedureParams.setParamSet("result", "2", true);
 
-        HashMap<String, String> params = CDataAccess.ExecuateProcedure("SP_CHECK_USER_EMAIL_EXISTS", procedureParams.getParamSet());
+        HashMap<String, String> params = CDataAccess.ExecuateProcedure(AppDelegate.GetSQLQuery(Constants.SQL_CHECK_USER_EMAIL_DUPLICATES), procedureParams.getParamSet());
 
         if(params.get("result").equals("0"))
             return false;

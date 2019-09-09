@@ -31,7 +31,7 @@ public class Constants {
 
     public static final String SALT = "salt";
 
-    public static final String XML_ROOT_NODE = "queries";
+    public static final String XML_ROOT_NODE_QURIES = "queries";
     public static final String XML_TAG_QUERY = "query";
 
     /** =============================== Default Keys ======================================== */
@@ -79,5 +79,9 @@ public class Constants {
 
     /** Constant for Column index eight */
     public static final int COLUMN_INDEX_EIGHT = 8;
+
+    /** =============================== Default SQL Query Ids ======================================== */
+    /** Constant for Column index eight */
+    public static final String SQL_CHECK_USER_EMAIL_DUPLICATES = "checkEmailDuplicate";
 
 }
