@@ -43,11 +43,10 @@ function RegisterUser(email, password) {
     $.ajax({
         url: 'login',
         type: 'post',
-        data: { "txtEmails": email, "password" : password , "command" : "login"},
+        data: { "txtEmail": email, "password" : password , "command" : "login"},
         success: function(response) {
 
             console.log(response);
-
 
         }
     });

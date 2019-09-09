@@ -2,6 +2,7 @@ package com.echanneling.controller;
 
 import com.echanneling.delegate.AppDelegate;
 import com.echanneling.model.Constants;
+import com.echanneling.model.UserMessages;
 import com.echanneling.service.biz.SessionOperations;
 import com.echanneling.service.biz.UserManagementService;
 import com.echanneling.service.support.CatchException;
@@ -21,23 +22,31 @@ import java.sql.SQLException;
 @WebServlet(urlPatterns = {"/login", "/register", "/sighup"})
 public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        //return json
+        String ReturnMessage = "{ \"result\":\"%s\", \"message\":\"%s\" }";
         try{
             //get Command from request
             String command = request.getParameter("command");
 
             switch (command){
                 case "login":
-                    UserManagementService.checkUserEmailIsExists("shalithax@gmail.com");
+                    boolean exists = UserManagementService.checkUserEmailIsExists(request.getParameter("txtEmail"));
+                    if(exists){
+                        ReturnMessage = String.format(ReturnMessage, Constants.FALSE, UserMessages.EMAIL_DUPLICATE);
+                    }else{
+                        ReturnMessage = String.format(ReturnMessage, Constants.TRUE, Constants.SUCCESS);
+                    }
                     break;
             }
+
+            response.setContentType("text/plain");
+            response.getWriter().write(ReturnMessage);
+
         }catch (SQLException | ClassNotFoundException e){
             CatchException.Handle(e);
         }
 
-        String greetings = "Hello ";
-        response.setContentType("text/plain");
-        response.getWriter().write(greetings);
+
 
     }
 

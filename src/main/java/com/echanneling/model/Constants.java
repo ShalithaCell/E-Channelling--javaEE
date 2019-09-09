@@ -32,7 +32,12 @@ public class Constants {
     public static final String SALT = "salt";
 
     public static final String XML_ROOT_NODE_QURIES = "queries";
-    public static final String XML_TAG_QUERY = "query";
+
+    public static final String TRUE = "true";
+    public static final String FALSE = "false";
+    public static final String SUCCESS = "success";
+
+
 
     /** =============================== Default Keys ======================================== */
 

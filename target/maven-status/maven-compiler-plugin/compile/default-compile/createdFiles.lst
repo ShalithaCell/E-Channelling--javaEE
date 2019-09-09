@@ -19,4 +19,5 @@ com/echanneling/service/biz/EncryptionModule.class
 com/echanneling/service/biz/CommonOperations.class
 com/echanneling/controller/DelegateServlet.class
 com/echanneling/model/ExceptionDetails.class
+com/echanneling/model/UserMessages.class
 com/echanneling/DAL/CDataAccess.class

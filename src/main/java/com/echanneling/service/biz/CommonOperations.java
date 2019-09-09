@@ -8,6 +8,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.Types;
+import java.util.Random;
 
 /**
  * @author shalithasenanayaka on 2019-08-11 using IntelliJ IDEA
@@ -44,6 +45,19 @@ public class CommonOperations extends Operations {
         strBuilder.append(")}");
 
         return strBuilder.toString();
+    }
+
+    public static String GetSaltString(int size) {
+        String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+        StringBuilder salt = new StringBuilder();
+        Random rnd = new Random();
+        while (salt.length() < size) { // length of the random string.
+            int index = (int) (rnd.nextFloat() * SALTCHARS.length());
+            salt.append(SALTCHARS.charAt(index));
+        }
+        String saltStr = salt.toString();
+        return saltStr;
+
     }
 
 }

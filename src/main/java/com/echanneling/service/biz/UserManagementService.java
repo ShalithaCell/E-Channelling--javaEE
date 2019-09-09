@@ -8,6 +8,7 @@ import org.javatuples.Quartet;
 import org.javatuples.Triplet;
 
 
+import javax.servlet.http.HttpServletRequest;
 import java.sql.SQLException;
 import java.sql.Types;
 import java.util.HashMap;
@@ -20,8 +21,8 @@ public class UserManagementService {
     public static boolean checkUserEmailIsExists(String email) throws SQLException, ClassNotFoundException {
 
         ProcedureParams procedureParams = new ProcedureParams();
-        procedureParams.setParamSet("UserEmail", "shalithax@gmail.com", false);
-        procedureParams.setParamSet("result", "2", true);
+        procedureParams.setParamSet("UserEmail", email, false);
+        procedureParams.setParamSet("result", "0", true);
 
         HashMap<String, String> params = CDataAccess.ExecuateProcedure(AppDelegate.GetSQLQuery(Constants.SQL_CHECK_USER_EMAIL_DUPLICATES), procedureParams.getParamSet());
 
@@ -29,6 +30,10 @@ public class UserManagementService {
             return false;
         else
             return true;
+    }
+
+    public static String RegisterTempUser(HttpServletRequest request){
+        return "";
     }
 
 }
