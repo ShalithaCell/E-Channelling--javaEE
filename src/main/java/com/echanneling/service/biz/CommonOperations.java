@@ -1,13 +1,13 @@
 package com.echanneling.service.biz;
 
 import com.echanneling.model.Operations;
-import org.javatuples.Quartet;
 import org.javatuples.Triplet;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.sql.Types;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import java.util.Random;
 
 /**
@@ -58,6 +58,12 @@ public class CommonOperations extends Operations {
         String saltStr = salt.toString();
         return saltStr;
 
+    }
+
+    public static Date getCurrentLocalDateTime(){
+        Date date = new Date();
+
+        return date;
     }
 
 }

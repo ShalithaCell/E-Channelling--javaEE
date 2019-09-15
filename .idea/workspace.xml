@@ -8,18 +8,22 @@
   <component name="ChangeListManager">
     <list default="true" id="cebaf41e-f4a3-453d-ba76-6ebf40e5dc91" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/controller/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/controller/LoginServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/model/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/model/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/model/structure/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/model/structure/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/service/biz/CommonOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/service/biz/CommonOperations.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/service/biz/UserManagementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/service/biz/UserManagementService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/site-master/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/site-master/footer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/site-master/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/site-master/header.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/scripts/script-login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/scripts/script-login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/controller/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/controller/LoginServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/delegate/AppDelegate$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/delegate/AppDelegate$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/delegate/AppDelegate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/delegate/AppDelegate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/styles/navbar-master.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/styles/navbar-master.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/styles/style-default.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/styles/style-default.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/model/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/model/Constants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/service/biz/CommonOperations.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/service/biz/CommonOperations.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/service/biz/UserManagementService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/service/biz/UserManagementService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-09-09" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-09-09" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/index_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/index_jsp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/index_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/index_jsp.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,10 +35,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package-info" />
-        <option value="CSS File" />
         <option value="JavaScript File" />
         <option value="Jsp File" />
         <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -55,16 +59,18 @@
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources/libs/bootstrap-3.3.7" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources/fonts" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources/libs" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/EmailTempletes" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/target/E-Channeling-0.0.1-SNAPSHOT/WEB-INF" />
       <recent name="$PROJECT_DIR$/src/main/webapp/resources/libs" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/EmailTempletes" />
       <recent name="$PROJECT_DIR$/src/main/webapp/resources" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/webapp/resources/libs" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/EmailTempletes" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -194,7 +200,10 @@
       <workItem from="1568012981764" duration="4023000" />
       <workItem from="1568017405726" duration="96000" />
       <workItem from="1568017538771" duration="788000" />
-      <workItem from="1568050536727" duration="2076000" />
+      <workItem from="1568050536727" duration="2132000" />
+      <workItem from="1568052990295" duration="5000" />
+      <workItem from="1568309515007" duration="2288000" />
+      <workItem from="1568455520634" duration="6221000" />
     </task>
     <task id="LOCAL-00001" summary="clean project and add mailing functions">
       <created>1565503011733</created>
@@ -280,7 +289,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568017432122</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Change some major updates">
+      <created>1568052969382</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1568052969382</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,7 +327,8 @@
     <MESSAGE value="Implement DB Stored Procedure exec function" />
     <MESSAGE value="Implement XMlf file" />
     <MESSAGE value="Implement XMl reading functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement XMl reading functionality" />
+    <MESSAGE value="Change some major updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change some major updates" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

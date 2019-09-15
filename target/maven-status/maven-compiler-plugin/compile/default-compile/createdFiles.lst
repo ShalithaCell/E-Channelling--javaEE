@@ -4,9 +4,11 @@ com/echanneling/model/Operations.class
 com/echanneling/service/biz/IOOperations.class
 com/echanneling/DAL/MySQLAccess.class
 com/echanneling/model/Constants.class
+com/echanneling/model/structure/TempUser.class
 com/echanneling/service/support/CustomMailSender.class
 com/echanneling/DAL/DBDataAccess.class
 com/echanneling/controller/homeServlet.class
+com/echanneling/model/structure/User.class
 com/echanneling/service/support/CatchException.class
 com/echanneling/model/ProcedureParams.class
 com/echanneling/service/support/DConvert.class

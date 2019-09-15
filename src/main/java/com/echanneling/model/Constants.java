@@ -47,6 +47,9 @@ public class Constants {
     /** Constant for simple date time format **/
     public static final String SIMPLE_DATE_FORMAT = "yyyy/MM/dd HH:mm:ss";
 
+    /** Constant for verificationCodeSize **/
+    public static final int VERIFICATION_CODE_SIZE = 15;
+
     /** =============================== Page identifying keys ======================================== */
     public static final String HOME_PAGE_KEY = "home";
     public static final String LOGIN_PAGE_KEY = "login";

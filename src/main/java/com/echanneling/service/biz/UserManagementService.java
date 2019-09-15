@@ -4,6 +4,9 @@ import com.echanneling.DAL.CDataAccess;
 import com.echanneling.delegate.AppDelegate;
 import com.echanneling.model.Constants;
 import com.echanneling.model.ProcedureParams;
+import com.echanneling.model.UserMessages;
+import com.echanneling.model.structure.TempUser;
+import com.echanneling.model.structure.User;
 import org.javatuples.Quartet;
 import org.javatuples.Triplet;
 
@@ -32,8 +35,32 @@ public class UserManagementService {
             return true;
     }
 
-    public static String RegisterTempUser(HttpServletRequest request){
-        return "";
+    public static String RegisterTempUser(HttpServletRequest request) throws SQLException, ClassNotFoundException {
+
+        //return json message format
+        String ReturnMessage = "{ \"result\":\"%s\", \"message\":\"%s\" }";
+
+        String email = request.getParameter("txtEmail");
+        String password = EncryptionModule.Encrypt(request.getParameter("password"));
+
+        if(checkUserEmailIsExists(email)){
+            ReturnMessage = String.format(ReturnMessage, Constants.FALSE, UserMessages.EMAIL_DUPLICATE);
+            return ReturnMessage;
+        }
+
+        //create user object and assign values
+        TempUser objUser = new TempUser();
+        objUser.setEmail(email);
+        objUser.setPassword(password);
+        objUser.setVerificationCode(CommonOperations.GetSaltString(Constants.VERIFICATION_CODE_SIZE));
+        objUser.setRegistrationDate(CommonOperations.getCurrentLocalDateTime());
+        objUser.setActive(true);
+
+        
+
+        ReturnMessage = String.format(ReturnMessage, Constants.TRUE, Constants.SUCCESS);
+
+        return ReturnMessage;
     }
 
 }
