@@ -36,4 +36,21 @@ public class MailInitializer extends CustomMailSender {
 
     }
 
+    public static void InitAndSendVerificationMessage(String userName, String URL, String UserEmail) throws MessagingException {
+
+        String mailBody ="";
+
+        Map<String, String> valuesMap = new HashMap<String, String>();
+
+        valuesMap.put("username", userName);
+        valuesMap.put("redirecturl", URL);
+
+        StrSubstitutor sub = new StrSubstitutor(valuesMap);
+        mailBody = sub.replace(AppParams.VerificationMailContent);
+
+
+        CustomMailSender.generateAndSendEmail("365Care Account Verification",mailBody, new String[] {UserEmail});
+
+    }
+
 }

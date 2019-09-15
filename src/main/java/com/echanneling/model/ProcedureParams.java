@@ -2,7 +2,10 @@ package com.echanneling.model;
 
 import org.javatuples.Triplet;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -17,8 +20,15 @@ public class ProcedureParams {
     }
 
     public void setParamSet(String paramName, Object value, Boolean isOutPut){
-        Triplet<String, Object, Boolean> newTriplet = new Triplet<>(paramName, value, isOutPut);
-        paramList.add(newTriplet);
+        if(value instanceof Date){
+            DateFormat dateFormat = new SimpleDateFormat(Constants.MYSQL_DATE_FORMAT);
+            Triplet<String, Object, Boolean> newTriplet = new Triplet<>(paramName, dateFormat.format(value), isOutPut);
+            paramList.add(newTriplet);
+        }else {
+            Triplet<String, Object, Boolean> newTriplet = new Triplet<>(paramName, value, isOutPut);
+            paramList.add(newTriplet);
+        }
+
         counter++;
     }
 

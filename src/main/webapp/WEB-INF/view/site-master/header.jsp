@@ -26,6 +26,9 @@
         <script src="../../../resources/scripts/toastMessageHandler.js"></script>
         <script src="../../../resources/scripts/script-default.js"></script>
 
+        <script src="../../../resources/libs/jquery-confirm/jquery-confirm.min.js"></script>
+        <link rel="stylesheet" href="../../../resources/libs/jquery-confirm/jquery-confirm.min.css">
+
         <script src="https://apis.google.com/js/platform.js" async defer></script>
         <meta name="google-signin-client_id" content="201405093980-siql7qs8kergiu0k3d75vjvcdgr2usb3.apps.googleusercontent.com">
 
@@ -76,6 +79,7 @@
                 }
                 else{
                     //$('#testform').submit();
+                    $('#loadingSpinner').show();
                     RegisterUser($('#txtEmail').val(), $('#txtPassword').val());
                 }
             }
@@ -185,6 +189,10 @@
             </div>
         </nav>
     </body>
+
+    <div id="loadingSpinner" class="loading" style="display: none">
+        <div class="loader"></div>
+    </div>
 
     <script src="../../../resources/libs/jquery.toaster-master/jquery.toaster.js"></script>
 </html>

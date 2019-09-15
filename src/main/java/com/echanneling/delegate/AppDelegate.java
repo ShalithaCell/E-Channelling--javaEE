@@ -105,6 +105,9 @@ public class AppDelegate {
 
             }
         });
+
+
+
     }
     //read all  system config xml file
     public static void InstantiateXMLFile() {

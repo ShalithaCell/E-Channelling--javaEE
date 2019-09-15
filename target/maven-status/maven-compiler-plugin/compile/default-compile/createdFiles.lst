@@ -16,6 +16,7 @@ com/echanneling/controller/LoginServlet.class
 com/echanneling/delegate/AppParams.class
 com/echanneling/delegate/AppDelegate$1.class
 com/echanneling/service/biz/SessionOperations.class
+com/echanneling/controller/HTTP500Servlet.class
 com/echanneling/delegate/AppDelegate.class
 com/echanneling/service/biz/EncryptionModule.class
 com/echanneling/service/biz/CommonOperations.class

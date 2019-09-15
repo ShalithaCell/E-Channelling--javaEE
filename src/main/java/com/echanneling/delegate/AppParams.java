@@ -21,8 +21,10 @@ public class AppParams {
     public static String MailSender;
     public static String SQLDriver;
     public static String ConnectionString;
+    public static String VerificationURL;
 
     public static String ExceptionMailContent;
+    public static String VerificationMailContent;
 
     static {
         InitParam = "Started";
@@ -30,10 +32,11 @@ public class AppParams {
         MailSender = AppDelegate.properties.getProperty(Constants.MAIL_SENDER);
         SQLDriver = AppDelegate.properties.getProperty(Constants.DRIVER_NAME);
         ConnectionString = AppDelegate.properties.getProperty(Constants.CONNECTION_STRING);
-
+        VerificationURL = AppDelegate.properties.getProperty(Constants.VERIFICATION_URL);
         try{
             //get Exception mail template content
             ExceptionMailContent = CommonOperations.readString(IOOperations.ReadFromContexPath(Constants.EXEPTION_MAIL));
+            VerificationMailContent = CommonOperations.readString(IOOperations.ReadFromContexPath(Constants.VERIFICATION_MAIL));
         } catch (UnsupportedEncodingException e) {
             CatchException.Handle(e);
         } catch (IOException e) {

@@ -3,5 +3,6 @@
 <root>
     <queries>
         <query id="checkEmailDuplicate">SP_CHECK_USER_EMAIL_EXISTS</query>
+        <query id="registerTempUser">SP_REGISTER_TEMP_USER</query>
     </queries>
 </root>

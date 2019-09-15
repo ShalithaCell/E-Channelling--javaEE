@@ -46,6 +46,11 @@ public class Constants {
 
     /** Constant for simple date time format **/
     public static final String SIMPLE_DATE_FORMAT = "yyyy/MM/dd HH:mm:ss";
+    /** Constant for my sql datetime format **/
+    public static final String MYSQL_DATE_FORMAT = "yyyy-MM-dd hh:mm:ss";
+
+    /** Constant for project account verification url **/
+    public static final String VERIFICATION_URL = "projectAccountVerificationURL";
 
     /** Constant for verificationCodeSize **/
     public static final int VERIFICATION_CODE_SIZE = 15;
@@ -53,13 +58,16 @@ public class Constants {
     /** =============================== Page identifying keys ======================================== */
     public static final String HOME_PAGE_KEY = "home";
     public static final String LOGIN_PAGE_KEY = "login";
+    public static final String ERROR_PAGE_KEY = "Error";
 
 
     /** =============================== Default Routing ======================================== */
     public static final String HOMEPAGE = "/WEB-INF/view/index.jsp";
     public static final String LOGINPAGE = "/WEB-INF/view/account/login.jsp";
+    public static final String HTTP500PAGE = "/WEB-INF/view/HTTP500.jsp";
 
     public static final String EXEPTION_MAIL = "WEB-INF/EmailTempletes/ErrorInformTemplete.html";
+    public static final String VERIFICATION_MAIL = "WEB-INF/EmailTempletes/VerificationMail.html";
     public static final String CONFIG_XML = "WEB-INF/SystemInfo.xml";
 
 
@@ -89,7 +97,7 @@ public class Constants {
     public static final int COLUMN_INDEX_EIGHT = 8;
 
     /** =============================== Default SQL Query Ids ======================================== */
-    /** Constant for Column index eight */
     public static final String SQL_CHECK_USER_EMAIL_DUPLICATES = "checkEmailDuplicate";
+    public static final String SQL_REGISTER_TEMP_USER = "registerTempUser";
 
 }

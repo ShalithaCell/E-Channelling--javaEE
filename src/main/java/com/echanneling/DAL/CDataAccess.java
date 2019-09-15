@@ -159,6 +159,14 @@ public class CDataAccess extends DBDataAccess{
             if((item.getValue1() instanceof String)){
                 stmt.setString(counter, (String) item.getValue1());
             }
+
+            if((item.getValue1() instanceof Integer)){
+                stmt.setString(counter, Integer.toString((Integer) item.getValue1()));
+            }
+
+            if((item.getValue1() instanceof Boolean)){
+                stmt.setString(counter, (Boolean) item.getValue1() ? "1" : "0");
+            }
             counter++;
         }
 

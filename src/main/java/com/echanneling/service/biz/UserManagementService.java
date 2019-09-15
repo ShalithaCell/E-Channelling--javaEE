@@ -2,15 +2,18 @@ package com.echanneling.service.biz;
 
 import com.echanneling.DAL.CDataAccess;
 import com.echanneling.delegate.AppDelegate;
+import com.echanneling.delegate.AppParams;
 import com.echanneling.model.Constants;
 import com.echanneling.model.ProcedureParams;
 import com.echanneling.model.UserMessages;
 import com.echanneling.model.structure.TempUser;
 import com.echanneling.model.structure.User;
+import com.echanneling.service.support.MailInitializer;
 import org.javatuples.Quartet;
 import org.javatuples.Triplet;
 
 
+import javax.mail.MessagingException;
 import javax.servlet.http.HttpServletRequest;
 import java.sql.SQLException;
 import java.sql.Types;
@@ -35,7 +38,7 @@ public class UserManagementService {
             return true;
     }
 
-    public static String RegisterTempUser(HttpServletRequest request) throws SQLException, ClassNotFoundException {
+    public static String RegisterTempUser(HttpServletRequest request) throws SQLException, ClassNotFoundException, MessagingException {
 
         //return json message format
         String ReturnMessage = "{ \"result\":\"%s\", \"message\":\"%s\" }";
@@ -56,8 +59,15 @@ public class UserManagementService {
         objUser.setRegistrationDate(CommonOperations.getCurrentLocalDateTime());
         objUser.setActive(true);
 
-        
+        ProcedureParams procedureParams = new ProcedureParams();
+        procedureParams.setParamSet("_Email", objUser.getEmail(), false);
+        procedureParams.setParamSet("_UPassword", objUser.getPassword(), false);
+        procedureParams.setParamSet("_Verification_Code", objUser.getVerificationCode(), false);
+        procedureParams.setParamSet("_RegisteredDate", objUser.getRegistrationDate(), false);
+        procedureParams.setParamSet("_IsActive", objUser.isActive(), false);
 
+        CDataAccess.ExecuateProcedure(AppDelegate.GetSQLQuery(Constants.SQL_REGISTER_TEMP_USER), procedureParams.getParamSet());
+        MailInitializer.InitAndSendVerificationMessage("User", AppParams.VerificationURL+objUser.getVerificationCode(), objUser.getEmail());
         ReturnMessage = String.format(ReturnMessage, Constants.TRUE, Constants.SUCCESS);
 
         return ReturnMessage;

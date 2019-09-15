@@ -7,6 +7,7 @@ import com.echanneling.service.biz.SessionOperations;
 import com.echanneling.service.biz.UserManagementService;
 import com.echanneling.service.support.CatchException;
 
+import javax.mail.MessagingException;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -30,20 +31,16 @@ public class LoginServlet extends HttpServlet {
 
             switch (command){
                 case "login":
-                    boolean exists = UserManagementService.checkUserEmailIsExists(request.getParameter("txtEmail"));
-                    if(exists){
-                        ReturnMessage = String.format(ReturnMessage, Constants.FALSE, UserMessages.EMAIL_DUPLICATE);
-                    }else{
-                        ReturnMessage = String.format(ReturnMessage, Constants.TRUE, Constants.SUCCESS);
-                    }
+                    ReturnMessage = UserManagementService.RegisterTempUser(request);
                     break;
             }
 
             response.setContentType("text/plain");
             response.getWriter().write(ReturnMessage);
 
-        }catch (SQLException | ClassNotFoundException e){
+        }catch (SQLException | ClassNotFoundException | MessagingException e){
             CatchException.Handle(e);
+            response.sendError(500, e.getMessage());
         }
 
 
