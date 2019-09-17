@@ -39,22 +39,28 @@
         <script>
             var email = '${email}';
             var tempUserID = '${userID}';
+            var invalidPassword = ${passCorrect}
 
             $(document).ready(function () {
-                passwordPrompt();
+                if(tempUserID == '0'){
+                    passwordPrompt();
+                }
+
             });
 
 
             function passwordPrompt() {
                 $.confirm({
-                    title: 'Prompt!',
-                    boxWidth: '30%',
+                    title: 'Congratulations! your account has been activated',
+                    boxWidth: '50%',
+                    type: 'success',
+                    typeAnimated: true,
                     useBootstrap: false,
                     content: '' +
-                        '<form action="" class="formName">' +
+                        '<form action="verification" type="post" class="formName">' +
                         '<div class="form-group">' +
-                        '<label>Enter something here</label>' +
-                        '<input type="text" placeholder="Your name" class="name form-control" required />' +
+                        '<label>please confirm your current password to continue.</label>' +
+                        '<input type="password" placeholder="Enter your password" class="password form-control" required />' +
                         '</div>' +
                         '</form>',
                     buttons: {
@@ -62,20 +68,34 @@
                             text: 'Submit',
                             btnClass: 'btn-blue',
                             action: function () {
-                                var name = this.$content.find('.name').val();
-                                if(!name){
-                                    $.alert('provide a valid name');
+                                var password = this.$content.find('.password').val();
+                                if(!password){
+                                    $.alert('provide a valid password');
                                     return false;
                                 }
-                                $.alert('Your name is ' + name);
+
+                                $.ajax({
+                                    url: 'verification',
+                                    type: 'post',
+                                    data: { "password" : password , "command" : "login"},
+                                    error: function (request, status, error) {
+
+                                        window.location = "Error";
+                                    },
+                                    success: function(response) {
+
+                                    }
+                                });
+
                             }
-                        },
-                        cancel: function () {
-                            //close
                         },
                     },
                     onContentReady: function () {
                         // bind to events
+                        if(invalidPassword){
+                            $.alert('Password incorrect !');
+                        }
+
                         var jc = this;
                         this.$content.find('form').on('submit', function (e) {
                             // if the user submits the form by pressing enter in the field.

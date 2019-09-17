@@ -1,16 +1,16 @@
 package com.echanneling.service.biz;
 
 import com.echanneling.model.Operations;
+import com.echanneling.model.structure.TempUser;
 import org.javatuples.Triplet;
 
+import javax.swing.*;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.Field;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Random;
+import java.util.*;
 
 /**
  * @author shalithasenanayaka on 2019-08-11 using IntelliJ IDEA
@@ -92,6 +92,45 @@ public class CommonOperations extends Operations {
             map.put(name, value);
         }
         return map;
+    }
+
+    public static List<Object> PopulateDataListFromJTable(Object objectInstance, JTable table) throws NoSuchFieldException, IllegalAccessException, InstantiationException {
+
+        /**
+         *  objectInstance - object's class attributes must be public
+         */
+
+        List<Object> list = new ArrayList<>();
+        Class  aClass = objectInstance.getClass();
+
+        for(int row = 0; row < table.getRowCount(); row++){
+
+            Object newObject = objectInstance.getClass().newInstance();
+
+            for(int column = 0; column < table.getColumnCount(); column++){
+                String columnName = table.getColumnName(column);
+                String jtableValue = (String) table.getValueAt( row, table.getColumn(columnName).getModelIndex() );
+
+
+                try{
+                    Field field = aClass.getField(columnName);
+
+
+                    Object value = jtableValue;
+
+                    field.set(newObject, value);
+
+                }catch (Exception e){
+                    continue;
+                }
+
+            }
+
+            list.add(newObject);
+        }
+        return  list;
+
+
     }
 
 }

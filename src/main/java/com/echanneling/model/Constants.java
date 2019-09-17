@@ -103,5 +103,6 @@ public class Constants {
     public static final String SQL_CHECK_USER_EMAIL_DUPLICATES = "checkEmailDuplicate";
     public static final String SQL_REGISTER_TEMP_USER = "registerTempUser";
     public static final String SQL_GET_TEMP_USER = "getTempUserByVerificationCode";
+    public static final String SQL_GET_TEMP_USER_DETAILS = "getTempUserDetails";
 
 }

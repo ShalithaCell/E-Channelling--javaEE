@@ -7,9 +7,9 @@ import org.javatuples.Quartet;
 import org.javatuples.Triplet;
 
 import javax.swing.*;
-import java.sql.SQLException;
-import java.sql.SQLType;
-import java.sql.Types;
+import javax.swing.table.DefaultTableModel;
+import java.awt.print.PrinterException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -88,7 +88,7 @@ public class CDataAccess extends DBDataAccess{
             // Result set get the result of the SQL query
             resultSet = statement.executeQuery(query);
 
-            JTable jTable = DConvert.convertToJTable(resultSet);
+            JTable jTable = new JTable(DConvert.buildTableModel(resultSet));
 
             return jTable;
         }
@@ -119,7 +119,7 @@ public class CDataAccess extends DBDataAccess{
             // Result set get the result of the SQL query
             resultSet = preparedStatement.executeQuery(query);
 
-            JTable jTable = DConvert.convertToJTable(resultSet);
+            JTable jTable = new JTable(DConvert.buildTableModel(resultSet));
 
             return jTable;
         }
@@ -178,7 +178,70 @@ public class CDataAccess extends DBDataAccess{
             outputParamSet.put(entry.getKey(), stmt.getString(entry.getValue()));
         }
 
+        ReInitializeDBParams();
+
         return outputParamSet;
+    }
+
+    public static JTable ExecuateProcedureToJTable (String procedureName, Triplet<String, Object, Boolean>[] paramSet) throws SQLException, ClassNotFoundException {
+        /**
+         * procedureName = Stored procedure name
+         *
+         * Quartet - { param name, param value, is output}
+         */
+
+        try{
+            connection = MySQLAccess.getConnection();
+
+            String procedure = CommonOperations.InitSQLProcedure(procedureName, paramSet);
+
+            CallableStatement stmt= (CallableStatement) connection.prepareCall(procedure);
+
+            int counter = 1;
+            HashMap<String ,Integer> outputIndexes = new HashMap<String ,Integer>();
+
+            for (Triplet<String, Object, Boolean> item: paramSet) {
+                if(item.getValue2()){
+                    //Set OUT parameter
+                    stmt.registerOutParameter(counter, Types.VARCHAR);
+                    outputIndexes.put(item.getValue0(), counter);
+                    counter++;
+                    continue;
+                }
+
+                if((item.getValue1() instanceof String)){
+                    stmt.setString(counter, (String) item.getValue1());
+                }
+
+                if((item.getValue1() instanceof Integer)){
+                    stmt.setString(counter, Integer.toString((Integer) item.getValue1()));
+                }
+
+                if((item.getValue1() instanceof Boolean)){
+                    stmt.setString(counter, (Boolean) item.getValue1() ? "1" : "0");
+                }
+                counter++;
+            }
+
+            //Execute stored procedure
+            ResultSet rs = stmt.executeQuery();
+
+            JTable table = new JTable(DConvert.buildTableModel(rs));
+
+            return table;
+
+        } catch (SQLException | ClassNotFoundException e){
+            e.printStackTrace();
+            throw  e;
+        }finally {
+            ReInitializeDBParams();
+        }
+
+
+
+
+
+
     }
 
 

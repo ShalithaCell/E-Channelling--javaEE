@@ -15,6 +15,8 @@ import org.javatuples.Triplet;
 
 import javax.mail.MessagingException;
 import javax.servlet.http.HttpServletRequest;
+import java.awt.print.PrinterException;
+import java.lang.reflect.Field;
 import java.sql.SQLException;
 import java.sql.Types;
 import java.util.HashMap;
@@ -94,6 +96,21 @@ public class UserManagementService {
         return tempUser;
 
 
+    }
+
+    public static void GetTempUserDetails() throws SQLException, ClassNotFoundException, NoSuchFieldException, IllegalAccessException {
+
+        try{
+            CommonOperations.PopulateDataListFromJTable(new TempUser());
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        ProcedureParams procedureParams = new ProcedureParams();
+        procedureParams.setParamSet("_verificationCode", "75J8R3HH33SAV4T", false);
+        procedureParams.setParamSet("_password", "82ARuMqbIXR1dighpXxYIQ==", false);
+
+        CDataAccess.ExecuateProcedureToJTable(AppDelegate.GetSQLQuery(Constants.SQL_GET_TEMP_USER_DETAILS), procedureParams.getParamSet());
     }
 
 }

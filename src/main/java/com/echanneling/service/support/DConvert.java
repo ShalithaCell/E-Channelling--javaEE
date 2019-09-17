@@ -30,7 +30,8 @@ public class DConvert {
     private static JSONArray jsonArray;
 
     //populate result set to JTable
-    public static JTable convertToJTable(ResultSet rs) throws SQLException {
+    public static DefaultTableModel buildTableModel(ResultSet rs)
+            throws SQLException {
 
         ResultSetMetaData metaData = rs.getMetaData();
 
@@ -51,9 +52,7 @@ public class DConvert {
             data.add(vector);
         }
 
-        JTable table = new JTable(new DefaultTableModel(data, columnNames));
-
-        return table;
+        return new DefaultTableModel(data, columnNames);
 
     }
 

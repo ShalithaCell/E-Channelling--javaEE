@@ -8,20 +8,22 @@
   <component name="ChangeListManager">
     <list default="true" id="cebaf41e-f4a3-453d-ba76-6ebf40e5dc91" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/DAL/CDataAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/DAL/CDataAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/controller/AccountVerificationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/controller/AccountVerificationServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/model/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/model/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/model/structure/TempUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/model/structure/TempUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/service/biz/CommonOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/service/biz/CommonOperations.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/service/biz/UserManagementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/service/biz/UserManagementService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/service/support/DConvert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/service/support/DConvert.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/SystemInfo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/SystemInfo.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/account/AccountVerification.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/account/AccountVerification.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/scripts/script-login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/scripts/script-login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/SystemInfo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SystemInfo.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/DAL/CDataAccess.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/DAL/CDataAccess.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/model/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/model/Constants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/model/structure/TempUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/model/structure/TempUser.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/service/biz/CommonOperations.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/service/biz/CommonOperations.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/service/biz/UserManagementService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/service/biz/UserManagementService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/service/support/DConvert.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/service/support/DConvert.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -206,7 +208,8 @@
       <workItem from="1568455520634" duration="6348000" />
       <workItem from="1568529964217" duration="2955000" />
       <workItem from="1568553997975" duration="9049000" />
-      <workItem from="1568690158075" duration="5652000" />
+      <workItem from="1568690158075" duration="5884000" />
+      <workItem from="1568725480181" duration="11471000" />
     </task>
     <task id="LOCAL-00001" summary="clean project and add mailing functions">
       <created>1565503011733</created>
@@ -313,7 +316,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568566379761</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="add registration jsp">
+      <created>1568699621032</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1568699621032</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -347,7 +357,8 @@
     <MESSAGE value="Change some major updates" />
     <MESSAGE value="Implement google sign up" />
     <MESSAGE value="Finished Temp user registration and Verification mail sending function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished Temp user registration and Verification mail sending function" />
+    <MESSAGE value="add registration jsp" />
+    <option name="LAST_COMMIT_MESSAGE" value="add registration jsp" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -356,16 +367,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/echanneling/controller/LoginServlet.java</url>
           <line>41</line>
           <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/echanneling/service/biz/CommonOperations.java</url>
-          <line>72</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/echanneling/controller/AccountVerificationServlet.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

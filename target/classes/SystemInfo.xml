@@ -5,5 +5,6 @@
         <query id="checkEmailDuplicate">SP_CHECK_USER_EMAIL_EXISTS</query>
         <query id="registerTempUser">SP_REGISTER_TEMP_USER</query>
         <query id="getTempUserByVerificationCode">SP_GET_TEMP_USER_BY_VERIFICATIONCODE</query>
+        <query id="getTempUserDetails">SP_GET_TEMP_USER</query>
     </queries>
 </root>

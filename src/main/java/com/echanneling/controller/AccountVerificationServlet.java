@@ -12,6 +12,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.awt.print.PrinterException;
 import java.io.IOException;
 import java.sql.SQLException;
 
@@ -21,6 +22,25 @@ import java.sql.SQLException;
 @WebServlet(urlPatterns = {"/verification"})
 public class AccountVerificationServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+
+        try{
+            String command = request.getParameter("command");
+
+            switch (command){
+                case "login":
+                    UserManagementService.GetTempUserDetails();
+                    break;
+            }
+
+        }catch (ClassNotFoundException | SQLException e){
+            CatchException.Handle(e);
+            response.sendError(500, e.getMessage());
+        }catch (Exception e){
+            CatchException.Handle(e);
+            response.sendError(500, e.getMessage());
+        }
+
 
     }
 
@@ -39,7 +59,8 @@ public class AccountVerificationServlet extends HttpServlet {
                     request.getRequestDispatcher(Constants.HOMEPAGE).forward(request, response);
                 }else{
                     request.setAttribute("email", tempUser.getEmail());
-                    request.setAttribute("userID", tempUser.getUserID());
+                    request.setAttribute("userID", 0);
+                    request.setAttribute("passCorrect", false);
                     request.getRequestDispatcher(Constants.VERIFICATIONPAGE).forward(request, response);
                 }
 
