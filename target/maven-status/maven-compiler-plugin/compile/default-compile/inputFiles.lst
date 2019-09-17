@@ -16,6 +16,7 @@
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/model/UserMessages.java
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/controller/DelegateServlet.java
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/DAL/MySQLAccess.java
+/Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/controller/AccountVerificationServlet.java
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/delegate/AppParams.java
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/DAL/DBDataAccess.java
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/service/biz/EncryptionModule.java

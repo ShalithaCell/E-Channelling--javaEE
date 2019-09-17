@@ -26,7 +26,7 @@ function ClearSignUpFields() {
 
 function displayAccountConfirmBox(email, name) {
 
-    var content = "<div class=\"container text-center\">\n" +
+    var content = "<div class=\"text-center\">\n" +
         "    <div >\n" +
         "\t\t<h3 style=\"color: rgb(24, 157, 14);\"> \Thank you for Registering. Please verify your account.</h3>\n" +
         "        <h4 style=\"font-size: 14px;\">In order to use 365Care features, you must verify your account. An email has been sent to "+email+" .</h4>\n" +

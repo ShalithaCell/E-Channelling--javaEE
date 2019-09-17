@@ -13,12 +13,15 @@
         <!-- Required meta tags-->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="Colorlib Templates">
-        <meta name="author" content="Colorlib">
-        <meta name="keywords" content="Colorlib Templates">
 
         <!-- Title Page-->
-        <title>Au Register Forms by Colorlib</title>
+        <title>365Care - Account</title>
+        <!-- Jquery JS-->
+        <script src="../../../resources/libs/jquery/jquery-3.4.1.min.js"></script>
+
+        <!-- Jquery Confirm JS-->
+        <script src="../../../resources/libs/jquery-confirm/jquery-confirm.min.js"></script>
+        <link href="../../../resources/libs/jquery-confirm/jquery-confirm.min.css" rel="stylesheet">
 
         <!-- Icons font CSS-->
         <link href="../../../resources/libs/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
@@ -32,6 +35,59 @@
 
         <!-- Main CSS-->
         <link href="../../../resources/libs/vendor/main.css" rel="stylesheet" media="all">
+
+        <script>
+            var email = '${email}';
+            var tempUserID = '${userID}';
+
+            $(document).ready(function () {
+                passwordPrompt();
+            });
+
+
+            function passwordPrompt() {
+                $.confirm({
+                    title: 'Prompt!',
+                    boxWidth: '30%',
+                    useBootstrap: false,
+                    content: '' +
+                        '<form action="" class="formName">' +
+                        '<div class="form-group">' +
+                        '<label>Enter something here</label>' +
+                        '<input type="text" placeholder="Your name" class="name form-control" required />' +
+                        '</div>' +
+                        '</form>',
+                    buttons: {
+                        formSubmit: {
+                            text: 'Submit',
+                            btnClass: 'btn-blue',
+                            action: function () {
+                                var name = this.$content.find('.name').val();
+                                if(!name){
+                                    $.alert('provide a valid name');
+                                    return false;
+                                }
+                                $.alert('Your name is ' + name);
+                            }
+                        },
+                        cancel: function () {
+                            //close
+                        },
+                    },
+                    onContentReady: function () {
+                        // bind to events
+                        var jc = this;
+                        this.$content.find('form').on('submit', function (e) {
+                            // if the user submits the form by pressing enter in the field.
+                            e.preventDefault();
+                            jc.$$formSubmit.trigger('click'); // reference the button and click it
+                        });
+                    }
+                });
+            }
+
+        </script>
+
     </head>
 
     <body>
@@ -39,7 +95,7 @@
             <div class="wrapper wrapper--w680">
                 <div class="card card-4">
                     <div class="card-body">
-                        <h2 class="title">Registration Form</h2>
+                        <h2 class="title">365Care Registration Form</h2>
                         <form method="POST">
                             <div class="row row-space">
                                 <div class="col-2">
@@ -85,7 +141,7 @@
                                 <div class="col-2">
                                     <div class="input-group">
                                         <label class="label">Email</label>
-                                        <input class="input--style-4" type="email" name="email">
+                                        <input class="input--style-4" type="email" name="email" value="${email}" disabled>
                                     </div>
                                 </div>
                                 <div class="col-2">
@@ -116,15 +172,14 @@
             </div>
         </div>
 
-        <!-- Jquery JS-->
-        <script src="../../../resources/libs/jquery/jquery-3.4.1.min.js"></script>
+
         <!-- Vendor JS-->
         <script src="../../../resources/libs/vendor/select2/select2.min.js"></script>
         <script src="../../../resources/libs/vendor/datepicker/moment.min.js"></script>
         <script src="../../../resources/libs/vendor/datepicker/daterangepicker.js"></script>
 
         <!-- Main JS-->
-        <script src="../../../resources/libs/vendor/js/global.js"></script>
+        <script src="../../../resources/libs/vendor/global.js"></script>
 
     </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 

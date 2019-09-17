@@ -16,7 +16,7 @@
 
 	<error-page>
 		<exception-type>java.lang.Exception</exception-type>
-		<location>/WEB-INF/view/404Page.jsp</location>
+		<location>/WEB-INF/view/HTTP500.jsp</location>
 	</error-page>
 
 

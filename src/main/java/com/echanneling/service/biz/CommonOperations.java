@@ -8,6 +8,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
 /**
@@ -64,6 +66,32 @@ public class CommonOperations extends Operations {
         Date date = new Date();
 
         return date;
+    }
+
+    public static String getURLQueryValue(String URL, String key){
+
+        String returnString = "";
+
+        Map<String, String> queryParams = getQueryMap(URL);
+
+        if(queryParams.containsKey(key)){
+            returnString = queryParams.get(key);
+        }
+
+        return  returnString;
+    }
+
+    public static Map<String, String> getQueryMap(String query)
+    {
+        String[] params = query.split("&");
+        Map<String, String> map = new HashMap<String, String>();
+        for (String param : params)
+        {
+            String name = param.split("=")[0];
+            String value = param.split("=")[1];
+            map.put(name, value);
+        }
+        return map;
     }
 
 }

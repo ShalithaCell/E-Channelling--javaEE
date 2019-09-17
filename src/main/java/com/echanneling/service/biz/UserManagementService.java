@@ -73,4 +73,27 @@ public class UserManagementService {
         return ReturnMessage;
     }
 
+    public static TempUser GetTempUserFromVerificationCode(String verificationCode) throws SQLException, ClassNotFoundException {
+
+        ProcedureParams procedureParams = new ProcedureParams();
+        procedureParams.setParamSet("_verificationCode", verificationCode, false);
+        procedureParams.setParamSet("_TempUserID", "0", true);
+        procedureParams.setParamSet("_Email", "", true);
+
+        HashMap<String, String> params = CDataAccess.ExecuateProcedure(AppDelegate.GetSQLQuery(Constants.SQL_GET_TEMP_USER), procedureParams.getParamSet());
+
+        TempUser tempUser = new TempUser();
+
+        if(!params.get("_TempUserID").equals("0")){
+            tempUser.setUserID(Integer.parseInt(params.get("_TempUserID")));
+            tempUser.setEmail(params.get("_Email"));
+        }else{
+            tempUser.setUserID(0);
+        }
+
+        return tempUser;
+
+
+    }
+
 }

@@ -51,6 +51,8 @@ public class Constants {
 
     /** Constant for project account verification url **/
     public static final String VERIFICATION_URL = "projectAccountVerificationURL";
+    /** Constant for project account verification url **/
+    public static final String VERIFICATION_CODE = "verification";
 
     /** Constant for verificationCodeSize **/
     public static final int VERIFICATION_CODE_SIZE = 15;
@@ -64,6 +66,7 @@ public class Constants {
     /** =============================== Default Routing ======================================== */
     public static final String HOMEPAGE = "/WEB-INF/view/index.jsp";
     public static final String LOGINPAGE = "/WEB-INF/view/account/login.jsp";
+    public static final String VERIFICATIONPAGE = "/WEB-INF/view/account/AccountVerification.jsp";
     public static final String HTTP500PAGE = "/WEB-INF/view/HTTP500.jsp";
 
     public static final String EXEPTION_MAIL = "WEB-INF/EmailTempletes/ErrorInformTemplete.html";
@@ -99,5 +102,6 @@ public class Constants {
     /** =============================== Default SQL Query Ids ======================================== */
     public static final String SQL_CHECK_USER_EMAIL_DUPLICATES = "checkEmailDuplicate";
     public static final String SQL_REGISTER_TEMP_USER = "registerTempUser";
+    public static final String SQL_GET_TEMP_USER = "getTempUserByVerificationCode";
 
 }
