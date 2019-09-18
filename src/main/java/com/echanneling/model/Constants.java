@@ -46,6 +46,8 @@ public class Constants {
 
     /** Constant for simple date time format **/
     public static final String SIMPLE_DATE_FORMAT = "yyyy/MM/dd HH:mm:ss";
+    /** Constant for simple date time format for web input**/
+    public static final String SIMPLE_DATE_FORMAT_WEB_INPUT = "dd/MM/yyyy";
     /** Constant for my sql datetime format **/
     public static final String MYSQL_DATE_FORMAT = "yyyy-MM-dd hh:mm:ss";
 

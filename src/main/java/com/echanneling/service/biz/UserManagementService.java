@@ -5,7 +5,9 @@ import com.echanneling.delegate.AppDelegate;
 import com.echanneling.delegate.AppParams;
 import com.echanneling.model.Constants;
 import com.echanneling.model.ProcedureParams;
+import com.echanneling.model.TableModels.TempUserModel;
 import com.echanneling.model.UserMessages;
+import com.echanneling.model.structure.RegistredUser;
 import com.echanneling.model.structure.TempUser;
 import com.echanneling.model.structure.User;
 import com.echanneling.service.support.MailInitializer;
@@ -15,11 +17,15 @@ import org.javatuples.Triplet;
 
 import javax.mail.MessagingException;
 import javax.servlet.http.HttpServletRequest;
+import javax.swing.*;
 import java.awt.print.PrinterException;
 import java.lang.reflect.Field;
 import java.sql.SQLException;
 import java.sql.Types;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * @author shalithasenanayaka on 2019-09-03 using IntelliJ IDEA
@@ -98,19 +104,37 @@ public class UserManagementService {
 
     }
 
-    public static void GetTempUserDetails() throws SQLException, ClassNotFoundException, NoSuchFieldException, IllegalAccessException {
-
-        try{
-            CommonOperations.PopulateDataListFromJTable(new TempUser());
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+    public static TempUserModel GetTempUserDetails(String verificationCode, String password) throws SQLException, ClassNotFoundException, NoSuchFieldException, IllegalAccessException, InstantiationException {
 
         ProcedureParams procedureParams = new ProcedureParams();
-        procedureParams.setParamSet("_verificationCode", "75J8R3HH33SAV4T", false);
-        procedureParams.setParamSet("_password", "82ARuMqbIXR1dighpXxYIQ==", false);
+        procedureParams.setParamSet("_verificationCode", verificationCode, false);
+        procedureParams.setParamSet("_password", password, false);
 
-        CDataAccess.ExecuateProcedureToJTable(AppDelegate.GetSQLQuery(Constants.SQL_GET_TEMP_USER_DETAILS), procedureParams.getParamSet());
+        JTable table = CDataAccess.ExecuateProcedureToJTable(AppDelegate.GetSQLQuery(Constants.SQL_GET_TEMP_USER_DETAILS), procedureParams.getParamSet());
+
+        List<Object> objectList = CommonOperations.PopulateDataListFromJTable(new TempUserModel(), table);
+
+        TempUserModel tempUserModel = new TempUserModel();
+
+        if(objectList.size() != 0){
+            tempUserModel = (TempUserModel) objectList.get(0);
+        }
+
+        return tempUserModel;
+    }
+
+    public static void RegisterUser(HttpServletRequest request) throws ParseException {
+
+        RegistredUser registredUser = new RegistredUser();
+
+        registredUser.setFirstName(request.getParameter("first_name"));
+        registredUser.setLastName(request.getParameter("last_name"));
+
+        SimpleDateFormat formatter1=new SimpleDateFormat(Constants.SIMPLE_DATE_FORMAT_WEB_INPUT);
+
+        registredUser.setDOB(formatter1.parse(request.getParameter("birthday")));
+        registredUser.setFK_GenderID(Integer.parseInt(request.getParameter("gender")));
+        registredUser.setContactNo(request.getParameter("phone"));
     }
 
 }

@@ -1,8 +1,10 @@
 package com.echanneling.controller;
 
 import com.echanneling.model.Constants;
+import com.echanneling.model.TableModels.TempUserModel;
 import com.echanneling.model.structure.TempUser;
 import com.echanneling.service.biz.CommonOperations;
+import com.echanneling.service.biz.EncryptionModule;
 import com.echanneling.service.biz.UserManagementService;
 import com.echanneling.service.support.CatchException;
 import jdk.nashorn.internal.ir.RuntimeNode;
@@ -26,12 +28,29 @@ public class AccountVerificationServlet extends HttpServlet {
 
         try{
             String command = request.getParameter("command");
+            String ReturnMessage = "{ \"UserID\":\"%s\", \"Email\":\"%s\" }";
 
             switch (command){
                 case "login":
-                    UserManagementService.GetTempUserDetails();
+                    String verificationCode = request.getParameter("verificationCode");
+                    String password = EncryptionModule.Encrypt(request.getParameter("password"));
+                    TempUserModel tempUserModel = UserManagementService.GetTempUserDetails(verificationCode, password);
+
+                    if(tempUserModel.Email == null){
+                        ReturnMessage = String.format(ReturnMessage, 0, "");
+                    }else{
+                        ReturnMessage = String.format(ReturnMessage, tempUserModel.UserID, tempUserModel.Email);
+                    }
+                    break;
+
+                case "register":
+                    String TempUserID = request.getParameter("TempUserID");
+                    UserManagementService.RegisterUser(request);
                     break;
             }
+
+            response.setContentType("text/plain");
+            response.getWriter().write(ReturnMessage);
 
         }catch (ClassNotFoundException | SQLException e){
             CatchException.Handle(e);
@@ -60,7 +79,6 @@ public class AccountVerificationServlet extends HttpServlet {
                 }else{
                     request.setAttribute("email", tempUser.getEmail());
                     request.setAttribute("userID", 0);
-                    request.setAttribute("passCorrect", false);
                     request.getRequestDispatcher(Constants.VERIFICATIONPAGE).forward(request, response);
                 }
 

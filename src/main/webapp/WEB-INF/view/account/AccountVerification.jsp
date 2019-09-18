@@ -35,13 +35,17 @@
 
         <!-- Main CSS-->
         <link href="../../../resources/libs/vendor/main.css" rel="stylesheet" media="all">
+        <script src="../../../resources/scripts/script-default.js"></script>
 
         <script>
             var email = '${email}';
             var tempUserID = '${userID}';
-            var invalidPassword = ${passCorrect}
+            var content = 'please confirm your current password to continue.';
 
             $(document).ready(function () {
+
+                console.log(tempUserID);
+
                 if(tempUserID == '0'){
                     passwordPrompt();
                 }
@@ -50,6 +54,7 @@
 
 
             function passwordPrompt() {
+
                 $.confirm({
                     title: 'Congratulations! your account has been activated',
                     boxWidth: '50%',
@@ -59,7 +64,7 @@
                     content: '' +
                         '<form action="verification" type="post" class="formName">' +
                         '<div class="form-group">' +
-                        '<label>please confirm your current password to continue.</label>' +
+                        '<label>'+content+'</label>' +
                         '<input type="password" placeholder="Enter your password" class="password form-control" required />' +
                         '</div>' +
                         '</form>',
@@ -74,16 +79,31 @@
                                     return false;
                                 }
 
+                                var verificationCode = $.urlParam('verification');
+
+                                if(!verificationCode){
+                                    window.location('home');
+                                }
+
                                 $.ajax({
                                     url: 'verification',
                                     type: 'post',
-                                    data: { "password" : password , "command" : "login"},
+                                    data: { "password" : password, "verificationCode" : verificationCode , "command" : "login"},
                                     error: function (request, status, error) {
 
                                         window.location = "Error";
                                     },
                                     success: function(response) {
+                                        var json = $.parseJSON(response);
 
+                                        if(json.UserID == 0){
+                                            content = '<lable style="color:red">Incorrect Password ! </lable><br> please confirm your current password to continue.';
+                                            passwordPrompt();
+                                        }else{
+                                            tempUserID = json.UserID;
+                                            email = json.Email;
+                                            $('#TempUserID').val(tempUserID);
+                                        }
                                     }
                                 });
 
@@ -96,12 +116,7 @@
                             $.alert('Password incorrect !');
                         }
 
-                        var jc = this;
-                        this.$content.find('form').on('submit', function (e) {
-                            // if the user submits the form by pressing enter in the field.
-                            e.preventDefault();
-                            jc.$$formSubmit.trigger('click'); // reference the button and click it
-                        });
+
                     }
                 });
             }
@@ -116,18 +131,18 @@
                 <div class="card card-4">
                     <div class="card-body">
                         <h2 class="title">365Care Registration Form</h2>
-                        <form method="POST">
+                        <form method="POST" action="verification">
                             <div class="row row-space">
                                 <div class="col-2">
                                     <div class="input-group">
                                         <label class="label">first name</label>
-                                        <input class="input--style-4" type="text" name="first_name">
+                                        <input required class="input--style-4"  type="text" name="first_name">
                                     </div>
                                 </div>
                                 <div class="col-2">
                                     <div class="input-group">
                                         <label class="label">last name</label>
-                                        <input class="input--style-4" type="text" name="last_name">
+                                        <input required class="input--style-4" type="text" name="last_name">
                                     </div>
                                 </div>
                             </div>
@@ -136,7 +151,7 @@
                                     <div class="input-group">
                                         <label class="label">Birthday</label>
                                         <div class="input-group-icon">
-                                            <input class="input--style-4 js-datepicker" type="text" name="birthday">
+                                            <input required class="input--style-4 js-datepicker" type="text" name="birthday">
                                             <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                                         </div>
                                     </div>
@@ -146,11 +161,11 @@
                                         <label class="label">Gender</label>
                                         <div class="p-t-10">
                                             <label class="radio-container m-r-45">Male
-                                                <input type="radio" checked="checked" name="gender">
+                                                <input type="radio" value="1" checked="checked" name="gender">
                                                 <span class="checkmark"></span>
                                             </label>
                                             <label class="radio-container">Female
-                                                <input type="radio" name="gender">
+                                                <input type="radio" value="0" name="gender">
                                                 <span class="checkmark"></span>
                                             </label>
                                         </div>
@@ -171,18 +186,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="input-group">
-                                <label class="label">Subject</label>
-                                <div class="rs-select2 js-select-simple select--no-search">
-                                    <select name="subject">
-                                        <option disabled="disabled" selected="selected">Choose option</option>
-                                        <option>Subject 1</option>
-                                        <option>Subject 2</option>
-                                        <option>Subject 3</option>
-                                    </select>
-                                    <div class="select-dropdown"></div>
-                                </div>
-                            </div>
+                            <input type="hidden" name="command" id="command" value="register"></input>
+                            <input type="hidden" name="TempUserID" id="TempUserID" value=""></input>
                             <div class="p-t-15">
                                 <button class="btn btn--radius-2 btn--blue" type="submit">Submit</button>
                             </div>

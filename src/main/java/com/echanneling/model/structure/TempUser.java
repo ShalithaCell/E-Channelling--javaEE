@@ -8,7 +8,6 @@ import java.util.Date;
 public class TempUser extends User {
     private String verificationCode;
     private Date registrationDate;
-    public  String ttt;
 
 
     public String getVerificationCode() {

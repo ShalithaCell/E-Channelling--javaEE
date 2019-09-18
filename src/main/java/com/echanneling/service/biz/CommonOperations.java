@@ -109,7 +109,7 @@ public class CommonOperations extends Operations {
 
             for(int column = 0; column < table.getColumnCount(); column++){
                 String columnName = table.getColumnName(column);
-                String jtableValue = (String) table.getValueAt( row, table.getColumn(columnName).getModelIndex() );
+                Object jtableValue = table.getValueAt( row, table.getColumn(columnName).getModelIndex() );
 
 
                 try{

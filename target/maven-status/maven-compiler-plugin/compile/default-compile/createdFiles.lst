@@ -1,7 +1,9 @@
 com/echanneling/service/biz/UserManagementService.class
 com/echanneling/service/support/MailInitializer.class
 com/echanneling/model/Operations.class
+com/echanneling/model/structure/RegistredUser.class
 com/echanneling/service/biz/IOOperations.class
+com/echanneling/model/TableModels/TempUserModel.class
 com/echanneling/DAL/MySQLAccess.class
 com/echanneling/model/Constants.class
 com/echanneling/model/structure/TempUser.class
