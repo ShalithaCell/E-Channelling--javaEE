@@ -6,5 +6,6 @@
         <query id="registerTempUser">SP_REGISTER_TEMP_USER</query>
         <query id="getTempUserByVerificationCode">SP_GET_TEMP_USER_BY_VERIFICATIONCODE</query>
         <query id="getTempUserDetails">SP_GET_TEMP_USER</query>
+        <query id="registerUserSP">SP_ADD_NEW_REGISTERED_USER</query>
     </queries>
 </root>

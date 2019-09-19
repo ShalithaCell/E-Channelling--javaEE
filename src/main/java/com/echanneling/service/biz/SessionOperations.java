@@ -17,6 +17,7 @@ public class SessionOperations extends Operations {
 
 
         session.setAttribute("page", value);
+
         //setting session to expiry in 30 mins
         session.setMaxInactiveInterval(30*60);
 

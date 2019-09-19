@@ -9,19 +9,12 @@ import com.echanneling.model.TableModels.TempUserModel;
 import com.echanneling.model.UserMessages;
 import com.echanneling.model.structure.RegistredUser;
 import com.echanneling.model.structure.TempUser;
-import com.echanneling.model.structure.User;
 import com.echanneling.service.support.MailInitializer;
-import org.javatuples.Quartet;
-import org.javatuples.Triplet;
-
 
 import javax.mail.MessagingException;
 import javax.servlet.http.HttpServletRequest;
 import javax.swing.*;
-import java.awt.print.PrinterException;
-import java.lang.reflect.Field;
 import java.sql.SQLException;
-import java.sql.Types;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.HashMap;
@@ -123,7 +116,7 @@ public class UserManagementService {
         return tempUserModel;
     }
 
-    public static void RegisterUser(HttpServletRequest request) throws ParseException {
+    public static void RegisterUser(HttpServletRequest request) throws ParseException, SQLException, ClassNotFoundException {
 
         RegistredUser registredUser = new RegistredUser();
 
@@ -135,6 +128,21 @@ public class UserManagementService {
         registredUser.setDOB(formatter1.parse(request.getParameter("birthday")));
         registredUser.setFK_GenderID(Integer.parseInt(request.getParameter("gender")));
         registredUser.setContactNo(request.getParameter("phone"));
+
+        ProcedureParams procedureParams = new ProcedureParams();
+        procedureParams.setParamSet("_FK_RoleID", Constants.STANDUSER_ROLE_CODE, false);
+        procedureParams.setParamSet("_FirstName", registredUser.getFirstName(), false);
+        procedureParams.setParamSet("_LastName", registredUser.getLastName(), false);
+        procedureParams.setParamSet("_TempUserID", request.getParameter("TempUserID"), false);
+        procedureParams.setParamSet("_FK_GenderID", registredUser.getFK_GenderID(), false);
+        procedureParams.setParamSet("_ContactNo", registredUser.getContactNo(), false);
+        procedureParams.setParamSet("_DOB", registredUser.getDOB(), false);
+        procedureParams.setParamSet("_UserID", 0, true);
+
+        HashMap<String, String> params = CDataAccess.ExecuateProcedure(AppDelegate.GetSQLQuery(Constants.SQL_REGISTER_USER), procedureParams.getParamSet());
+
+        System.out.println(params.get("_UserID"));
+
     }
 
 }

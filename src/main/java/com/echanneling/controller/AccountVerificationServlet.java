@@ -46,6 +46,7 @@ public class AccountVerificationServlet extends HttpServlet {
                 case "register":
                     String TempUserID = request.getParameter("TempUserID");
                     UserManagementService.RegisterUser(request);
+                    request.getRequestDispatcher(Constants.HOMEPAGE).forward(request, response);
                     break;
             }
 

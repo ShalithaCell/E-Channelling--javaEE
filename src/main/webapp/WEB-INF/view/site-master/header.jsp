@@ -171,7 +171,7 @@
                                 <form id="formSignUp" action="login" method="post">
                                     <p class="hint-text">Fill in this form to create your account!</p>
                                     <div class="form-group">
-                                        <input type="email" id="txtEmail" class="form-control" placeholder="Username" required="required">
+                                        <input type="email" id="txtEmail" class="form-control" placeholder="Email" required="required">
                                     </div>
                                     <div class="form-group">
                                         <input type="password" id="txtPassword" class="form-control" placeholder="Password" required="required">

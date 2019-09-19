@@ -59,6 +59,9 @@ public class Constants {
     /** Constant for verificationCodeSize **/
     public static final int VERIFICATION_CODE_SIZE = 15;
 
+    /** Constant for Stand User Role Code **/
+    public static final int STANDUSER_ROLE_CODE = 3;
+
     /** =============================== Page identifying keys ======================================== */
     public static final String HOME_PAGE_KEY = "home";
     public static final String LOGIN_PAGE_KEY = "login";
@@ -106,5 +109,6 @@ public class Constants {
     public static final String SQL_REGISTER_TEMP_USER = "registerTempUser";
     public static final String SQL_GET_TEMP_USER = "getTempUserByVerificationCode";
     public static final String SQL_GET_TEMP_USER_DETAILS = "getTempUserDetails";
+    public static final String SQL_REGISTER_USER = "registerUserSP";
 
 }
