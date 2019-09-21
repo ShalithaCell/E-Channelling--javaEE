@@ -1,4 +1,5 @@
 com/echanneling/service/biz/UserManagementService.class
+com/echanneling/controller/AdminPanelServlet.class
 com/echanneling/service/support/MailInitializer.class
 com/echanneling/model/Operations.class
 com/echanneling/model/structure/RegistredUser.class

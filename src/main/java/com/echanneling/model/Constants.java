@@ -72,6 +72,7 @@ public class Constants {
     public static final String HOMEPAGE = "/WEB-INF/view/index.jsp";
     public static final String LOGINPAGE = "/WEB-INF/view/account/login.jsp";
     public static final String VERIFICATIONPAGE = "/WEB-INF/view/account/AccountVerification.jsp";
+    public static final String ADMINPANELPAGE = "/WEB-INF/view/system/AdminPanel.jsp";
     public static final String HTTP500PAGE = "/WEB-INF/view/HTTP500.jsp";
 
     public static final String EXEPTION_MAIL = "WEB-INF/EmailTempletes/ErrorInformTemplete.html";

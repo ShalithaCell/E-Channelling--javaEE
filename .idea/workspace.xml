@@ -7,20 +7,107 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cebaf41e-f4a3-453d-ba76-6ebf40e5dc91" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/css/animate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/css/color-switcher.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/css/colors/alizarin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/css/colors/blue.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/css/colors/orange.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/css/colors/preset.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/css/colors/turquoise.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/css/colors/wisteria.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/css/line-icons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/css/magnific-popup.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/css/menu_sideslide.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/css/nivo-lightbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/css/owl.carousel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/css/owl.theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/css/responsive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/fonts/LineIcons.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/fonts/LineIcons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/fonts/LineIcons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/fonts/LineIcons.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/about/img-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/about/img-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/about/img1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/bg/bg-cta.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/bg/bg-subs.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/bg/hero-area-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/bg/video.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/blog/avater-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/blog/blog-1-big.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/blog/img1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/blog/img2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/blog/img3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/blog/ta-avater.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/clients/img1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/clients/img2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/clients/img3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/clients/img4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/clients/img5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/clients/img6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/clients/img7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/clients/img8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/dummy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/hero-area.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/instagram/insta1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/instagram/insta2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/instagram/insta3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/instagram/insta4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/instagram/insta5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/instagram/insta6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/intro.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/logo.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/map-marker.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/portfolio/img-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/portfolio/img-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/portfolio/img-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/portfolio/img-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/portfolio/img-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/portfolio/img-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/portfolio/img-7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/slider/bg-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/slider/bg-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/slider/bg-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/team/member-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/team/team1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/team/team2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/team/team3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/team/team4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/testimonial/img1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/testimonial/img2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/testimonial/img3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/timer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/js/classie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/js/color-switcher.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/js/contact-form-script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/js/form-validator.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/js/jquery-min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/js/jquery.counterup.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/js/jquery.easing.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/js/jquery.magnific-popup.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/js/jquery.mixitup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/js/jquery.nav.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/js/jquery.stellar.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/js/jquery.vide.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/js/map.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/js/menu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/js/nivo-lightbox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/js/owl.carousel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/js/popper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/js/scrolling-nav.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/js/waypoints.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/js/wow.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/controller/AccountVerificationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/controller/AccountVerificationServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/model/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/model/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/service/biz/SessionOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/service/biz/SessionOperations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/service/biz/UserManagementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/service/biz/UserManagementService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/SystemInfo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/SystemInfo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/site-master/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/site-master/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SystemInfo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SystemInfo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/controller/AccountVerificationServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/controller/AccountVerificationServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/model/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/model/Constants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/service/biz/SessionOperations.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/service/biz/SessionOperations.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/service/biz/UserManagementService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/service/biz/UserManagementService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/index_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/index_jsp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/index_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/index_jsp.java" afterDir="false" />
     </list>
@@ -36,9 +123,9 @@
         <option value="package-info" />
         <option value="JavaScript File" />
         <option value="HTML File" />
-        <option value="Jsp File" />
         <option value="CSS File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -52,7 +139,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/resources/libs/vendor" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -61,13 +148,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete" />
       <recent name="$PROJECT_DIR$/src/main/webapp/resources/libs/vendor" />
       <recent name="$PROJECT_DIR$/src/main/webapp/resources/libs" />
       <recent name="$PROJECT_DIR$/src/main/webapp/resources/libs/jquery-confirm" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
-      <recent name="$PROJECT_DIR$/target/E-Channeling-0.0.1-SNAPSHOT/WEB-INF" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/system" />
       <recent name="$PROJECT_DIR$/src/main/webapp/resources/libs/bootstrap-3.3.7" />
       <recent name="$PROJECT_DIR$/src/main/webapp/resources/fonts" />
       <recent name="$PROJECT_DIR$/src/main/webapp/resources/libs" />
@@ -212,7 +300,9 @@
       <workItem from="1568768895851" duration="6209000" />
       <workItem from="1568784136938" duration="4113000" />
       <workItem from="1568826705521" duration="2382000" />
-      <workItem from="1568854297409" duration="1958000" />
+      <workItem from="1568854297409" duration="2006000" />
+      <workItem from="1568859716436" duration="707000" />
+      <workItem from="1568995164394" duration="7352000" />
     </task>
     <task id="LOCAL-00001" summary="clean project and add mailing functions">
       <created>1565503011733</created>
@@ -340,7 +430,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568788632829</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="finished user registration process">
+      <created>1568856544432</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1568856544432</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -377,7 +474,8 @@
     <MESSAGE value="add registration jsp" />
     <MESSAGE value="crate population methods" />
     <MESSAGE value="Add user registration methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add user registration methods" />
+    <MESSAGE value="finished user registration process" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished user registration process" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
