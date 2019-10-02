@@ -6,29 +6,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cebaf41e-f4a3-453d-ba76-6ebf40e5dc91" name="Default Changelist" comment="">
+    <list default="true" id="cebaf41e-f4a3-453d-ba76-6ebf40e5dc91" name="Default Changelist" comment="add session management functions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/controller/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/controller/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/model/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/model/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/service/biz/SessionOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/service/biz/SessionOperations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/service/biz/UserManagementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/service/biz/UserManagementService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/SystemInfo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/SystemInfo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/site-master/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/site-master/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/libs/jquery.toaster-master/jquery.toaster.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/jquery.toaster-master/jquery.toaster.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/scripts/script-default.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/scripts/script-default.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/scripts/script-login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/scripts/script-login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/styles/style-default.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/styles/style-default.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SystemInfo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SystemInfo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/controller/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/controller/LoginServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/model/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/model/Constants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/service/biz/SessionOperations.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/service/biz/SessionOperations.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/service/biz/UserManagementService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/service/biz/UserManagementService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/index_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/index_jsp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/index_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/index_jsp.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -229,7 +208,7 @@
       <workItem from="1569845859997" duration="6912000" />
       <workItem from="1569896166215" duration="2495000" />
       <workItem from="1569901155100" duration="88000" />
-      <workItem from="1569932081301" duration="6406000" />
+      <workItem from="1569932081301" duration="6847000" />
     </task>
     <task id="LOCAL-00001" summary="clean project and add mailing functions">
       <created>1565503011733</created>
@@ -371,7 +350,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569099211728</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="add session management functions">
+      <created>1570001330042</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1570001330043</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -410,6 +396,7 @@
     <MESSAGE value="Add user registration methods" />
     <MESSAGE value="finished user registration process" />
     <MESSAGE value="Add new design to Admin panel and home page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add new design to Admin panel and home page" />
+    <MESSAGE value="add session management functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="add session management functions" />
   </component>
 </project>
