@@ -5,6 +5,7 @@ import com.echanneling.delegate.AppDelegate;
 import com.echanneling.delegate.AppParams;
 import com.echanneling.model.Constants;
 import com.echanneling.model.ProcedureParams;
+import com.echanneling.model.TableModels.RegistedUserModel;
 import com.echanneling.model.TableModels.TempUserModel;
 import com.echanneling.model.UserMessages;
 import com.echanneling.model.structure.RegistredUser;
@@ -143,6 +144,63 @@ public class UserManagementService {
 
         System.out.println(params.get("_UserID"));
 
+    }
+
+    public static RegistedUserModel GetRegisterUserDetails(int UserID) throws SQLException, ClassNotFoundException, NoSuchFieldException, IllegalAccessException, InstantiationException {
+
+        ProcedureParams procedureParams = new ProcedureParams();
+        procedureParams.setParamSet("_UserID", UserID, false);
+
+        JTable table = CDataAccess.ExecuateProcedureToJTable(AppDelegate.GetSQLQuery(Constants.SQL_GET_REGISTED_USER), procedureParams.getParamSet());
+
+        List<Object> objectList = CommonOperations.PopulateDataListFromJTable(new RegistedUserModel(), table);
+
+        RegistedUserModel registedUserModel = new RegistedUserModel();
+
+        if(objectList.size() != 0){
+            registedUserModel = (RegistedUserModel) objectList.get(0);
+        }
+
+        return registedUserModel;
+    }
+
+    public static void setLoginSession(RegistedUserModel objUser, HttpServletRequest request){
+        RegistredUser registredUser = new RegistredUser();
+
+        registredUser.setUserID(objUser.UserID);
+        registredUser.setFK_RoleID(objUser.FK_RoleID);
+        registredUser.setFirstName(objUser.FirstName);
+        registredUser.setLastName(objUser.LastName);
+        registredUser.setEmail(objUser.Email);
+        registredUser.setFK_GenderID(objUser.FK_GenderID);
+        registredUser.setDOB(objUser.DOB);
+
+        SessionOperations.SessionInit(request, registredUser);
+    }
+
+    public static String LogIn(HttpServletRequest request) throws SQLException, ClassNotFoundException, IllegalAccessException, NoSuchFieldException, InstantiationException {
+        //return json message format
+        String ReturnMessage = "{ \"result\":\"%s\", \"message\":\"%s\" }";
+
+        String Email = request.getParameter("txtEmail");
+        String Password = EncryptionModule.Encrypt(request.getParameter("password"));
+
+        ProcedureParams procedureParams = new ProcedureParams();
+        procedureParams.setParamSet("_Email", Email, false);
+        procedureParams.setParamSet("_Password", Password, false);
+        procedureParams.setParamSet("_Result", 0, true);
+        procedureParams.setParamSet("_UserID", 0, true);
+
+        HashMap<String, String> params = CDataAccess.ExecuateProcedure(AppDelegate.GetSQLQuery(Constants.SQL_USER_LOGIN), procedureParams.getParamSet());
+
+        if(params.get("_Result").equals("1")){
+            ReturnMessage = String.format(ReturnMessage, Constants.TRUE, Constants.SUCCESS);
+            setLoginSession(GetRegisterUserDetails(Integer.parseInt(params.get("_UserID"))), request);
+        }else{
+            ReturnMessage = String.format(ReturnMessage, Constants.FALSE, "email or password is invalid !");
+        }
+
+        return ReturnMessage;
     }
 
 }

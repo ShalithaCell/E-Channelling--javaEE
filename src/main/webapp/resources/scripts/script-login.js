@@ -3,16 +3,26 @@ function RegisterUser(email, password) {
     $.ajax({
         url: 'login',
         type: 'post',
-        data: { "txtEmail": email, "password" : password , "command" : "login"},
+        data: { "txtEmail": email, "password" : password , "command" : "register"},
+        beforeSend: function() {
+            $('#loadingSpinner').show();
+        },
         error: function (request, status, error) {
             $('#loadingSpinner').hide();
             window.location = "Error";
         },
         success: function(response) {
             //console.log(response);
-            ClearSignUpFields();
             $('#loadingSpinner').hide();
-            displayAccountConfirmBox(email,"User");
+            var result = JSON.parse(response);
+            if(result.result == 'false'){
+                StartToasterMessage(MESSAGE_DANGER, result.message, 'Notice');
+            }else{
+                displayAccountConfirmBox(email,"User");
+            }
+
+            ClearSignUpFields();
+
         }
     });
 
@@ -22,6 +32,8 @@ function ClearSignUpFields() {
     $('#txtEmail').val('');
     $('#txtPassword').val('');
     $('#confirmPassword').val('');
+    $('#txtUserName').val('');
+    $('#txtPasswordl').val('');
 }
 
 function displayAccountConfirmBox(email, name) {
@@ -49,4 +61,51 @@ function displayAccountConfirmBox(email, name) {
             }
         }
     });
+}
+
+function UserLogIn() {
+
+    var controllers = CheckFormTextElementsIsEmpty('FrmLogIn');
+
+    if(controllers.length > 0){
+        jQuery.each( controllers, function( i, val ) {
+            $('#'+val).addClass('has-error');
+        });
+
+        StartToasterMessage(MESSAGE_DANGER, REQUIRED_FIELD, 'required');
+        return;
+    }
+
+    var email = $('#txtUserName').val();
+    var password = $('#txtPasswordl').val();
+
+    $.ajax({
+        url: 'login',
+        type: 'post',
+        data: { "txtEmail": email, "password" : password , "command" : "login"},
+        beforeSend: function() {
+            $('#loadingSpinner').show();
+        },
+        error: function (request, status, error) {
+            $('#loadingSpinner').hide();
+            window.location = "Error";
+        },
+        success: function(response) {
+            //console.log(response);
+            $('#loadingSpinner').hide();
+            var result = JSON.parse(response);
+            if(result.result == 'false'){
+                StartToasterMessage(MESSAGE_DANGER, result.message, 'Incorrect Credentials');
+                $('#txtUserName').addClass('has-error');
+                $('#txtPasswordl').addClass('has-error');
+            }else{
+                HandleLoginButtons(true);
+                location.reload();
+            }
+
+            ClearSignUpFields();
+
+        }
+    });
+
 }

@@ -12,12 +12,15 @@ com/echanneling/service/support/CustomMailSender.class
 com/echanneling/DAL/DBDataAccess.class
 com/echanneling/controller/homeServlet.class
 com/echanneling/model/structure/User.class
+com/echanneling/model/structure/SessionDetails.class
 com/echanneling/service/support/CatchException.class
 com/echanneling/model/ProcedureParams.class
 com/echanneling/service/support/DConvert.class
 com/echanneling/controller/LoginServlet.class
+com/echanneling/model/TableModels/RegistedUserModel.class
 com/echanneling/delegate/AppParams.class
 com/echanneling/delegate/AppDelegate$1.class
+com/echanneling/controller/UserAccountServlet.class
 com/echanneling/service/biz/SessionOperations.class
 com/echanneling/controller/HTTP500Servlet.class
 com/echanneling/controller/AccountVerificationServlet.class

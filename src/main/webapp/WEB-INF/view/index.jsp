@@ -24,18 +24,121 @@
         <link rel="stylesheet" href="../../resources/libs/essence_templete/css/responsive.css">
 
 
+
+        <style>
+            .panel.with-nav-tabs .panel-heading{
+                padding: 5px 5px 0 5px;
+            }
+            .panel.with-nav-tabs .nav-tabs{
+                border-bottom: none;
+            }
+            .panel.with-nav-tabs .nav-justified{
+                margin-bottom: -1px;
+            }
+
+            /********************************************************************/
+            /*** PANEL PRIMARY ***/
+            .with-nav-tabs.panel-primary .nav-tabs > li > a,
+            .with-nav-tabs.panel-primary .nav-tabs > li > a:hover,
+            .with-nav-tabs.panel-primary .nav-tabs > li > a:focus {
+                color: #fff;
+            }
+            .with-nav-tabs.panel-primary .nav-tabs > .open > a,
+            .with-nav-tabs.panel-primary .nav-tabs > .open > a:hover,
+            .with-nav-tabs.panel-primary .nav-tabs > .open > a:focus,
+            .with-nav-tabs.panel-primary .nav-tabs > li > a:hover,
+            .with-nav-tabs.panel-primary .nav-tabs > li > a:focus {
+                color: #fff;
+                background-color: #3071a9;
+                border-color: transparent;
+            }
+            .with-nav-tabs.panel-primary .nav-tabs > li.active > a,
+            .with-nav-tabs.panel-primary .nav-tabs > li.active > a:hover,
+            .with-nav-tabs.panel-primary .nav-tabs > li.active > a:focus {
+                color: #428bca;
+                background-color: #fff;
+                border-color: #428bca;
+                border-bottom-color: transparent;
+            }
+            .with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu {
+                background-color: #428bca;
+                border-color: #3071a9;
+            }
+            .with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > li > a {
+                color: #fff;
+            }
+            .with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > li > a:hover,
+            .with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > li > a:focus {
+                background-color: #3071a9;
+            }
+            .with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > .active > a,
+            .with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > .active > a:hover,
+            .with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > .active > a:focus {
+                background-color: #4a9fe9;
+            }
+        </style>
+
     </head>
 <body>
 
     <%@include file="site-master/header.jsp"%>
 
+    <!-- Channel  Section Start -->
+    <div id="subscribe" class="section">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-5 col-md-12 col-xs-12">
+                    <div class="subscribe-form">
+                        <div class="form-wrapper">
+                            <div class="sub-title text-center">
+                                <h3>We are No 1. Channeling Website</h3>
+                                <p>e-Channelling PLC is the pioneer software development and ICT service provider to the Healthcare industry in Sri Lanka. It is the first company in Sri Lanka to offer a complete e-commerce based service and the first public quoted Technology Company in the Colombo Stock Exchange. E-Channelling has consistently been part of the 100 top brands in Sri Lanka.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-12 col-xs-12">
+                    <div class="col-md-12">
+                        <div class="panel with-nav-tabs panel-primary">
+                            <div class="panel-heading">
+                                <ul class="nav nav-tabs">
+                                    <li class="active"><a href="#tab1primary" data-toggle="tab">Primary 1</a></li>
+                                    <li><a href="#tab2primary" data-toggle="tab">Primary 2</a></li>
+                                    <li><a href="#tab3primary" data-toggle="tab">Primary 3</a></li>
+                                    <li class="dropdown">
+                                        <a href="#" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#tab4primary" data-toggle="tab">Primary 4</a></li>
+                                            <li><a href="#tab5primary" data-toggle="tab">Primary 5</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="panel-body">
+                                <div class="tab-content">
+                                    <div class="tab-pane fade in active" id="tab1primary">Primary 1</div>
+                                    <div class="tab-pane fade" id="tab2primary">Primary 2</div>
+                                    <div class="tab-pane fade" id="tab3primary">Primary 3</div>
+                                    <div class="tab-pane fade" id="tab4primary">Primary 4</div>
+                                    <div class="tab-pane fade" id="tab5primary">Primary 5</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Subcribe1 Section End -->
+
     <!-- Services Section Start -->
-    <section id="services" class="section">
+    <section id="services" tabindex="1" class="section">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Our Services</h2>
                 <span>Services</span>
-                <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy</p>
+                <p class="section-subtitle">The smartest way to stay healthy</p>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-xs-12">
@@ -710,78 +813,6 @@
     </section>
     <!-- Team section End -->
 
-    <!-- Subcribe Section Start -->
-    <div id="subscribe" class="section">
-        <div class="container">
-            <div class="row justify-content-between">
-                <div class="col-lg-5 col-md-12 col-xs-12">
-                    <div class="subscribe-form">
-                        <div class="form-wrapper">
-                            <div class="sub-title text-center">
-                                <h3>Subscribe to Newsletter</h3>
-                                <p>Weekly Freebies and More!</p>
-                            </div>
-                            <form>
-                                <div class="row">
-                                    <div class="col-12 form-line">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" name="email" placeholder="Name">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12 form-line">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" name="phone" placeholder="Phone">
-                                        </div>
-                                    </div>
-                                    <div class="col-12 form-line">
-                                        <div class="form-group">
-                                            <input type="email" class="form-control" name="email" placeholder="Email">
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-submit">
-                                            <button type="submit" class="btn btn-common btn-effect">Subscribe Now</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-12 col-xs-12">
-                    <div class="sub-item-box">
-                        <div class="icon-box">
-                            <i class="lni-bullhorn"></i>
-                        </div>
-                        <div class="text-box">
-                            <h4>Weekly Free Learning Materials</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, laborum libero beatae obcaecati.</p>
-                        </div>
-                    </div>
-                    <div class="sub-item-box">
-                        <div class="icon-box">
-                            <i class="lni-book"></i>
-                        </div>
-                        <div class="text-box">
-                            <h4>Free PDF to Get Started</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, laborum libero beatae obcaecati.</p>
-                        </div>
-                    </div>
-                    <div class="sub-item-box">
-                        <div class="icon-box">
-                            <i class="lni-timer"></i>
-                        </div>
-                        <div class="text-box">
-                            <h4>10% Instant Discount</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, laborum libero beatae obcaecati.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Subcribe Section End -->
-
     <!-- Blog Section -->
     <section id="blog" class="section">
         <!-- Container Starts -->
@@ -1012,7 +1043,9 @@
     <script src="../../resources/libs/essence_templete/js/contact-form-script.js"></script>
     <script src="../../resources/libs/essence_templete/js/main.js"></script>
 
-
+    <script src="../../resources/libs/jquery-confirm/jquery-confirm.min.js"></script>
+    <link rel="stylesheet" href="../../resources/libs/jquery-confirm/jquery-confirm.min.css">
+    <script src="../../resources/libs/jquery.toaster-master/jquery.toaster.js"></script>
 
 </body>
 </html>

@@ -40,6 +40,19 @@
             });
 
             $(document).ready(function () {
+
+                //nevigation
+                $("#aService").click(function() {
+                    $('html, body').animate({
+                        scrollTop: $("#services").offset().top
+                    }, 2000);
+                });
+
+                if(checkSessionAvailability()){
+                    //console.log('ok');
+                    HandleLoginButtons(true);
+                }
+
                 var session = '<%= session.getAttribute("page") %>';
                 sessionManagement(name);
 
@@ -62,7 +75,7 @@
                 event.preventDefault();
                 console.log('asdasd');
                 var counter = 0;
-                var controllers = CheckFormTextElementsIsEmpty('formSignUp')
+                var controllers = CheckFormTextElementsIsEmpty('formSignUp');
 
                 if(controllers.length > 0){
                     jQuery.each( controllers, function( i, val ) {
@@ -86,11 +99,11 @@
 
 
             function onSignIn(googleUser) {
-                var profile = googleUser.getBasicProfile();
+                /*var profile = googleUser.getBasicProfile();
                 console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
                 console.log('Name: ' + profile.getName());
                 console.log('Image URL: ' + profile.getImageUrl());
-                console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+                console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.*/
             }
 
             function signOut() {
@@ -105,7 +118,7 @@
     <body>
         <nav class="navbar navbar-default navbar-expand-lg navbar-light">
             <div class="navbar-header d-flex col">
-                <a class="navbar-brand" href="#">Brand<b>Name</b></a>
+                <a class="navbar-brand" href="#">365<b>Care</b></a>
                 <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">
                     <span class="navbar-toggler-icon"></span>
                     <span class="icon-bar"></span>
@@ -118,17 +131,7 @@
                 <ul class="nav navbar-nav">
                     <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-                    <li class="nav-item dropdown">
-                        <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Services <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#" class="dropdown-item">Web Design</a></li>
-                            <li><a href="#" class="dropdown-item">Web Development</a></li>
-                            <li><a href="#" class="dropdown-item">Graphic Design</a></li>
-                            <li><a href="#" class="dropdown-item">Digital Marketing</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item active"><a href="#" class="nav-link">Pricing</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a id="aService" class="nav-link cursor-pointer">Service</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
                 </ul>
                 <form class="navbar-form form-inline">
@@ -138,11 +141,11 @@
                     </div>
                 </form>
                 <ul class="nav navbar-nav navbar-right ml-auto">
-                    <li class="nav-item">
+                    <li class="nav-item" id="li_LogIn">
                         <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Login</a>
                         <ul class="dropdown-menu form-wrapper">
                             <li>
-                                <form action="" method="post">
+                                <form id="FrmLogIn" action="login" method="post">
                                     <p class="hint-text">Sign in with your social media account</p>
                                     <div class="form-group social-btn clearfix">
                                         <div class="form-group">
@@ -151,12 +154,12 @@
                                     </div>
                                     <div class="or-seperator"><b>or</b></div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Username" required="required">
+                                        <input type="text" id="txtUserName" class="form-control" placeholder="Username" required="required">
                                     </div>
                                     <div class="form-group">
-                                        <input type="password" class="form-control" placeholder="Password" required="required">
+                                        <input type="password" id="txtPasswordl" class="form-control" placeholder="Password" required="required">
                                     </div>
-                                    <input type="submit" class="btn btn-primary btn-block" value="Login">
+                                    <input type="button" class="btn btn-primary btn-block" value="Login" onclick="UserLogIn()">
                                     <div class="form-footer">
                                         <a href="#">Forgot Your password?</a>
                                     </div>
@@ -164,9 +167,9 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item">
+                    <li id="li_Register" class="nav-item">
                         <a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle get-started-btn mt-1 mb-1">Sign up</a>
-                        <ul class="dropdown-menu form-wrapper">
+                        <ul class="dropdown-menu form-wrapper" id="li_formSignUp">
                             <li>
                                 <form id="formSignUp" action="login" method="post">
                                     <p class="hint-text">Fill in this form to create your account!</p>
@@ -184,6 +187,14 @@
                                 </form>
                             </li>
                         </ul>
+                    </li>
+                    <li class="nav-item" id="li_SignOut" style="display: none">
+                        <a data-toggle="dropdown" data-hover="dropdown" data-delay="1000" class="nav-link dropdown-toggle" href="#">My Account</a>
+                        <ul class="dropdown-menu form-wrapper">
+                            <a class="dropdown-item" style="cursor: pointer;" id="btnAccount">My Account</a><br><br>
+                            <a class="dropdown-item" id="btnSignOut" style="color: orangered;cursor: pointer;">Log Out</a>
+                        </ul>
+
                     </li>
                 </ul>
             </div>

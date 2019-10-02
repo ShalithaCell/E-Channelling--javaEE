@@ -74,6 +74,7 @@ public class Constants {
     public static final String VERIFICATIONPAGE = "/WEB-INF/view/account/AccountVerification.jsp";
     public static final String ADMINPANELPAGE = "/WEB-INF/view/system/AdminPanel.jsp";
     public static final String HTTP500PAGE = "/WEB-INF/view/HTTP500.jsp";
+    public static final String USERACCOUNTPAGE = "/WEB-INF/view/account/UserAccount.jsp";
 
     public static final String EXEPTION_MAIL = "WEB-INF/EmailTempletes/ErrorInformTemplete.html";
     public static final String VERIFICATION_MAIL = "WEB-INF/EmailTempletes/VerificationMail.html";
@@ -111,5 +112,17 @@ public class Constants {
     public static final String SQL_GET_TEMP_USER = "getTempUserByVerificationCode";
     public static final String SQL_GET_TEMP_USER_DETAILS = "getTempUserDetails";
     public static final String SQL_REGISTER_USER = "registerUserSP";
+    public static final String SQL_USER_LOGIN = "checkLogin";
+    public static final String SQL_GET_REGISTED_USER = "GetRegisterUserDetails";
+
+    /** =============================== Session Variables ======================================== */
+
+    public static final String SESSION_USER_ID = "UserID";
+    public static final String SESSION_RoleID = "FK_RoleID";
+    public static final String SESSION_FirstName = "FirstName";
+    public static final String SESSION_LastName = "LastName";
+    public static final String SESSION_Email = "Email";
+    public static final String SESSION_GenderID = "FK_GenderID";
+    public static final String SESSION_DOB = "DOB";
 
 }

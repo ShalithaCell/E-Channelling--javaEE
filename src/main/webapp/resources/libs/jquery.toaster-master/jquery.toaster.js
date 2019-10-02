@@ -145,7 +145,7 @@
 		},
 
 		'debug'        : false,
-		'timeout'      : 1500,
+		'timeout'      : 3000,
 		'stylesheet'   : null,
 		'donotdismiss' : []
 	};

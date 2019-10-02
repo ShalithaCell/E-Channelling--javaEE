@@ -44,4 +44,46 @@ $.urlParam = function (name) {
     return (results !== null) ? results[1] || 0 : false;
 }
 
+function HandleLoginButtons(status) {
+    if(status){
+        $('#li_LogIn').hide();
+        $('#li_formSignUp').hide();
+        $('#li_Register').hide();
+        $('#li_SignOut').show();
+    }else{
+        $('#li_LogIn').show();
+        $('#li_formSignUp').show();
+        $('#li_Register').show();
+        $('#li_SignOut').hide();
+    }
+}
+
+function checkSessionAvailability() {
+    var success = false;
+
+    $.ajax({
+        url: 'login',
+        type: 'post',
+        async: false,
+        data: { "command" : "sessionCheck"},
+        error: function (request, status, error) {
+            window.location = "Error";
+        },
+        success: function(response) {
+            var result = JSON.parse(response);
+            //console.log(result);
+            if(result.result == 'true'){
+                //console.log('valid');
+                success = true;
+            }else{
+                //console.log('invalid');
+                success = false;
+            }
+
+        }
+    });
+
+    return success;
+}
+
 

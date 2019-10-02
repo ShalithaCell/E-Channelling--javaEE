@@ -1,5 +1,6 @@
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/service/support/MailInitializer.java
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/delegate/AppDelegate.java
+/Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/model/structure/SessionDetails.java
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/service/biz/IOOperations.java
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/service/support/CatchException.java
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/service/biz/SessionOperations.java
@@ -21,6 +22,7 @@
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/delegate/AppParams.java
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/model/structure/RegistredUser.java
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/DAL/DBDataAccess.java
+/Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/model/TableModels/RegistedUserModel.java
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/service/biz/EncryptionModule.java
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/service/support/CustomMailSender.java
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/model/TableModels/TempUserModel.java

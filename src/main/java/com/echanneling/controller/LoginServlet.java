@@ -30,26 +30,37 @@ public class LoginServlet extends HttpServlet {
             String command = request.getParameter("command");
 
             switch (command){
-                case "login":
+                case "register":
                     ReturnMessage = UserManagementService.RegisterTempUser(request);
+                    break;
+                case "login":
+                    ReturnMessage = UserManagementService.LogIn(request);
+                    break;
+                case "sessionCheck":
+                    boolean exists = SessionOperations.CheckSessionExists(request);
+                    if(exists){
+                        ReturnMessage = String.format(ReturnMessage, Constants.TRUE, "Session is valid");
+                    }else{
+                        ReturnMessage = String.format(ReturnMessage, Constants.FALSE, "Session is invalid");
+                    }
                     break;
             }
 
             response.setContentType("text/plain");
             response.getWriter().write(ReturnMessage);
 
-        }catch (SQLException | ClassNotFoundException | MessagingException e){
+        }catch (SQLException | ClassNotFoundException | MessagingException |
+                IllegalAccessException | InstantiationException | NoSuchFieldException e){
             CatchException.Handle(e);
             response.sendError(500, e.getMessage());
         }
-
 
 
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        SessionOperations.setPageToSession(request,Constants.LOGIN_PAGE_KEY);
+        //SessionOperations.setPageToSession(request,Constants.LOGIN_PAGE_KEY);
 
         request.getRequestDispatcher(Constants.LOGINPAGE).forward(request, response);
     }
