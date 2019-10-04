@@ -24,6 +24,7 @@ com/echanneling/controller/UserAccountServlet.class
 com/echanneling/service/biz/SessionOperations.class
 com/echanneling/controller/HTTP500Servlet.class
 com/echanneling/controller/AccountVerificationServlet.class
+com/echanneling/controller/PasswordResetServlet.class
 com/echanneling/delegate/AppDelegate.class
 com/echanneling/service/biz/EncryptionModule.class
 com/echanneling/service/biz/CommonOperations.class

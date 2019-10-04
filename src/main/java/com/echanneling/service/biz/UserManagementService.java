@@ -174,6 +174,7 @@ public class UserManagementService {
         registredUser.setEmail(objUser.Email);
         registredUser.setFK_GenderID(objUser.FK_GenderID);
         registredUser.setDOB(objUser.DOB);
+        registredUser.setContactNo(objUser.ContactNo);
 
         SessionOperations.SessionInit(request, registredUser);
     }
@@ -202,5 +203,99 @@ public class UserManagementService {
 
         return ReturnMessage;
     }
+
+    public static String UpdateRegisterUser(HttpServletRequest request) throws ParseException, SQLException, ClassNotFoundException {
+
+        RegistredUser objUser = new RegistredUser();
+        String ReturnMessage = "{ \"result\":\"%s\", \"message\":\"%s\" }";
+
+        objUser.setFirstName(request.getParameter("first_name"));
+        objUser.setLastName(request.getParameter("last_name"));
+
+        SimpleDateFormat formatter1=new SimpleDateFormat(Constants.SIMPLE_DATE_FORMAT_WEB_INPUT);
+
+        objUser.setDOB(formatter1.parse(request.getParameter("birthday")));
+        objUser.setFK_GenderID(Integer.parseInt(request.getParameter("gender")));
+        objUser.setContactNo(request.getParameter("phone"));
+        objUser.setUserID(Integer.parseInt(request.getParameter("UserID")));
+        objUser.setEmail((String)request.getSession().getAttribute(Constants.SESSION_Email));
+
+        ProcedureParams procedureParams = new ProcedureParams();
+        procedureParams.setParamSet("_UserID", objUser.getUserID(), false);
+        procedureParams.setParamSet("_FirstName", objUser.getFirstName(), false);
+        procedureParams.setParamSet("_LastName", objUser.getLastName(), false);
+        procedureParams.setParamSet("_FK_GenderID", objUser.getFK_GenderID(), false);
+        procedureParams.setParamSet("_ContactNo", objUser.getContactNo(), false);
+        procedureParams.setParamSet("_DOB", objUser.getDOB(), false);
+        procedureParams.setParamSet("_Password", EncryptionModule.Encrypt(request.getParameter("password")), false);
+
+        SessionOperations.UpdateSession(request, objUser);
+
+        CDataAccess.ExecuateProcedure(AppDelegate.GetSQLQuery(Constants.SQL_UPDATE_USER), procedureParams.getParamSet());
+        ReturnMessage = String.format(ReturnMessage, Constants.TRUE, "User Account Updated !");
+        return ReturnMessage;
+    }
+
+    public static String SendPasswordResetLink(String Email) throws SQLException, ClassNotFoundException, MessagingException {
+
+
+        String ReturnMessage = "{ \"result\":\"%s\", \"message\":\"%s\" }";
+
+        ProcedureParams procedureParams = new ProcedureParams();
+        procedureParams.setParamSet("_email", Email, false);
+        procedureParams.setParamSet("_UserID", 0, true);
+
+        HashMap<String, String> params = CDataAccess.ExecuateProcedure(AppDelegate.GetSQLQuery(Constants.SQL_GET_USER_BY_EMAIL), procedureParams.getParamSet());
+
+        if(params.get("_UserID").equals("0")){
+            ReturnMessage = String.format(ReturnMessage, Constants.FALSE, "cannot finds user for " + Email);
+            return ReturnMessage;
+        }
+
+        String TempCode = CommonOperations.GetSaltString(Constants.PASSWORD_RESET_TOKEN_LINK);
+
+        procedureParams = new ProcedureParams();
+        procedureParams.setParamSet("_Token", TempCode, false);
+        procedureParams.setParamSet("_UserID", Integer.parseInt(params.get("_UserID")), false);
+
+        CDataAccess.ExecuateProcedure(AppDelegate.GetSQLQuery(Constants.SQL_SAVE_RESET_TOKEN), procedureParams.getParamSet());
+
+        MailInitializer.InitAndSendForgetPasswordResetMessage(AppParams.PasswordResetURL + TempCode, Email);
+        ReturnMessage = String.format(ReturnMessage, Constants.TRUE, "password recovery link sent to your email");
+
+        return ReturnMessage;
+    }
+
+
+    public static Boolean CheckVerificationCodeValidation(String token) throws SQLException, ClassNotFoundException, MessagingException {
+
+        ProcedureParams procedureParams = new ProcedureParams();
+        procedureParams.setParamSet("_token", token, false);
+        procedureParams.setParamSet("_result", 0, true);
+
+        HashMap<String, String> params = CDataAccess.ExecuateProcedure(AppDelegate.GetSQLQuery(Constants.SQL_VALIDATE_TOKEN), procedureParams.getParamSet());
+
+        Boolean success = false;
+
+        if(params.get("_result").equals("0")){
+            success = false;
+        }else{
+            success = true;
+        }
+
+        return  success;
+
+    }
+
+    public static void ChangeUserPassword(String token, String Password) throws SQLException, ClassNotFoundException, MessagingException {
+
+        ProcedureParams procedureParams = new ProcedureParams();
+        procedureParams.setParamSet("_token", token, false);
+        procedureParams.setParamSet("_password", EncryptionModule.Encrypt(Password) , false);
+
+        CDataAccess.ExecuateProcedure(AppDelegate.GetSQLQuery(Constants.SQL_PASSWORD_CHANGE), procedureParams.getParamSet());
+
+    }
+
 
 }

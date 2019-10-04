@@ -48,6 +48,8 @@ public class Constants {
     public static final String SIMPLE_DATE_FORMAT = "yyyy/MM/dd HH:mm:ss";
     /** Constant for simple date time format for web input**/
     public static final String SIMPLE_DATE_FORMAT_WEB_INPUT = "dd/MM/yyyy";
+    /** Constant for simple date time format for web input 2**/
+    public static final String SIMPLE_DATE_FORMAT_WEB_INPUT2 = "yyyy-MM-dd";
     /** Constant for my sql datetime format **/
     public static final String MYSQL_DATE_FORMAT = "yyyy-MM-dd hh:mm:ss";
 
@@ -55,9 +57,19 @@ public class Constants {
     public static final String VERIFICATION_URL = "projectAccountVerificationURL";
     /** Constant for project account verification url **/
     public static final String VERIFICATION_CODE = "verification";
+    /** Constant for project URL **/
+    public static final String PROJECTDOMAIN = "projectURL";
+    /** Constant for project Forgot Password address **/
+    public static final String FORGETPASSWORD_CODE = "projectAccountResetURL";
+
+    /** Constant for project account verification url **/
+    public static final String ACCOUNT_RESET_CODE = "resetToken";
+
 
     /** Constant for verificationCodeSize **/
     public static final int VERIFICATION_CODE_SIZE = 15;
+    /** Constant for PasswordResetTocken **/
+    public static final int PASSWORD_RESET_TOKEN_LINK = 10;
 
     /** Constant for Stand User Role Code **/
     public static final int STANDUSER_ROLE_CODE = 3;
@@ -75,9 +87,11 @@ public class Constants {
     public static final String ADMINPANELPAGE = "/WEB-INF/view/system/AdminPanel.jsp";
     public static final String HTTP500PAGE = "/WEB-INF/view/HTTP500.jsp";
     public static final String USERACCOUNTPAGE = "/WEB-INF/view/account/UserAccount.jsp";
+    public static final String PASSWORDRESETPAGE = "/WEB-INF/view/account/PasswordReset.jsp";
 
     public static final String EXEPTION_MAIL = "WEB-INF/EmailTempletes/ErrorInformTemplete.html";
     public static final String VERIFICATION_MAIL = "WEB-INF/EmailTempletes/VerificationMail.html";
+    public static final String FORGETPASSWORD_MAIL = "WEB-INF/EmailTempletes/PAsswordResetEmailTemplate.html";
     public static final String CONFIG_XML = "WEB-INF/SystemInfo.xml";
 
 
@@ -114,6 +128,11 @@ public class Constants {
     public static final String SQL_REGISTER_USER = "registerUserSP";
     public static final String SQL_USER_LOGIN = "checkLogin";
     public static final String SQL_GET_REGISTED_USER = "GetRegisterUserDetails";
+    public static final String SQL_UPDATE_USER = "UpdateUserDetails";
+    public static final String SQL_GET_USER_BY_EMAIL = "GetUserByEmailSP";
+    public static final String SQL_SAVE_RESET_TOKEN = "SavePasswordResetToken";
+    public static final String SQL_VALIDATE_TOKEN = "ValidatePasswordResetToken";
+    public static final String SQL_PASSWORD_CHANGE = "PasswordChangeSP";
 
     /** =============================== Session Variables ======================================== */
 
@@ -124,5 +143,6 @@ public class Constants {
     public static final String SESSION_Email = "Email";
     public static final String SESSION_GenderID = "FK_GenderID";
     public static final String SESSION_DOB = "DOB";
+    public static final String SESSION_CONTACT = "Contact";
 
 }

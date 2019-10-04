@@ -44,6 +44,13 @@ public class LoginServlet extends HttpServlet {
                         ReturnMessage = String.format(ReturnMessage, Constants.FALSE, "Session is invalid");
                     }
                     break;
+                case "signout":
+                    SessionOperations.SessionDestroy(request);
+                    ReturnMessage = ReturnMessage = String.format(ReturnMessage, Constants.TRUE, "Session destroyed");
+                    break;
+                case "resetpassword":
+                    ReturnMessage = UserManagementService.SendPasswordResetLink(request.getParameter("email"));
+                    break;
             }
 
             response.setContentType("text/plain");

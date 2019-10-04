@@ -8,6 +8,8 @@ import com.echanneling.model.structure.SessionDetails;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.sql.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 
 /**
  * @author shalithasenanayaka on 2019-08-11 using IntelliJ IDEA
@@ -30,6 +32,7 @@ public class SessionOperations extends Operations {
         session.setAttribute(Constants.SESSION_Email, user.getEmail());
         session.setAttribute(Constants.SESSION_GenderID, user.getFK_GenderID());
         session.setAttribute(Constants.SESSION_DOB, user.getDOB());
+        session.setAttribute(Constants.SESSION_CONTACT, user.getContactNo());
 
         //setting session to expiry in 15 mins
         session.setMaxInactiveInterval(15*60);
@@ -52,7 +55,7 @@ public class SessionOperations extends Operations {
 
         RegistredUser registredUser = new RegistredUser();
 
-        session = request.getSession(true);
+        session = request.getSession();
 
         registredUser.setUserID((Integer)session.getAttribute(Constants.SESSION_USER_ID));
         registredUser.setFK_RoleID((Integer)session.getAttribute(Constants.SESSION_RoleID));
@@ -60,7 +63,8 @@ public class SessionOperations extends Operations {
         registredUser.setLastName((String) session.getAttribute(Constants.SESSION_LastName));
         registredUser.setEmail((String) session.getAttribute(Constants.SESSION_Email));
         registredUser.setFK_GenderID((Integer) session.getAttribute(Constants.SESSION_GenderID));
-        registredUser.setDOB((Date) session.getAttribute(Constants.SESSION_DOB));
+        registredUser.setDOB((java.util.Date) session.getAttribute(Constants.SESSION_DOB));
+        registredUser.setContactNo((String) session.getAttribute(Constants.SESSION_CONTACT));
 
         sessionDetails.setRegistredUser(registredUser);
 
@@ -68,5 +72,25 @@ public class SessionOperations extends Operations {
 
     }
 
+    public static void UpdateSession(HttpServletRequest request, RegistredUser user){
 
+        request.getSession().setAttribute(Constants.SESSION_USER_ID, user.getUserID());
+        request.getSession().setAttribute(Constants.SESSION_RoleID, user.getFK_RoleID());
+        request.getSession().setAttribute(Constants.SESSION_FirstName, user.getFirstName());
+        request.getSession().setAttribute(Constants.SESSION_LastName, user.getLastName());
+        request.getSession().setAttribute(Constants.SESSION_Email, user.getEmail());
+        request.getSession().setAttribute(Constants.SESSION_GenderID, user.getFK_GenderID());
+        request.getSession().setAttribute(Constants.SESSION_DOB, user.getDOB());
+
+        request.getSession().setAttribute(Constants.SESSION_DOB, user.getDOB());
+
+        request.getSession().setAttribute(Constants.SESSION_CONTACT, user.getContactNo());
+
+
+    }
+
+    public static void SessionDestroy(HttpServletRequest request){
+        session = request.getSession();
+        session.invalidate();
+    }
 }

@@ -1,5 +1,6 @@
 package com.echanneling.service.biz;
 
+import com.echanneling.model.Constants;
 import com.echanneling.model.Operations;
 import com.echanneling.model.structure.TempUser;
 import org.javatuples.Triplet;
@@ -9,6 +10,8 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Field;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 
@@ -131,6 +134,12 @@ public class CommonOperations extends Operations {
         return  list;
 
 
+    }
+
+    public static String DateToString(Date date){
+        DateFormat dateFormat = new SimpleDateFormat(Constants.SIMPLE_DATE_FORMAT_WEB_INPUT);
+        String strDate = dateFormat.format(date);
+        return strDate;
     }
 
 }

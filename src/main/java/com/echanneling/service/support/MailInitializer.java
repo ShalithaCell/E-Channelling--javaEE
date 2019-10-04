@@ -1,6 +1,7 @@
 package com.echanneling.service.support;
 
 import com.echanneling.delegate.AppParams;
+import com.echanneling.model.Constants;
 import com.echanneling.model.ExceptionDetails;
 import org.apache.commons.lang3.text.StrSubstitutor;
 
@@ -50,6 +51,23 @@ public class MailInitializer extends CustomMailSender {
 
 
         CustomMailSender.generateAndSendEmail("365Care Account Verification",mailBody, new String[] {UserEmail});
+
+    }
+
+    public static void InitAndSendForgetPasswordResetMessage(String URL, String UserEmail) throws MessagingException {
+
+        String mailBody ="";
+
+        Map<String, String> valuesMap = new HashMap<String, String>();
+
+        valuesMap.put("redirectlink", URL);
+        valuesMap.put("homepageLink", AppParams.AppDomain);
+
+        StrSubstitutor sub = new StrSubstitutor(valuesMap);
+        mailBody = sub.replace(AppParams.PasswordRestMailContent);
+
+
+        CustomMailSender.generateAndSendEmail("365Care Account Password Reset",mailBody, new String[] {UserEmail});
 
     }
 

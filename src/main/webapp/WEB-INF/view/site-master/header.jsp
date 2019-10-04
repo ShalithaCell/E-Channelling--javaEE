@@ -73,7 +73,7 @@
 
             function SignUp(event) {
                 event.preventDefault();
-                console.log('asdasd');
+                //console.log('asdasd');
                 var counter = 0;
                 var controllers = CheckFormTextElementsIsEmpty('formSignUp');
 
@@ -97,6 +97,10 @@
                 }
             }
 
+            function ForgetPasswordOnClick() {
+                displayPasswordResetBox();
+            }
+
 
             function onSignIn(googleUser) {
                 /*var profile = googleUser.getBasicProfile();
@@ -112,6 +116,29 @@
                     console.log('User signed out.');
                 });
             }
+
+            function appicationSignout() {
+                $.ajax({
+                    url: 'login',
+                    type: 'post',
+                    data: {  "command" : "signout"},
+                    beforeSend: function() {
+                        $('#loadingSpinner').show();
+                    },
+                    error: function (request, status, error) {
+                        $('#loadingSpinner').hide();
+                        window.location = "Error";
+                    },
+                    success: function(response) {
+                        location.reload();
+
+                    }
+                });
+            }
+
+
+
+
 
         </script>
     </head>
@@ -161,7 +188,7 @@
                                     </div>
                                     <input type="button" class="btn btn-primary btn-block" value="Login" onclick="UserLogIn()">
                                     <div class="form-footer">
-                                        <a href="#">Forgot Your password?</a>
+                                        <a class="cursor-pointer" onclick="ForgetPasswordOnClick()">Forgot Your password?</a>
                                     </div>
                                 </form>
                             </li>
@@ -191,8 +218,8 @@
                     <li class="nav-item" id="li_SignOut" style="display: none">
                         <a data-toggle="dropdown" data-hover="dropdown" data-delay="1000" class="nav-link dropdown-toggle" href="#">My Account</a>
                         <ul class="dropdown-menu form-wrapper">
-                            <a class="dropdown-item" style="cursor: pointer;" id="btnAccount">My Account</a><br><br>
-                            <a class="dropdown-item" id="btnSignOut" style="color: orangered;cursor: pointer;">Log Out</a>
+                            <a class="dropdown-item" href="account" style="cursor: pointer;" id="btnAccount">My Account</a><br><br>
+                            <a class="dropdown-item" id="btnSignOut" onclick="appicationSignout()" style="color: orangered;cursor: pointer;">Log Out</a>
                         </ul>
 
                     </li>
