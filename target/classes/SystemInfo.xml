@@ -14,5 +14,12 @@
         <query id="SavePasswordResetToken">SP_INSERT_PASSWORD_RESET_TOKEN</query>
         <query id="ValidatePasswordResetToken">SP_VALIDATE_RESET_TOKEN</query>
         <query id="PasswordChangeSP">SP_CHANGE_USER_PASSWORD</query>
+        <query id="getAllHospitals">SP_GET_ALL_HOSPITALS</query>
+        <query id="AddNewHospital">SP_ADD_NEW_HOSPITAL</query>
+        <query id="getHospitalByID">SP_GET_HOSPITALS_BY_ID</query>
+        <query id="UpdateHospital">SP_UPDATE_HOSPITALS</query>
+        <query id="RemoveHospital">SP_REMOVE_HOSPITALID</query>
+        <query id="getAllDoctors">SP_GET_ALL_DOCTORS</query>
+        <query id="AddNewDoctor">SP_ADD_NEW_DOCTOR</query>
     </queries>
 </root>

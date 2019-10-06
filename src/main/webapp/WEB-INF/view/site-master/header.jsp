@@ -51,6 +51,16 @@
                 if(checkSessionAvailability()){
                     //console.log('ok');
                     HandleLoginButtons(true);
+
+                    if(GetCurrentUserRoleCode()){
+                        showHideAdminPanel(true);
+                    }else{
+                        showHideAdminPanel(false);
+                    }
+
+
+                }else{
+                    showHideAdminPanel(false);
                 }
 
                 var session = '<%= session.getAttribute("page") %>';
@@ -160,6 +170,7 @@
                     <li class="nav-item"><a href="#" class="nav-link">About</a></li>
                     <li class="nav-item"><a id="aService" class="nav-link cursor-pointer">Service</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                    <li class="nav-item" id="li_adminPanel"><a href="adminPanel" class="nav-link">AdminPanel</a></li>
                 </ul>
                 <form class="navbar-form form-inline">
                     <div class="input-group search-box">

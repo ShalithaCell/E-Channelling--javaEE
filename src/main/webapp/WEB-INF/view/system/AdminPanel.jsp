@@ -10,9 +10,17 @@
 
     <head>
         <script src="../../../resources/libs/jquery/jquery-3.4.1.min.js"></script>
+
+
+
         <link href="../../../resources/libs/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
         <script src="../../../resources/libs/bootstrap-3.3.7/js/bootstrap.min.js"></script>
 
+
+
+
+
+        <title>365Care - Admin Panel</title>
 
         <style>
             @import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700);
@@ -31,6 +39,11 @@
                 margin-bottom: 0;
                 box-sizing: border-box;
 
+            }
+
+            .panel-resize{
+                padding-left: 1% !important;
+                padding-right: 1% !important;
             }
 
             .board > div.board-inner{
@@ -90,6 +103,17 @@
 
             span.round-tabs.two{
                 color: #febe29;border: 2px solid #febe29;
+            }
+
+            .bootstrap-select .bs-ok-default::after {
+                width: 0.3em;
+                height: 0.6em;
+                border-width: 0 0.1em 0.1em 0;
+                transform: rotate(45deg) translateY(0.5rem);
+            }
+
+            .btn.dropdown-toggle:focus {
+                outline: none !important;
             }
 
             li.active span.round-tabs.two{
@@ -255,6 +279,45 @@
                 $('a[title]').tooltip();
             });
 
+            $(document).ready(function () {
+
+
+                LoadHospitals();
+
+                $("#li_Doctors").click(function(){
+
+                    setTimeout(LoadDoctors, 1000);
+
+                });
+
+
+            });
+
+
+            function addNewMedicalCenter() {
+                $.ajax({
+                    url: 'adminPanel',
+                    type: 'post',
+                    async: false,
+                    data: { "command" : "sessionCheck"},
+                    error: function (request, status, error) {
+                        window.location = "Error";
+                    },
+                    success: function(response) {
+                        var result = JSON.parse(response);
+                        //console.log(result);
+                        if(result.result == 'true'){
+                            //console.log('valid');
+                            success = true;
+                        }else{
+                            //console.log('invalid');
+                            success = false;
+                        }
+
+                    }
+                });
+            }
+
         </script>
 
     </head>
@@ -263,22 +326,22 @@
 
         <%@include file="../site-master/header.jsp"%>
 
-        <section style="background:#efefe9;">
+        <section style="background:#efefe9;height: 100%;">
             <div class="container">
                 <div class="row">
-                    <div class="board">
+                    <div class="board ">
                         <!-- <h2>Welcome to IGHALO!<sup>™</sup></h2>-->
                         <div class="board-inner">
                             <ul class="nav nav-tabs custom-right-mar" id="myTab">
                                 <div class="liner"></div>
                                 <li class="active">
-                                    <a href="#home" data-toggle="tab" title="welcome">
+                                    <a href="#home" data-toggle="tab" title="hospitals">
                       <span class="round-tabs one">
                               <i class="glyphicon glyphicon-home custom-top-mar"></i>
                       </span>
                                     </a></li>
 
-                                <li><a href="#profile" data-toggle="tab" title="profile">
+                                <li><a href="#profile" data-toggle="tab" id="li_Doctors" title="doctors">
                      <span class="round-tabs two">
                          <i class="glyphicon glyphicon-user custom-top-mar"></i>
                      </span>
@@ -304,57 +367,74 @@
 
                             </ul></div>
 
-                        <div class="tab-content">
+                        <div class="tab-content ">
                             <div class="tab-pane fade in active" id="home">
 
-                                <h3 class="head text-center">Welcome to Bootsnipp<sup>™</sup> <span style="color:#f48260;">♥</span></h3>
-                                <p class="narrow text-center">
-                                    Lorem ipsum dolor sit amet, his ea mollis fabellas principes. Quo mazim facilis tincidunt ut, utinam saperet facilisi an vim.
-                                </p>
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading form-inline">
+                                        <h3 class="panel-title">List Of Medical Centers</h3>
+                                        <div class="pull-right">
+                                            <input type="button" onclick="addHospital()" class="btn btn-success " value="Add New Hospital/Medical Center" style="margin-top: -10%;">
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
 
-                                <p class="text-center">
-                                    <a href="" class="btn btn-success btn-outline-rounded green"> start using bootsnipp <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span></a>
-                                </p>
+                                    </div>
+                                    <table class="table table-hover" id="tbl_hospital">
+                                        <thead>
+                                            <tr>
+                                                <th>Hospital ID</th>
+                                                <th>Description</th>
+                                                <th>Address</th>
+                                                <th>Active</th>
+                                                <th>Edit</th>
+                                                <th>Remove</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+
                             </div>
                             <div class="tab-pane fade" id="profile">
-                                <h3 class="head text-center">Create a Bootsnipp<sup>™</sup> Profile</h3>
-                                <p class="narrow text-center">
-                                    Lorem ipsum dolor sit amet, his ea mollis fabellas principes. Quo mazim facilis tincidunt ut, utinam saperet facilisi an vim.
-                                </p>
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading form-inline">
+                                        <h3 class="panel-title">List Of Doctors</h3>
+                                        <div class="pull-right">
+                                            <input type="button" onclick="AddDoctor()" class="btn btn-success " value="Add New Doctor" style="margin-top: -18%;">
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
 
-                                <p class="text-center">
-                                    <a href="" class="btn btn-success btn-outline-rounded green"> create your profile <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span></a>
-                                </p>
+                                    </div>
+                                    <table class="table table-hover" id="tbl_doctors">
+                                        <thead>
+                                            <tr>
+                                                <th>Doctor ID</th>
+                                                <th>Doctor Name</th>
+                                                <th>Doctor Speciality</th>
+                                                <th>Active</th>
+                                                <th>Edit</th>
+                                                <th>Remove</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                        </tbody>
+                                    </table>
+                                </div>
 
                             </div>
                             <div class="tab-pane fade" id="messages">
-                                <h3 class="head text-center">Bootsnipp goodies</h3>
-                                <p class="narrow text-center">
-                                    Lorem ipsum dolor sit amet, his ea mollis fabellas principes. Quo mazim facilis tincidunt ut, utinam saperet facilisi an vim.
-                                </p>
 
-                                <p class="text-center">
-                                    <a href="" class="btn btn-success btn-outline-rounded green"> start using bootsnipp <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span></a>
-                                </p>
                             </div>
                             <div class="tab-pane fade" id="settings">
-                                <h3 class="head text-center">Drop comments!</h3>
-                                <p class="narrow text-center">
-                                    Lorem ipsum dolor sit amet, his ea mollis fabellas principes. Quo mazim facilis tincidunt ut, utinam saperet facilisi an vim.
-                                </p>
 
-                                <p class="text-center">
-                                    <a href="" class="btn btn-success btn-outline-rounded green"> start using bootsnipp <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span></a>
-                                </p>
                             </div>
                             <div class="tab-pane fade" id="doner">
-                                <div class="text-center">
-                                    <i class="img-intro icon-checkmark-circle"></i>
-                                </div>
-                                <h3 class="head text-center">thanks for staying tuned! <span style="color:#f48260;">♥</span> Bootstrap</h3>
-                                <p class="narrow text-center">
-                                    Lorem ipsum dolor sit amet, his ea mollis fabellas principes. Quo mazim facilis tincidunt ut, utinam saperet facilisi an vim.
-                                </p>
+
                             </div>
                             <div class="clearfix"></div>
                         </div>
@@ -363,6 +443,13 @@
                 </div>
             </div>
         </section>
+
+        <script src="../../../resources/libs/jquery-datatables/datatables.min.js"></script>
+        <link href="../../../resources/libs/jquery-datatables/datatables.min.css" rel="stylesheet" >
+
+        <script src="../../../resources/scripts/script-admin-panel.js"></script>
+
+        <link href="../../../resources/styles/style-default.css" rel="stylesheet" />
 
         <%@include file="../site-master/footer.jsp"%>
     </body>

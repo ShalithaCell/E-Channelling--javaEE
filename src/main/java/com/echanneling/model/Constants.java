@@ -133,6 +133,13 @@ public class Constants {
     public static final String SQL_SAVE_RESET_TOKEN = "SavePasswordResetToken";
     public static final String SQL_VALIDATE_TOKEN = "ValidatePasswordResetToken";
     public static final String SQL_PASSWORD_CHANGE = "PasswordChangeSP";
+    public static final String SQL_GET_ALL_HOSPITALS = "getAllHospitals";
+    public static final String SQL_ADD_NEW_HOSPITAL = "AddNewHospital";
+    public static final String SQL_GET_HOSPITAL_BY_ID = "getHospitalByID";
+    public static final String SQL_UPDATE_HOSPITAL = "UpdateHospital";
+    public static final String SQL_DELETE_HOSPITAL = "RemoveHospital";
+    public static final String SQL_GET_ALL_DOCTORS = "getAllDoctors";
+    public static final String SQL_ADD_NEW_DOCTOR = "AddNewDoctor";
 
     /** =============================== Session Variables ======================================== */
 

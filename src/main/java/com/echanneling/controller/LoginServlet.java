@@ -51,6 +51,9 @@ public class LoginServlet extends HttpServlet {
                 case "resetpassword":
                     ReturnMessage = UserManagementService.SendPasswordResetLink(request.getParameter("email"));
                     break;
+                case "getcurrentuserjson":
+                    ReturnMessage = UserManagementService.getCurrentLoggedUserAsJSON(request);
+                    break;
             }
 
             response.setContentType("text/plain");

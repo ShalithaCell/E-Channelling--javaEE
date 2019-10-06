@@ -9,8 +9,11 @@ import com.echanneling.model.TableModels.RegistedUserModel;
 import com.echanneling.model.TableModels.TempUserModel;
 import com.echanneling.model.UserMessages;
 import com.echanneling.model.structure.RegistredUser;
+import com.echanneling.model.structure.SessionDetails;
 import com.echanneling.model.structure.TempUser;
 import com.echanneling.service.support.MailInitializer;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import javax.mail.MessagingException;
 import javax.servlet.http.HttpServletRequest;
@@ -294,6 +297,23 @@ public class UserManagementService {
         procedureParams.setParamSet("_password", EncryptionModule.Encrypt(Password) , false);
 
         CDataAccess.ExecuateProcedure(AppDelegate.GetSQLQuery(Constants.SQL_PASSWORD_CHANGE), procedureParams.getParamSet());
+
+    }
+
+    public static String getCurrentLoggedUserAsJSON(HttpServletRequest request) throws JsonProcessingException {
+        SessionDetails objSession = SessionOperations.GetSessionDetails(request);
+
+        RegistredUser objCurrentUser = new RegistredUser();
+        objCurrentUser = objSession.getRegistredUser();
+
+
+        // Creating Object of ObjectMapper define in Jakson Api
+        ObjectMapper Obj = new ObjectMapper();
+
+        // get Oraganisation object as a json string
+        String jsonStr = Obj.writeValueAsString(objCurrentUser);
+
+        return jsonStr;
 
     }
 

@@ -43,3 +43,7 @@
 .cursor-pointer{
     cursor: pointer !important;
 }
+
+.cont-resize-height{
+    height: 100% !important;
+}

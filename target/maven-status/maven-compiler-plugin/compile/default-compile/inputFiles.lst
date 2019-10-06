@@ -4,8 +4,10 @@
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/service/biz/IOOperations.java
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/service/support/CatchException.java
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/service/biz/SessionOperations.java
+/Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/service/biz/HospitalManagementService.java
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/model/structure/TempUser.java
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/service/biz/UserManagementService.java
+/Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/model/TableModels/HospitalModel.java
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/model/ExceptionDetails.java
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/DAL/CDataAccess.java
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/service/biz/CommonOperations.java
@@ -22,10 +24,14 @@
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/controller/AccountVerificationServlet.java
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/controller/AdminPanelServlet.java
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/delegate/AppParams.java
+/Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/model/structure/Doctor.java
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/model/structure/RegistredUser.java
+/Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/service/biz/DoctorManagement.java
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/DAL/DBDataAccess.java
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/model/TableModels/RegistedUserModel.java
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/service/biz/EncryptionModule.java
+/Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/model/structure/Hospital.java
+/Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/model/TableModels/DoctorModel.java
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/service/support/CustomMailSender.java
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/model/TableModels/TempUserModel.java
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/model/Constants.java

@@ -58,6 +58,14 @@ function HandleLoginButtons(status) {
     }
 }
 
+function showHideAdminPanel(status) {
+    if(status){
+        $('#li_adminPanel').show();
+    }else{
+        $('#li_adminPanel').hide();
+    }
+}
+
 function checkSessionAvailability() {
     var success = false;
 
@@ -77,6 +85,33 @@ function checkSessionAvailability() {
                 success = true;
             }else{
                 //console.log('invalid');
+                success = false;
+            }
+
+        }
+    });
+
+    return success;
+}
+
+function GetCurrentUserRoleCode() {
+    var success = false;
+    $.ajax({
+        url: 'login',
+        type: 'post',
+        async: false,
+        data: { "command" : "getcurrentuserjson"},
+        error: function (request, status, error) {
+            window.location = "Error";
+        },
+        success: function(response) {
+            var result = JSON.parse(response);
+            console.log(result);
+            if(result.fk_RoleID == '1'){
+
+                success = true;
+            }else{
+
                 success = false;
             }
 

@@ -137,4 +137,23 @@ public class RegistredUser extends User {
     public void setActive(boolean active) {
         isActive = active;
     }
+
+    @Override
+    public String toString() {
+        return "[FirstName="
+                + FirstName
+                + ", LastName="
+                + LastName
+                + ", FK_GenderID="
+                + FK_GenderID
+                + ", FK_RoleID="
+                + FK_RoleID
+                + ", GenderDescription="
+                + GenderDescription
+                + ", ContactNo="
+                + ContactNo
+                + ", DOB="
+                + DOB+
+        "]";
+    }
 }
