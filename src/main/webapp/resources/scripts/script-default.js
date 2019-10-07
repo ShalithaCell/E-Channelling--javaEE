@@ -25,7 +25,7 @@ function checkMailIsValied(email){
 function CheckFormTextElementsIsEmpty(FormName) {
     var controlArray = [];
 
-    $('#'+FormName).find('input[type="text"],input[type="password"],input[type="email"]').each(function () {
+    $('#'+FormName).find('input[type="text"],input[type="password"],input[type="email"],input[type="number"]').each(function () {
 
 
         if($(this).val().length == 0){

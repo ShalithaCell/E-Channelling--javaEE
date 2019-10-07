@@ -53,6 +53,17 @@ public class AdminPanelServlet extends HttpServlet {
                     DoctorManagement.AddNewDoctor(request);
                     ReturnMessage = String.format(ReturnMessage, Constants.TRUE, "New item added successfully.");
                     break;
+                case "GetDoctorByID":
+                    ReturnMessage = DoctorManagement.GetDoctorByID(request.getParameter("DoctorID"));
+                    break;
+                case "updateDoctor":
+                    DoctorManagement.UpdateDoctor(request);
+                    ReturnMessage = String.format(ReturnMessage, Constants.TRUE, "Doctor Updated");
+                    break;
+                case "RemoveDoctor":
+                    DoctorManagement.RemoveDoctor(request);
+                    ReturnMessage = String.format(ReturnMessage, Constants.TRUE, "item deleted !");
+                    break;
             }
 
             response.setContentType("text/plain");

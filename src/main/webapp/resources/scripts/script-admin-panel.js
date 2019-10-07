@@ -301,11 +301,11 @@ function LoadDoctors() {
             { 'data': 'Speciality' },
             { 'data': 'Active' },
             { 'data': null, 'render': function (data, type, row) {
-                    return '<button type= "button" class="btn btn-info btn-header" style="font-size: .5vw;" onclick="editCenter(' + data.DoctorID + ');"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</button>'
+                    return '<button type= "button" class="btn btn-info btn-header" style="font-size: .5vw;" onclick="editDoctor(' + data.DoctorID + ');"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</button>'
                 }
             },
             { 'data': null, 'render': function (data, type, row) {
-                    return '<button type= "button" class="btn btn-danger btn-header" style="font-size: .5vw;" onclick="Remove(' + data.DoctorID + ');"><i class="fa fa-trash" aria-hidden="true"></i> Remove</button>'
+                    return '<button type= "button" class="btn btn-danger btn-header" style="font-size: .5vw;" onclick="RemoveDoctor(' + data.DoctorID + ');"><i class="fa fa-trash" aria-hidden="true"></i> Remove</button>'
                 }
             }
         ],
@@ -452,7 +452,7 @@ function editDoctor(DoctorID) {
                     $.ajax({
                         url: 'adminPanel',
                         type: 'post',
-                        data: { "DoctorID": HospitalID, "hospitalname": $('#txtHospitalNameE').val(), "hospitalAddress" : $('#hospitalAddressE').val(), "command" : "updatehospital"},
+                        data: { "DoctorID": DoctorID, "name": $('#txtDoctorName').val(), "specilality" : $('#txtSpeciality').val(), "command" : "updateDoctor"},
                         beforeSend: function(){
                             $('#loadingSpinner').show();
                         },
@@ -464,10 +464,10 @@ function editDoctor(DoctorID) {
 
                             var result = JSON.parse(response);
                             if(result.result == 'true') {
-                                $("#tbl_hospital").dataTable().fnDestroy();
-                                StartToasterMessage(MESSAGE_SUCCESS, result.message, 'Medical Center updated !');
+                                $("#tbl_doctors").dataTable().fnDestroy();
+                                StartToasterMessage(MESSAGE_SUCCESS, result.message, 'Doctor updated !');
 
-                                LoadHospitals();
+                                LoadDoctors();
                                 return true;
                             }else{
                                 StartToasterMessage(MESSAGE_DANGER, 'Something went wrong.please try again', 'Error');
@@ -504,12 +504,35 @@ function editDoctor(DoctorID) {
                     $('#loadingSpinner').hide();
                     var result = JSON.parse(response);
 
-                    $('#txtHospitalNameE').val(result[0].Description);
-                    $('#hospitalAddressE').val(result[0].Address);
+                    $('#txtDoctorName').val(result[0].DoctorName);
+                    $('#txtSpeciality').val(result[0].Speciality);
                 }
             });
 
 
+        }
+    });
+}
+
+
+function RemoveDoctor(DoctID) {
+    //loading details
+    $.ajax({
+        url: 'adminPanel',
+        type: 'post',
+        data: { "command": "RemoveDoctor", "docID" : DoctID},
+        beforeSend: function(){
+            $('#loadingSpinner').show();
+        },
+        complete: function(){
+
+        },
+        success: function(response) {
+            $('#loadingSpinner').hide();
+            $("#tbl_doctors").dataTable().fnDestroy();
+            StartToasterMessage(MESSAGE_SUCCESS, "Deleted", 'Medical Center Deleted !');
+
+            LoadDoctors();
         }
     });
 }

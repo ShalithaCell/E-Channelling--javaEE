@@ -85,6 +85,7 @@ public class Constants {
     public static final String LOGINPAGE = "/WEB-INF/view/account/login.jsp";
     public static final String VERIFICATIONPAGE = "/WEB-INF/view/account/AccountVerification.jsp";
     public static final String ADMINPANELPAGE = "/WEB-INF/view/system/AdminPanel.jsp";
+    public static final String PAYMENTPAGE = "/WEB-INF/view/system/payment.jsp";
     public static final String HTTP500PAGE = "/WEB-INF/view/HTTP500.jsp";
     public static final String USERACCOUNTPAGE = "/WEB-INF/view/account/UserAccount.jsp";
     public static final String PASSWORDRESETPAGE = "/WEB-INF/view/account/PasswordReset.jsp";
@@ -140,6 +141,10 @@ public class Constants {
     public static final String SQL_DELETE_HOSPITAL = "RemoveHospital";
     public static final String SQL_GET_ALL_DOCTORS = "getAllDoctors";
     public static final String SQL_ADD_NEW_DOCTOR = "AddNewDoctor";
+    public static final String SQL_GET_DOCTOR_BY_ID = "GetDoctorByID";
+    public static final String SQL_UPDATE_DOCTOR = "updateDoctor";
+    public static final String SQL_REMOVE_DOCTOR = "DeleteDoctor";
+    public static final String SQL_ADD_APPOINTMENT = "addAppointment";
 
     /** =============================== Session Variables ======================================== */
 

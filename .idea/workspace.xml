@@ -7,29 +7,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cebaf41e-f4a3-453d-ba76-6ebf40e5dc91" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/portfolio/asiri.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/portfolio/durdance.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/portfolio/hemas.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/portfolio/lanka.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/portfolio/nawaloka.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/portfolio/nevil.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/controller/AdminPanelServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/controller/AdminPanelServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/controller/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/controller/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/delegate/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/delegate/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/controller/homeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/controller/homeServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/model/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/model/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/model/structure/RegistredUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/model/structure/RegistredUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/service/biz/UserManagementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/service/biz/UserManagementService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/service/biz/DoctorManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/service/biz/DoctorManagement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/SystemInfo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/SystemInfo.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/site-master/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/site-master/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/system/AdminPanel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/system/AdminPanel.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/portfolio/img-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/portfolio/img-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/portfolio/img-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/portfolio/img-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/portfolio/img-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/portfolio/img-3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/portfolio/img-4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/portfolio/img-4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/portfolio/img-5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/portfolio/img-5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/portfolio/img-6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/portfolio/img-6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/portfolio/img-7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/portfolio/img-7.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/scripts/script-admin-panel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/scripts/script-admin-panel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/scripts/script-default.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/scripts/script-default.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/styles/style-default.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/styles/style-default.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/SystemInfo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SystemInfo.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/controller/AdminPanelServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/controller/AdminPanelServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/controller/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/controller/LoginServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/controller/homeServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/controller/homeServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/model/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/model/Constants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/model/structure/RegistredUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/model/structure/RegistredUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/service/biz/UserManagementService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/service/biz/UserManagementService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/com.echanneling/E-Channeling/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/com.echanneling/E-Channeling/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/com.echanneling/E-Channeling/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/m2e-wtp/web-resources/META-INF/maven/com.echanneling/E-Channeling/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/account/UserAccount_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/account/UserAccount_jsp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/account/UserAccount_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/account/UserAccount_jsp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/index_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/index_jsp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/index_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/index_jsp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/system/AdminPanel_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/system/AdminPanel_jsp.class" afterDir="false" />
@@ -46,10 +54,10 @@
       <list>
         <option value="package-info" />
         <option value="HTML File" />
-        <option value="Jsp File" />
+        <option value="JavaScript File" />
         <option value="Class" />
         <option value="CSS File" />
-        <option value="JavaScript File" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -63,7 +71,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/bg" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/resources/styles" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
@@ -72,19 +80,19 @@
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/bg" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/resources/libs/vendor" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/resources/libs" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/resources/libs/jquery-confirm" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp/resources/libs" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/system" />
       <recent name="$PROJECT_DIR$/src/main/webapp/resources/libs/bootstrap-3.3.7" />
       <recent name="$PROJECT_DIR$/src/main/webapp/resources/fonts" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/EmailTempletes" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources/styles" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/portfolio" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/bg" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources/libs/vendor" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -239,7 +247,8 @@
       <workItem from="1570075329574" duration="12775000" />
       <workItem from="1570119736585" duration="1194000" />
       <workItem from="1570169884210" duration="22338000" />
-      <workItem from="1570243830972" duration="36321000" />
+      <workItem from="1570243830972" duration="45940000" />
+      <workItem from="1570414135398" duration="2722000" />
     </task>
     <task id="LOCAL-00001" summary="clean project and add mailing functions">
       <created>1565503011733</created>
@@ -402,7 +411,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570221397219</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Finished Admin Panel Medical center adding function">
+      <created>1570381678784</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1570381678784</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -444,15 +460,16 @@
     <MESSAGE value="add session management functions" />
     <MESSAGE value="Add DB Backup" />
     <MESSAGE value="Finished user management functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished user management functions" />
+    <MESSAGE value="Finished Admin Panel Medical center adding function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished Admin Panel Medical center adding function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/echanneling/controller/AdminPanelServlet.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="8" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/echanneling/service/biz/AppointmentManegement.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

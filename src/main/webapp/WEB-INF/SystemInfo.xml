@@ -21,5 +21,9 @@
         <query id="RemoveHospital">SP_REMOVE_HOSPITALID</query>
         <query id="getAllDoctors">SP_GET_ALL_DOCTORS</query>
         <query id="AddNewDoctor">SP_ADD_NEW_DOCTOR</query>
+        <query id="GetDoctorByID">SP_GET_DOCTOR_BY_ID</query>
+        <query id="updateDoctor">SP_UPDATE_DOCTOR</query>
+        <query id="DeleteDoctor">SP_DELETE_DOCTOR</query>
+        <query id="addAppointment">SP_ADD_APPOINTMENT</query>
     </queries>
 </root>

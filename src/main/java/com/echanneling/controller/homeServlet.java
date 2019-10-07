@@ -2,8 +2,13 @@ package com.echanneling.controller;
 
 import com.echanneling.delegate.AppDelegate;
 import com.echanneling.model.Constants;
+import com.echanneling.service.biz.AppointmentManegement;
+import com.echanneling.service.biz.DoctorManagement;
+import com.echanneling.service.biz.HospitalManagementService;
+import com.echanneling.service.support.CatchException;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -31,8 +36,32 @@ public class homeServlet extends HttpServlet {
 	
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		
+		//return json
+		String ReturnMessage = "{ \"result\":\"%s\", \"message\":\"%s\" }";
+
+		try {
+
+			//get Command from request
+			String command = request.getParameter("command");
+			switch (command){
+				case "book":
+					boolean success = AppointmentManegement.AddAppoinment(request);
+					if(success){
+						ReturnMessage = String.format(ReturnMessage, Constants.TRUE, "Appointment Added Successfully");
+					}else{
+						ReturnMessage = String.format(ReturnMessage, Constants.FALSE, "Please log to the site first");
+					}
+					break;
+			}
+
+			response.setContentType("text/plain");
+			response.getWriter().write(ReturnMessage);
+
+		} catch (SQLException | ClassNotFoundException e) {
+			CatchException.Handle(e);
+			response.sendError(500, e.getMessage());
+		}
+
 	}
 	
 }
