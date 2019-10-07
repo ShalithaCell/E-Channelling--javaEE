@@ -8,12 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cebaf41e-f4a3-453d-ba76-6ebf40e5dc91" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB_Backup/365Care_02-10-2019.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/delegate/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/delegate/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/delegate/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/delegate/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-10-07" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-10-07" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/account/UserAccount_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/account/UserAccount_jsp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/account/UserAccount_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/account/UserAccount_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -221,7 +216,7 @@
       <workItem from="1570169884210" duration="22338000" />
       <workItem from="1570243830972" duration="45940000" />
       <workItem from="1570414135398" duration="5373000" />
-      <workItem from="1570420545896" duration="4318000" />
+      <workItem from="1570420545896" duration="8055000" />
     </task>
     <task id="LOCAL-00001" summary="clean project and add mailing functions">
       <created>1565503011733</created>
@@ -405,7 +400,21 @@
       <option name="project" value="LOCAL" />
       <updated>1570419493448</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="finalize the implementation">
+      <created>1570461159546</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1570461159546</updated>
+    </task>
+    <task id="LOCAL-00028" summary="finalize the implementations">
+      <created>1570461181714</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1570461181714</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -425,8 +434,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="clean project and add mailing functions" />
-    <MESSAGE value="Implement DB functionality" />
     <MESSAGE value="Implement Convections" />
     <MESSAGE value="Implement Encryption modules" />
     <MESSAGE value="Optimise Imports" />
@@ -450,7 +457,9 @@
     <MESSAGE value="Finished Admin Panel Medical center adding function" />
     <MESSAGE value="add anointment function" />
     <MESSAGE value="add payment function" />
-    <option name="LAST_COMMIT_MESSAGE" value="add payment function" />
+    <MESSAGE value="finalize the implementation" />
+    <MESSAGE value="finalize the implementations" />
+    <option name="LAST_COMMIT_MESSAGE" value="finalize the implementations" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
