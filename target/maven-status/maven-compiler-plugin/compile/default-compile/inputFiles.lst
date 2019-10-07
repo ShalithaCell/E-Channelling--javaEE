@@ -1,4 +1,5 @@
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/service/support/MailInitializer.java
+/Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/service/biz/PaymentService.java
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/delegate/AppDelegate.java
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/model/structure/SessionDetails.java
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/service/biz/IOOperations.java
@@ -25,6 +26,7 @@
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/controller/AccountVerificationServlet.java
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/controller/AdminPanelServlet.java
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/delegate/AppParams.java
+/Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/controller/PaymentServlet.java
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/model/structure/Doctor.java
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/model/structure/RegistredUser.java
 /Users/shalithasenanayaka/Documents/JAVA/My Project/e_channeling/src/main/java/com/echanneling/service/biz/DoctorManagement.java

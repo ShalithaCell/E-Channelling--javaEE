@@ -25,5 +25,6 @@
         <query id="updateDoctor">SP_UPDATE_DOCTOR</query>
         <query id="DeleteDoctor">SP_DELETE_DOCTOR</query>
         <query id="addAppointment">SP_ADD_APPOINTMENT</query>
+        <query id="addPayment">SP_ADD_PAYMENT</query>
     </queries>
 </root>

@@ -145,6 +145,7 @@ public class Constants {
     public static final String SQL_UPDATE_DOCTOR = "updateDoctor";
     public static final String SQL_REMOVE_DOCTOR = "DeleteDoctor";
     public static final String SQL_ADD_APPOINTMENT = "addAppointment";
+    public static final String SQL_ADD_PAYMENT = "addPayment";
 
     /** =============================== Session Variables ======================================== */
 

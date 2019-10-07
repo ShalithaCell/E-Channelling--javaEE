@@ -41,7 +41,7 @@
                             </div>
                         </div>
                         <div class="panel-body">
-                            <form  method="post" action="paymentServelet">
+                            <form  method="post" action="payment">
                                 <div class="form-group">
                                     <label for="cardNumber" name="cardNum">
                                         CARD NUMBER</label>
@@ -76,10 +76,11 @@
                                 <ul class="nav nav-pills nav-stacked" name = "finalPay">
                                     <li class="active"><a href="#"><span class="badge pull-right"><span class="glyphicon glyphicon-usd"></span>4200</span> Final Payment</a>
                                     </li>
+                                    <input type="hidden" name="amount" value="4200">
                                 </ul>
                                 <br/>
 
-                                <a href="http://www.jquery2dotnet.com" class="btn btn-success btn-lg btn-block" role="button">Pay</a>
+                                <input type="submit" class="btn btn-success btn-lg btn-block" role="button"/>
                             </form>
                         </div>
                     </div>
