@@ -8,15 +8,12 @@
   <component name="ChangeListManager">
     <list default="true" id="cebaf41e-f4a3-453d-ba76-6ebf40e5dc91" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/controller/PaymentServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/controller/PaymentServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/model/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/model/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/SystemInfo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/SystemInfo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/system/payment.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/system/payment.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SystemInfo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SystemInfo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/model/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/model/Constants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB_Backup/365Care_02-10-2019.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/echanneling/delegate/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/echanneling/delegate/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/echanneling/delegate/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/echanneling/delegate/config.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-10-07" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-10-07" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/account/UserAccount_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/account/UserAccount_jsp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/account/UserAccount_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/view/account/UserAccount_jsp.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +43,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/resources/styles" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/DB_Backup" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
@@ -55,19 +52,19 @@
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/DB_Backup" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources/styles" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/portfolio" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/bg" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp/resources/libs" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/system" />
       <recent name="$PROJECT_DIR$/src/main/webapp/resources/libs/bootstrap-3.3.7" />
       <recent name="$PROJECT_DIR$/src/main/webapp/resources/fonts" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/EmailTempletes" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/webapp/resources/styles" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/portfolio" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete/img/bg" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/resources/libs/essence_templete" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/resources/libs/vendor" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -223,7 +220,8 @@
       <workItem from="1570119736585" duration="1194000" />
       <workItem from="1570169884210" duration="22338000" />
       <workItem from="1570243830972" duration="45940000" />
-      <workItem from="1570414135398" duration="5126000" />
+      <workItem from="1570414135398" duration="5373000" />
+      <workItem from="1570420545896" duration="4318000" />
     </task>
     <task id="LOCAL-00001" summary="clean project and add mailing functions">
       <created>1565503011733</created>
@@ -400,7 +398,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570416904091</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="add payment function">
+      <created>1570419493448</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1570419493448</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -444,15 +449,16 @@
     <MESSAGE value="Finished user management functions" />
     <MESSAGE value="Finished Admin Panel Medical center adding function" />
     <MESSAGE value="add anointment function" />
-    <option name="LAST_COMMIT_MESSAGE" value="add anointment function" />
+    <MESSAGE value="add payment function" />
+    <option name="LAST_COMMIT_MESSAGE" value="add payment function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/echanneling/controller/PaymentServlet.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="4" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/echanneling/controller/LoginServlet.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
